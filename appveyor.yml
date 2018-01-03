@@ -2,6 +2,7 @@ configuration: Release
 
 #Restore nuget packages
 before_build:
+ - nuget update -self
  - nuget restore
 
 build:
