@@ -1,0 +1,9 @@
+configuration: Release
+
+#Restore nuget packages
+before_build:
+	- nuget restore
+
+build:
+  # MSBuild verbosity level
+  verbosity: normal
