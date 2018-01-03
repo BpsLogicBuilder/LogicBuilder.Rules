@@ -32,9 +32,9 @@
   <PropertyGroup>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
-  <PropertyGroup>
+  <!--<PropertyGroup>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.pfx</AssemblyOriginatorKeyFile>
-  </PropertyGroup>
+  </PropertyGroup>-->
   <ItemGroup>
     <Reference Include="LogicBuilder.ComponentModel.Design.Serialization, Version=1.0.0.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
       <HintPath>..\packages\LogicBuilder.ComponentModel.Design.Serialization.1.0.0-preview05\lib\netstandard2.0\LogicBuilder.ComponentModel.Design.Serialization.dll</HintPath>

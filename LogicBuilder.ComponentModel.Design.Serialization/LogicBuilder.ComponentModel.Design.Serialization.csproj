@@ -15,8 +15,8 @@
     <FileVersion>1.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
     <PackageLicenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/Licence.MD</PackageLicenseUrl>
-    <SignAssembly>true</SignAssembly>
-    <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.pfx</AssemblyOriginatorKeyFile>
+    <!--<SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.pfx</AssemblyOriginatorKeyFile>-->
   </PropertyGroup>
 
   <ItemGroup>
