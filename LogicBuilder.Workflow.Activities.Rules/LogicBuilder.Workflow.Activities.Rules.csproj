@@ -20,7 +20,11 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.0-preview04" />
+    <None Remove="PackNuget.bat" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.0-preview05" />
     <PackageReference Include="System.CodeDom" Version="4.4.0" />
   </ItemGroup>
 
