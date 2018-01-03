@@ -1,0 +1,48 @@
+<Project Sdk="Microsoft.NET.Sdk">
+
+  <PropertyGroup>
+    <TargetFramework>netstandard2.0</TargetFramework>
+    <RootNamespace>LogicBuilder.Workflow</RootNamespace>
+    <PackageId>LogicBuilder.Workflow.ComponentModel.Serialization</PackageId>
+    <PackageVersion>1.0.0-preview05</PackageVersion>
+    <Authors>BlaiseD</Authors>
+    <Description>Updates WorkflowMarkupSerializer to allow serialization of rule sets in .NetStandard projects.</Description>
+    <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
+    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageTags>rules serialization</PackageTags>
+    <Copyright>Copyright © Microsoft 2017</Copyright>
+    <AssemblyVersion>1.0.0.0</AssemblyVersion>
+    <FileVersion>1.0.0.0</FileVersion>
+    <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
+    <PackageLicenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/Licence.MD</PackageLicenseUrl>
+    <SignAssembly>true</SignAssembly>
+    <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.pfx</AssemblyOriginatorKeyFile>
+  </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.0-preview04" />
+    <PackageReference Include="System.CodeDom" Version="4.4.0" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Compile Update="Resources.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.resx</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Resources.resx">
+      <Generator>ResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <Folder Include="ComponentModel\Compiler\" />
+    <Folder Include="ComponentModel\Design\" />
+    <Folder Include="ComponentModel\Serialization\" />
+  </ItemGroup>
+
+</Project>

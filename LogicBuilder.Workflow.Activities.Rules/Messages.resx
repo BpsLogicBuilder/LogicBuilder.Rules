@@ -1,0 +1,779 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+  <data name="RuleSetNewNameLableText" xml:space="preserve">
+    <value>New name for rule set:</value>
+  </data>
+  <data name="CastIncompatibleTypes" xml:space="preserve">
+    <value>Cannot cast from type "{0}" to type "{1}".</value>
+  </data>
+  <data name="InvalidRuleSetExpression" xml:space="preserve">
+    <value>Property "{0}" has an invalid value. Rule set is invalid.</value>
+  </data>
+  <data name="TargetEvaluatedNullIndexer" xml:space="preserve">
+    <value>Cannot evaluate indexer because its target object is null.</value>
+  </data>
+  <data name="NullMethodTypeParameter" xml:space="preserve">
+    <value>Type parameter specified for parameter {0} of method "{1}" can not be null.</value>
+  </data>
+  <data name="ContextStackItemMissing" xml:space="preserve">
+    <value>Code generator context stack does not contain required item of type "{0}".</value>
+  </data>
+  <data name="Error_DuplicateRuleName" xml:space="preserve">
+    <value>Invalid rule. Another rule of that name exists in the rule set.</value>
+  </data>
+  <data name="IndexerArgCannotBeRefOrOut" xml:space="preserve">
+    <value>Indices may not be "ref" or "out".</value>
+  </data>
+  <data name="ConstructorOverloadNotFound" xml:space="preserve">
+    <value>No constructor matched the supplied arguments.</value>
+  </data>
+  <data name="Parser_MissingRCurlyAfterInitializers" xml:space="preserve">
+    <value>The '}' at the end of an initializer list was not found.</value>
+  </data>
+  <data name="MissingInitializer" xml:space="preserve">
+    <value>The initializers for the array of type "{0}" can not be null.</value>
+  </data>
+  <data name="NullFieldTarget" xml:space="preserve">
+    <value>Target object for field "{0}" can not be null.</value>
+  </data>
+  <data name="NullIndexExpression" xml:space="preserve">
+    <value>Index expression cannot be null.</value>
+  </data>
+  <data name="UnknownFieldOrProperty" xml:space="preserve">
+    <value>The field or property "{0}" on type "{1}" does not exist or is not accessible.</value>
+  </data>
+  <data name="Error_RuleNameIsEmpty" xml:space="preserve">
+    <value>Value is invalid. Rule name cannot be empty.</value>
+  </data>
+  <data name="Parser_InvalidNew" xml:space="preserve">
+    <value>A new expression requires () or [] after type.</value>
+  </data>
+  <data name="NullDirectionTarget" xml:space="preserve">
+    <value>The target expression for the direction specifier cannot be null.</value>
+  </data>
+  <data name="RuleSetRenameTitleText" xml:space="preserve">
+    <value>Rename Rule Set</value>
+  </data>
+  <data name="InvalidOutRefParameter" xml:space="preserve">
+    <value>Parameters passed as "ref" or "out" parameters must be fields.</value>
+  </data>
+  <data name="Parser_InvalidEscapeSequence" xml:space="preserve">
+    <value>The escape sequence '\{0}' is not valid.</value>
+  </data>
+  <data name="AssignLeftNull" xml:space="preserve">
+    <value>Assignment could not be executed as the field or property to be assigned to is null.</value>
+  </data>
+  <data name="Error_ConfigFileMissingOrInvalid" xml:space="preserve">
+    <value>Application configuration file is either missing or does not contain authorizedTypes related configuration information.</value>
+  </data>
+  <data name="RuleSetValidationFailed" xml:space="preserve">
+    <value>Unable to execute rule set "{0}" as there are validation errors.</value>
+  </data>
+  <data name="InvalidConditionName" xml:space="preserve">
+    <value>Property "{0}" has invalid value. Condition name is invalid.</value>
+  </data>
+  <data name="ConditionRenameTitleText" xml:space="preserve">
+    <value>Rename Condition</value>
+  </data>
+  <data name="Parser_ExtraCharactersIgnored" xml:space="preserve">
+    <value>Extra characters ignored.</value>
+  </data>
+  <data name="Parser_InvalidHexDigit" xml:space="preserve">
+    <value>Invalid character '{0}' in hexadecimal number.</value>
+  </data>
+  <data name="NoHelp" xml:space="preserve">
+    <value>Help topic is not implemented.</value>
+  </data>
+  <data name="TraceRuleResult" xml:space="preserve">
+    <value>{0}: Rule "{1}" condition evaluated to {2}.</value>
+  </data>
+  <data name="TraceRuleSetEvaluate" xml:space="preserve">
+    <value>{0}: Executing</value>
+  </data>
+  <data name="MissingService" xml:space="preserve">
+    <value>The service "{0}" must be installed for this operation to succeed.  Ensure that this service is available.</value>
+  </data>
+  <data name="DeleteRule" xml:space="preserve">
+    <value>Delete Rule</value>
+  </data>
+  <data name="InvalidRuleAttributeParameter" xml:space="preserve">
+    <value>Parameter "{0}" was not found in member "{1}".</value>
+  </data>
+  <data name="MethodArgumentTypeMismatch" xml:space="preserve">
+    <value>Argument {0} to method "{1}" cannot be converted from "{2}" to "{3}".</value>
+  </data>
+  <data name="NamePropertyDescription" xml:space="preserve">
+    <value>Please specify the name of the Rule Expression condition.</value>
+  </data>
+  <data name="Error_ConditionParser" xml:space="preserve">
+    <value>Error building the condition:</value>
+  </data>
+  <data name="ExplicitUpdateOnly" xml:space="preserve">
+    <value>Explicit Update Only</value>
+  </data>
+  <data name="ConditionNameNotSet" xml:space="preserve">
+    <value>Condition name is not set.  Specify a name for this condition before editing the expression.</value>
+  </data>
+  <data name="UnexpectedArgumentType" xml:space="preserve">
+    <value>Argument "{1}" is not of type "{0}".</value>
+  </data>
+  <data name="ArraySizeInvalid" xml:space="preserve">
+    <value>The size of an array cannot be less than 0.</value>
+  </data>
+  <data name="Parser_BadTypeArgCount" xml:space="preserve">
+    <value>Incorrect number of type arguments for generic type "{0}".</value>
+  </data>
+  <data name="NullPropertyTarget" xml:space="preserve">
+    <value>Target object for property "{0}" can not be null.</value>
+  </data>
+  <data name="RuleSetEmptyNameErrorText" xml:space="preserve">
+    <value>The rule set must have a name. Please type a name for the rule set, or click Cancel.</value>
+  </data>
+  <data name="UnknownType" xml:space="preserve">
+    <value>The type name specified ("{0}") can not be resolved.</value>
+  </data>
+  <data name="Parser_NotAGenericType" xml:space="preserve">
+    <value>Type arguments are not allowed with non-generic type "{0}".</value>
+  </data>
+  <data name="TraceRuleActions" xml:space="preserve">
+    <value>{0}: Evaluating {1} actions for rule "{2}".</value>
+  </data>
+  <data name="ContextStackMissing" xml:space="preserve">
+    <value>Code generator context stack is missing from current ValidationManager.</value>
+  </data>
+  <data name="MethodOverloadNotFound" xml:space="preserve">
+    <value>No overloaded method "{0}" matched the supplied arguments.</value>
+  </data>
+  <data name="GenericMethodsNotSupported" xml:space="preserve">
+    <value>Generic methods are not supported.</value>
+  </data>
+  <data name="Parser_MissingCloseSquareBracket" xml:space="preserve">
+    <value>Missing ']' at end of array index.</value>
+  </data>
+  <data name="IndexerCountMismatch" xml:space="preserve">
+    <value>No indexer property was found that takes {0} arguments.</value>
+  </data>
+  <data name="TraceRuleTriggers" xml:space="preserve">
+    <value>{0}: Rule "{1}" {2} actions trigger rule "{3}"</value>
+  </data>
+  <data name="NullBinaryOpLHS" xml:space="preserve">
+    <value>The expression to the left of operator "{0}" can not be null.</value>
+  </data>
+  <data name="NullBinaryOpRHS" xml:space="preserve">
+    <value>The expression to the right of operator "{0}" can not be null.</value>
+  </data>
+  <data name="ConditionConfirmDeleteMessageText" xml:space="preserve">
+    <value>Are you sure you want to delete the selected condition?</value>
+  </data>
+  <data name="Parser_NoArrayCreationSize" xml:space="preserve">
+    <value>No array size or initializers were specified.</value>
+  </data>
+  <data name="ConditionNewNameLableText" xml:space="preserve">
+    <value>New name for condition:</value>
+  </data>
+  <data name="AttributePropertyNotFound" xml:space="preserve">
+    <value>{0} has a "{1}" that specifies  "{2}", but no matching property or field is found</value>
+  </data>
+  <data name="RuleSetPreviewLabelText" xml:space="preserve">
+    <value>Rule Set Preview</value>
+  </data>
+  <data name="ConditionExpression" xml:space="preserve">
+    <value>Condition Expression</value>
+  </data>
+  <data name="NullIndexerTarget" xml:space="preserve">
+    <value>The target object for the indexer operation cannot be null.</value>
+  </data>
+  <data name="StaticMember" xml:space="preserve">
+    <value>Static member "{0}" cannot be accessed with an instance reference. Qualify it with a type name instead.</value>
+  </data>
+  <data name="InvalidCast" xml:space="preserve">
+    <value>Unable to convert type '{0}' to type '{1}' as determined when the expression was validated.</value>
+  </data>
+  <data name="Parser_InvalidFloatingPointConstant" xml:space="preserve">
+    <value>Invalid floating point constant.  {0}</value>
+  </data>
+  <data name="Error_PropertyGet" xml:space="preserve">
+    <value>The following error was encountered while getting the property {0}.{1}: {2}</value>
+  </data>
+  <data name="Error_PropertySet" xml:space="preserve">
+    <value>The following error was encountered while setting the property {0}.{1}: {2}</value>
+  </data>
+  <data name="TargetEvaluatedNullProperty" xml:space="preserve">
+    <value>Cannot evaluate property "{0}" because its target object is null.</value>
+  </data>
+  <data name="RuleSetDuplicateNameErrorText" xml:space="preserve">
+    <value>The rule set name must be unique. Please type a unique name for the rule set, or click Cancel.</value>
+  </data>
+  <data name="ErrorsCollectionMissing" xml:space="preserve">
+    <value>Could not report errors when validating sub-expression. Errors property is null for RuleValidation instance associated with type "{0}".</value>
+  </data>
+  <data name="CodeStatementNotHandled" xml:space="preserve">
+    <value>Statements of type "{0}" are not supported.</value>
+  </data>
+  <data name="CannotAccessInternalMember" xml:space="preserve">
+    <value>The member "{0}" on type "{1}" cannot be accessed because it is internal.</value>
+  </data>
+  <data name="UnknownField" xml:space="preserve">
+    <value>The field "{0}" on type "{1}" does not exist or is not accessible.</value>
+  </data>
+  <data name="Parser_InvalidTypeArgument" xml:space="preserve">
+    <value>Invalid type argument.</value>
+  </data>
+  <data name="Error_TypeNotAuthorized" xml:space="preserve">
+    <value>Type {0} is not marked as authorized in the application configuration file.</value>
+  </data>
+  <data name="InvalidWildCardInPathQualifier" xml:space="preserve">
+    <value>The wildcard '*' is only allowed as the last part of the path in an Update action or RuleAttribute.</value>
+  </data>
+  <data name="DeleteRuleSet" xml:space="preserve">
+    <value>Delete Rule Set</value>
+  </data>
+  <data name="AmbiguousConversion" xml:space="preserve">
+    <value>Ambiguous user defined conversions for converting '{0}' to '{1}'.</value>
+  </data>
+  <data name="AssignRightNull" xml:space="preserve">
+    <value>Assignment could not be executed as the expression to be assigned is null.</value>
+  </data>
+  <data name="NullInvokeStatementExpression" xml:space="preserve">
+    <value>An expression must be specified for the expression statement.</value>
+  </data>
+  <data name="ReevaluationAlways" xml:space="preserve">
+    <value>Always</value>
+  </data>
+  <data name="Parser_UnknownIdentifier" xml:space="preserve">
+    <value>The identifier "{0}" could not be resolved.</value>
+  </data>
+  <data name="UpdateNotThis" xml:space="preserve">
+    <value>An Update action is only valid on fields or properties. The field or property to be updated should be specified as "this/field" or "this/property".</value>
+  </data>
+  <data name="AttributeFieldName" xml:space="preserve">
+    <value>Field "{0}.{1}"</value>
+  </data>
+  <data name="NullConstructorParameter" xml:space="preserve">
+    <value>Parameter {0} to constructor of type "{1}" can not be null.</value>
+  </data>
+  <data name="Error_InvalidPriority" xml:space="preserve">
+    <value>Value is invalid. Please type an integer value.</value>
+  </data>
+  <data name="ExpressionPropertyDescription" xml:space="preserve">
+    <value>Please specify the expression to be associated with the the Rule Expression condition's name.</value>
+  </data>
+  <data name="RuleValidationError" xml:space="preserve">
+    <value>Rule "{0}" validation failed. </value>
+  </data>
+  <data name="NullMethodTarget" xml:space="preserve">
+    <value>Target object for method "{0}" can not be null.</value>
+  </data>
+  <data name="TraceRuleIdentifier" xml:space="preserve">
+    <value>Rule Set "{0}": InstanceId {1}</value>
+  </data>
+  <data name="NullUpdate" xml:space="preserve">
+    <value>The field or property for an Update action cannot be null</value>
+  </data>
+  <data name="MissingRuleCondition" xml:space="preserve">
+    <value>A rule must specify a valid condition.</value>
+  </data>
+  <data name="Parser_MissingCloseAngleBracket" xml:space="preserve">
+    <value>Missing '&gt;' at end of generic type argument list.</value>
+  </data>
+  <data name="Parser_MissingLparenAfterCommand" xml:space="preserve">
+    <value>A '(' is expected after the "{0}" statement.</value>
+  </data>
+  <data name="NewRuleSetName" xml:space="preserve">
+    <value>Rule Set</value>
+  </data>
+  <data name="NullStatement" xml:space="preserve">
+    <value>The statement cannot be null.</value>
+  </data>
+  <data name="Parser_InvalidUpdateExpression" xml:space="preserve">
+    <value>The update path must be a string literal, or an expression that produces a single side effect path.</value>
+  </data>
+  <data name="No" xml:space="preserve">
+    <value>No</value>
+  </data>
+  <data name="AttributeMethodNotFound" xml:space="preserve">
+    <value>{0} has a "{1}" that specifies "{2}", but no matching method or property was found</value>
+  </data>
+  <data name="Parser_InvalidIntegerConstant" xml:space="preserve">
+    <value>Invalid integer constant.  {0}</value>
+  </data>
+  <data name="ConditionEmptyNameErrorText" xml:space="preserve">
+    <value>The condition must have a name. Please type a name for the condition, or click Cancel.</value>
+  </data>
+  <data name="UnknownMethod" xml:space="preserve">
+    <value>The method "{0}" on type "{1}" does not exist, is not accessible, or has no match with the signature specified.</value>
+  </data>
+  <data name="InvalidConditionExpression" xml:space="preserve">
+    <value>Property "{0}" has invalid value. Condition expression is invalid.</value>
+  </data>
+  <data name="RuleSetNameNotSet" xml:space="preserve">
+    <value>Rule set name is not set.  Specify a name for this rule set before editing it.</value>
+  </data>
+  <data name="MethodDirectionMismatch" xml:space="preserve">
+    <value>Argument {0} to method "{1}" must be passed with the "{2}" specifier.</value>
+  </data>
+  <data name="RuleSetDescriptionText" xml:space="preserve">
+    <value>Select a rule set to be assigned to the PolicyActivity. You can also add, edit, delete or rename an existing rule set.</value>
+  </data>
+  <data name="IndexerNotFound" xml:space="preserve">
+    <value>No indexer properties were found on type "{0}".</value>
+  </data>
+  <data name="Parser_UnknownNamespaceMember" xml:space="preserve">
+    <value>The identifier "{0}" could not be found within namespace "{1}".</value>
+  </data>
+  <data name="CyclicalExpression" xml:space="preserve">
+    <value>A cycle was detected in the expression.</value>
+  </data>
+  <data name="CannotWriteToExpression" xml:space="preserve">
+    <value>Cannot write to an expression of this type.</value>
+  </data>
+  <data name="UnknownPropertyGet" xml:space="preserve">
+    <value>The property "{0}" on type "{1}" does not exist, does not have a property getter, or is not accessible.</value>
+  </data>
+  <data name="UnknownPropertySet" xml:space="preserve">
+    <value>The property "{0}" on type "{1}" does not exist, does not have a property setter, or is not accessible.</value>
+  </data>
+  <data name="FieldSetNotAllowed" xml:space="preserve">
+    <value>The field "{0}" on type "{1}" is a literal and can not be set.</value>
+  </data>
+  <data name="AmbiguousMatch" xml:space="preserve">
+    <value>More than one method was found with the name "{0}" that would match the specified parameters. </value>
+  </data>
+  <data name="Parser_MissingRParenInSubexpression" xml:space="preserve">
+    <value>The ')' and the end of a parenthesized sub expression was not found.</value>
+  </data>
+  <data name="Parser_MissingRParenAfterArgumentList" xml:space="preserve">
+    <value>The ')' at the end of an argument list was not found.</value>
+  </data>
+  <data name="Yes" xml:space="preserve">
+    <value>Yes</value>
+  </data>
+  <data name="UnknownConstructor" xml:space="preserve">
+    <value>The constructor on type "{0}" does not exist, is not accessible, or has no match with the signature specified.</value>
+  </data>
+  <data name="MethodArgCountMismatch" xml:space="preserve">
+    <value>No method named "{0}" was found that takes {1} arguments.</value>
+  </data>
+  <data name="UnknownGenericType" xml:space="preserve">
+    <value>Unable to resolve the generic type "{0}".</value>
+  </data>
+  <data name="InvokeAttrRefersToParameterAttribute" xml:space="preserve">
+    <value>RuleInvokeAttribute may not refer to method or property "{0}" which specifies a read or write of a parameter.</value>
+  </data>
+  <data name="NewConditionName" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="ConditionDescriptionText" xml:space="preserve">
+    <value>Select a rule condition to be assigned to the activity's condition. You can also add, edit, delete or rename existing conditions.</value>
+  </data>
+  <data name="ArraySizeTypeInvalid" xml:space="preserve">
+    <value>The type of the array size ("{0}") is invalid.</value>
+  </data>
+  <data name="IndexersCannotBeStatic" xml:space="preserve">
+    <value>Indexer operations cannot be static.</value>
+  </data>
+  <data name="MissingIndexExpressions" xml:space="preserve">
+    <value>No index expressions were specified.</value>
+  </data>
+  <data name="CannotCastNullToValueType" xml:space="preserve">
+    <value>Null object cannot be converted to value type "{0}".</value>
+  </data>
+  <data name="Parser_UnknownLiteral" xml:space="preserve">
+    <value>Unrecognized literal expression.</value>
+  </data>
+  <data name="InitializerCountMismatch" xml:space="preserve">
+    <value>The number of initializers specified ({0}) is greater than the array dimension specified ({1}).</value>
+  </data>
+  <data name="AttributeMethodName" xml:space="preserve">
+    <value>Method "{0}.{1}" </value>
+  </data>
+  <data name="CodeExpressionNotHandled" xml:space="preserve">
+    <value>Expressions of type "{0}" are not supported.</value>
+  </data>
+  <data name="TraceRuleEvaluate" xml:space="preserve">
+    <value>{0}: Evaluating condition on rule "{1}".</value>
+  </data>
+  <data name="FullChaining" xml:space="preserve">
+    <value>Full Chaining</value>
+  </data>
+  <data name="AssignNotAllowed" xml:space="preserve">
+    <value>The expression type "{0}" is not assignable to the field/property of type "{1}".</value>
+  </data>
+  <data name="NoConversion" xml:space="preserve">
+    <value>Can not convert from '{0}' to '{1}'.</value>
+  </data>
+  <data name="NullAssignRight" xml:space="preserve">
+    <value>The right side of an assignment statement must represent an expression to be evaluated.</value>
+  </data>
+  <data name="InvokeNotHandled" xml:space="preserve">
+    <value>Statement could not be executed as the expression must be a method invocation.</value>
+  </data>
+  <data name="ConditionTitleText" xml:space="preserve">
+    <value>Select Condition</value>
+  </data>
+  <data name="NullValue" xml:space="preserve">
+    <value>&lt;null value&gt;</value>
+  </data>
+  <data name="AssignNotHandled" xml:space="preserve">
+    <value>Assignment could not be executed as the left side must represent a field or property.</value>
+  </data>
+  <data name="Parser_EmptyExpression" xml:space="preserve">
+    <value>The condition can not be empty.</value>
+  </data>
+  <data name="RuleNameMissing" xml:space="preserve">
+    <value>The rule name may not be empty or null.</value>
+  </data>
+  <data name="ConditionNameNotIdentical" xml:space="preserve">
+    <value>The condition "{0}" being updated does not match the name of the original ("{1}").</value>
+  </data>
+  <data name="NoActivity" xml:space="preserve">
+    <value>The object used is not an Activity.</value>
+  </data>
+  <data name="Error_MethodInvoke" xml:space="preserve">
+    <value>The following error was encountered while executing method {0}.{1}: {2}</value>
+  </data>
+  <data name="Error_ExpressionNotSupported" xml:space="preserve">
+    <value>Some part of the expression is not supported . Action canceled.</value>
+  </data>
+  <data name="RuleSet" xml:space="preserve">
+    <value>Rule Set</value>
+  </data>
+  <data name="ConditionNotFound" xml:space="preserve">
+    <value>Can not find the condition "{0}".</value>
+  </data>
+  <data name="TargetEvaluatedNullMethod" xml:space="preserve">
+    <value>Cannot invoke method "{0}" because its target object is null.</value>
+  </data>
+  <data name="NullConstructorTypeParameter" xml:space="preserve">
+    <value>Type parameter specified for parameter {0} of the constructor for type {1} can not be null.</value>
+  </data>
+  <data name="ConditionPreviewLabelText" xml:space="preserve">
+    <value>Condition Preview</value>
+  </data>
+  <data name="ReevaluationNever" xml:space="preserve">
+    <value>Never</value>
+  </data>
+  <data name="NotARuleConditionReference" xml:space="preserve">
+    <value>{0} is not a RuleConditionReference.</value>
+  </data>
+  <data name="CouldNotDetermineMemberType" xml:space="preserve">
+    <value>The type of the member "{0}" could not be determined.  Ensure that the declaration is correct.</value>
+  </data>
+  <data name="NullAssignLeft" xml:space="preserve">
+    <value>The left side of an assignment statement must represent a field or property.</value>
+  </data>
+  <data name="Error_ActionsParser" xml:space="preserve">
+    <value>Error parsing the Action(s):</value>
+  </data>
+  <data name="IndexerOverloadNotFound" xml:space="preserve">
+    <value>No overloaded indexer property matched the supplied arguments.</value>
+  </data>
+  <data name="InvokeStatementNull" xml:space="preserve">
+    <value>Statement could not be executed as the method invoke expression is null.</value>
+  </data>
+  <data name="CannotIndexType" xml:space="preserve">
+    <value>Indexing not supported on type "{0}".</value>
+  </data>
+  <data name="InitializerMismatch" xml:space="preserve">
+    <value>Initializer {0} of the constructor for type {1}[] does not match the expected type.</value>
+  </data>
+  <data name="IncompatibleComparisonTypes" xml:space="preserve">
+    <value>Operands of types "{0}" and "{1}" can not be compared.</value>
+  </data>
+  <data name="NonStaticMember" xml:space="preserve">
+    <value>An object reference is required for non-static member "{0}".</value>
+  </data>
+  <data name="Parser_MissingCloseSquareBracket1" xml:space="preserve">
+    <value>Missing ']' at end of array specification.</value>
+  </data>
+  <data name="CastOfNullInvalid" xml:space="preserve">
+    <value>Cannot convert null value to type "{0}".</value>
+  </data>
+  <data name="Parser_MissingTypeArguments" xml:space="preserve">
+    <value>Type arguments are required for generic type "{0}".</value>
+  </data>
+  <data name="RuleConfirmDeleteMessageText" xml:space="preserve">
+    <value>Are you sure you want to delete the selected rule?</value>
+  </data>
+  <data name="ArithOpBadTypes" xml:space="preserve">
+    <value>Arithmetic operator "{0}" cannot be used on operands of types "{1}" and "{2}".</value>
+  </data>
+  <data name="Parser_UnterminatedCharacterLiteral" xml:space="preserve">
+    <value>Unterminated character literal.</value>
+  </data>
+  <data name="AmbiguousConstructor" xml:space="preserve">
+    <value>More than one constructor for type "{0}" that would match the specified parameters. </value>
+  </data>
+  <data name="Parser_MissingIdentifierAfterDot" xml:space="preserve">
+    <value>An identifier was expected after the dot (.) operator.</value>
+  </data>
+  <data name="Parser_MissingDotAfterNamespace" xml:space="preserve">
+    <value>A "." is expected after a namespace.</value>
+  </data>
+  <data name="UnknownProperty" xml:space="preserve">
+    <value>The property "{0}" on type "{1}" does not exist or is not accessible.</value>
+  </data>
+  <data name="Parser_UnterminatedStringLiteral" xml:space="preserve">
+    <value>Unterminated string literal.</value>
+  </data>
+  <data name="ExpressionNotValidated" xml:space="preserve">
+    <value>The expression was not validated.</value>
+  </data>
+  <data name="RelationalOpBadTypes" xml:space="preserve">
+    <value>Relational operator "{0}" cannot be used on operands of types "{1}" and "{2}".</value>
+  </data>
+  <data name="InvalidConditionNameCaption" xml:space="preserve">
+    <value>Invalid Condition Name</value>
+  </data>
+  <data name="ArraySizeBoth" xml:space="preserve">
+    <value>The size of an array cannot be specified twice.</value>
+  </data>
+  <data name="TraceUpdate" xml:space="preserve">
+    <value>{0}: Rule "{1}" side effects enable rule "{2}" reevaluation.</value>
+  </data>
+  <data name="RuleSetConfirmDeleteMessageText" xml:space="preserve">
+    <value>Are you sure you want to delete the selected rule set?</value>
+  </data>
+  <data name="DebugModeEditsDisallowed" xml:space="preserve">
+    <value>Cannot edit the workflow in debug mode.</value>
+  </data>
+  <data name="AmbiguousIndexerMatch" xml:space="preserve">
+    <value>More than one indexer was found that would match the specified arguments.</value>
+  </data>
+  <data name="Sequential" xml:space="preserve">
+    <value>Sequential</value>
+  </data>
+  <data name="UpdateUnknownFieldOrProperty" xml:space="preserve">
+    <value>The field or property "{0}" specified for the Update action or RuleAttribute does not exist or is not accessible.</value>
+  </data>
+  <data name="RuleSetTitleText" xml:space="preserve">
+    <value>Select Rule Set</value>
+  </data>
+  <data name="ArrayIndexBadType" xml:space="preserve">
+    <value>Type "{0}" cannot be used as an array index.</value>
+  </data>
+  <data name="ArrayIndexBadRank" xml:space="preserve">
+    <value>Incorrect number of indices; expected {0}.</value>
+  </data>
+  <data name="TraceRuleConditionDependency" xml:space="preserve">
+    <value>{0}: Rule "{1}" {2} dependency: "{3}"</value>
+  </data>
+  <data name="ValidationMismatch" xml:space="preserve">
+    <value>The type used for validation ("{0}") is not compatible with the type of the object specified ("{1}").</value>
+  </data>
+  <data name="RuleSetExists" xml:space="preserve">
+    <value>Rule set "{0}" already exists. Specify a unique name for this new rule set.</value>
+  </data>
+  <data name="Error_ConstructorInvoke" xml:space="preserve">
+    <value>The following error was encountered while executing the constructor on {0}: {1}</value>
+  </data>
+  <data name="TargetEvaluatedNullField" xml:space="preserve">
+    <value>Cannot evaluate field "{0}" because its target object is null.</value>
+  </data>
+  <data name="ConditionExists" xml:space="preserve">
+    <value>Condition "{0}" already exists. Specify a unique name for this new condition.</value>
+  </data>
+  <data name="ConditionEditor" xml:space="preserve">
+    <value>Condition Editor</value>
+  </data>
+  <data name="AttributePropertyName" xml:space="preserve">
+    <value>Property "{0}.{1}"</value>
+  </data>
+  <data name="DeleteCondition" xml:space="preserve">
+    <value>Delete Condition</value>
+  </data>
+  <data name="Parser_InvalidExponentDigit" xml:space="preserve">
+    <value>Invalid character '{0}' in floating point exponent.</value>
+  </data>
+  <data name="ArrayTypeInvalid" xml:space="preserve">
+    <value>Only single dimensional arrays are allowed. Defining an array of type "{0}" is not supported.</value>
+  </data>
+  <data name="DuplicateConditions" xml:space="preserve">
+    <value>More than one condition named "{0}" was found in the condition collection. Only the first condition will be used. Make sure all conditions have unique names.</value>
+  </data>
+  <data name="IncompatibleNullTypes" xml:space="preserve">
+    <value>Operands of type "{0}" can not be compared with null.</value>
+  </data>
+  <data name="LogicalOpBadTypeLHS" xml:space="preserve">
+    <value>The expression to the left of the logical operator "{0}" must return a Boolean result. Currently it evaluates to type "{1}".</value>
+  </data>
+  <data name="LogicalOpBadTypeRHS" xml:space="preserve">
+    <value>The expression to the right of the logical operator "{0}" must return a Boolean result. Currently it evaluates to type "{1}".</value>
+  </data>
+  <data name="IncompatibleArithmeticTypes" xml:space="preserve">
+    <value>Arithmetic operator "{1}" is not valid on operands of types "{0}" and "{2}".</value>
+  </data>
+  <data name="CannotAccessPrivateMember" xml:space="preserve">
+    <value>The member "{0}" on type "{1}" cannot be accessed because it is private.</value>
+  </data>
+  <data name="Condition" xml:space="preserve">
+    <value>Condition</value>
+  </data>
+  <data name="NullTypeType" xml:space="preserve">
+    <value>The type specified for an Expression can not be null.</value>
+  </data>
+  <data name="NullCastType" xml:space="preserve">
+    <value>The target type of the cast operator is missing.</value>
+  </data>
+  <data name="NullCastExpr" xml:space="preserve">
+    <value>The operand of the cast operator cannot be null.</value>
+  </data>
+  <data name="ConditionDuplicateNameErrorText" xml:space="preserve">
+    <value>The condition name must be unique. Please type a unique name for the condition, or click Cancel.</value>
+  </data>
+  <data name="TraceRuleHeader" xml:space="preserve">
+    <value>Rule Set "{0}"</value>
+  </data>
+  <data name="Parser_InvalidCharacter" xml:space="preserve">
+    <value>The character '{0}' is not valid.</value>
+  </data>
+  <data name="Parser_InvalidDecimalConstant" xml:space="preserve">
+    <value>Invalid decimal constant.  {0}</value>
+  </data>
+  <data name="BinaryOpNotSupported" xml:space="preserve">
+    <value>Binary operator "{0}" is not supported.</value>
+  </data>
+  <data name="ConditionExpressionNull" xml:space="preserve">
+    <value>The condition expression can not be null.</value>
+  </data>
+  <data name="BinaryOpFails" xml:space="preserve">
+    <value>Unable to evaluate operator {0} on types '{1}' and '{2}'.</value>
+  </data>
+  <data name="AmbiguousOperator" xml:space="preserve">
+    <value>The operator '{0}' is ambiguous between the following methods: '{1}' and '{2}'.</value>
+  </data>
+  <data name="NotCloneable" xml:space="preserve">
+    <value>Objects of type "{0}" do not support ICloneable, and can not be cloned.</value>
+  </data>
+  <data name="ConditionMustBeBoolean" xml:space="preserve">
+    <value>Condition expression must evaluate to true or false.</value>
+  </data>
+  <data name="InvalidRuleSetName" xml:space="preserve">
+    <value>Property "{0}" has an invalid value. Rule set name is invalid.</value>
+  </data>
+  <data name="TraceRuleActionSideEffect" xml:space="preserve">
+    <value>{0}: Rule "{1}" {2} side-effect: "{3}"</value>
+  </data>
+  <data name="NullMethodParameter" xml:space="preserve">
+    <value>Parameter {0} to method "{1}" can not be null.</value>
+  </data>
+  <data name="RuleSetNotFound" xml:space="preserve">
+    <value>Can not find the rule set "{0}". Check if rule set is defined in the rules file.</value>
+  </data>
+  <data name="Else" xml:space="preserve">
+    <value>ELSE</value>
+  </data>
+  <data name="Then" xml:space="preserve">
+    <value>THEN</value>
+  </data>
+  <data name="Parser_MissingOperand" xml:space="preserve">
+    <value>Missing operand.</value>
+  </data>
+  <data name="UnreachableCodeHalt" xml:space="preserve">
+    <value>Statements after the Halt action will not be executed.</value>
+  </data>
+  <data name="ConditionValidationFailed" xml:space="preserve">
+    <value>Unable to evaluate Condition "{0}" as there are validation errors.</value>
+  </data>
+  <data name="NewRuleName" xml:space="preserve">
+    <value>Rule</value>
+  </data>
+</root>
