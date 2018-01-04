@@ -1,0 +1,1451 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<root>
+	<!-- 
+		Microsoft ResX Schema
+
+		Version 1.3
+
+		The primary goals of this format is to allow a simple XML format 
+		that is mostly human readable. The generation and parsing of the 
+		various data types are done through the TypeConverter classes 
+		associated with the data types.
+
+		Example:
+
+		... ado.net/XML headers & schema ...
+		<resheader name="resmimetype">text/microsoft-resx</resheader>
+		<resheader name="version">1.3</resheader>
+		<resheader name="reader">System.Resources.ResXResourceReader, System.Windows.Forms, ...</resheader>
+		<resheader name="writer">System.Resources.ResXResourceWriter, System.Windows.Forms, ...</resheader>
+		<data name="Name1">this is my long string</data>
+		<data name="Color1" type="System.Drawing.Color, System.Drawing">Blue</data>
+		<data name="Bitmap1" mimetype="application/x-microsoft.net.object.binary.base64">
+			[base64 mime encoded serialized .NET Framework object]
+		</data>
+		<data name="Icon1" type="System.Drawing.Icon, System.Drawing" mimetype="application/x-microsoft.net.object.bytearray.base64">
+			[base64 mime encoded string representing a byte array form of the .NET Framework object]
+		</data>
+
+		There are any number of "resheader" rows that contain simple 
+		name/value pairs.
+
+		Each data row contains a name, and value. The row also contains a 
+		type or mimetype. Type corresponds to a .NET class that support 
+		text/value conversion through the TypeConverter architecture. 
+		Classes that don't support this are serialized and stored with the 
+		mimetype set.
+
+		The mimetype is used for serialized objects, and tells the 
+		ResXResourceReader how to depersist the object. This is currently not 
+		extensible. For a given mimetype the value must be set accordingly:
+
+		Note - application/x-microsoft.net.object.binary.base64 is the format 
+		that the ResXResourceWriter will generate, however the reader can 
+		read any of the formats listed below.
+
+		mimetype: application/x-microsoft.net.object.binary.base64
+		value   : The object must be serialized with 
+			: System.Serialization.Formatters.Binary.BinaryFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.soap.base64
+		value   : The object must be serialized with 
+			: System.Runtime.Serialization.Formatters.Soap.SoapFormatter
+			: and then encoded with base64 encoding.
+
+		mimetype: application/x-microsoft.net.object.bytearray.base64
+		value   : The object must be serialized into a byte array 
+			: using a System.ComponentModel.TypeConverter
+			: and then encoded with base64 encoding.
+	-->
+	
+	<xsd:schema id="root" xmlns="" xmlns:xsd="http://www.w3.org/2001/XMLSchema" xmlns:msdata="urn:schemas-microsoft-com:xml-msdata">
+		<xsd:element name="root" msdata:IsDataSet="true">
+			<xsd:complexType>
+				<xsd:choice maxOccurs="unbounded">
+					<xsd:element name="data">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+								<xsd:element name="comment" type="xsd:string" minOccurs="0" msdata:Ordinal="2" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" msdata:Ordinal="1" />
+							<xsd:attribute name="type" type="xsd:string" msdata:Ordinal="3" />
+							<xsd:attribute name="mimetype" type="xsd:string" msdata:Ordinal="4" />
+						</xsd:complexType>
+					</xsd:element>
+					<xsd:element name="resheader">
+						<xsd:complexType>
+							<xsd:sequence>
+								<xsd:element name="value" type="xsd:string" minOccurs="0" msdata:Ordinal="1" />
+							</xsd:sequence>
+							<xsd:attribute name="name" type="xsd:string" use="required" />
+						</xsd:complexType>
+					</xsd:element>
+				</xsd:choice>
+			</xsd:complexType>
+		</xsd:element>
+	</xsd:schema>
+	<resheader name="resmimetype">
+		<value>text/microsoft-resx</value>
+	</resheader>
+	<resheader name="version">
+		<value>1.3</value>
+	</resheader>
+	<resheader name="reader">
+		<value>System.Resources.ResXResourceReader, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+	<resheader name="writer">
+		<value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=2.0.3500.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+	</resheader>
+  <data name="Error_SerializerReadOnlyPropertyAndValueIsNull" xml:space="preserve">
+    <value>Could not deserialize compound property '{0}' on object of type '{1}'. The property is readonly and the getter method returned a null value.</value>
+  </data>
+  <data name="Error_AlreadyRegisteredAs" xml:space="preserve">
+    <value>Already registered as: {0}.</value>
+  </data>
+  <data name="Error_InvalidConnectorSource" xml:space="preserve">
+    <value>Source and target of the connectors do not contain a common connector container.</value>
+  </data>
+  <data name="Error_CantUseCurrentProjectTypeAsBase" xml:space="preserve">
+    <value>You cannot choose a type from the current project as the base type for your custom activity.</value>
+  </data>
+  <data name="SequenceActivityDescription" xml:space="preserve">
+    <value>Executes contained activities sequentially.</value>
+  </data>
+  <data name="CustomActivityBaseClassTypeFilterProviderDesc" xml:space="preserve">
+    <value>Showing types which derive from Activity.</value>
+  </data>
+  <data name="Error_TypePropertyInvalid" xml:space="preserve">
+    <value>Property '{0}' is not set or its value cannot be resolved to an actual type.</value>
+  </data>
+  <data name="SuspendErrorMessageDescr" xml:space="preserve">
+    <value>Please specify an error message used when suspending the workflow.</value>
+  </data>
+  <data name="Handlers" xml:space="preserve">
+    <value>Handlers</value>
+  </data>
+  <data name="BaseActivityType" xml:space="preserve">
+    <value>Base Class</value>
+  </data>
+  <data name="Error_LayoutSerializationRootDesignerNotFound" xml:space="preserve">
+    <value>Could not load the designer layout. Design surface does not contain a root designer.</value>
+  </data>
+  <data name="Error_InvalidCustomPropertyName" xml:space="preserve">
+    <value>One of the custom properties name value is either not set or invalid.</value>
+  </data>
+  <data name="Error_InvalidCustomPropertyType" xml:space="preserve">
+    <value>Custom property '{0}' has an invalid value. The property type is either not set or invalid.</value>
+  </data>
+  <data name="Error_InvalidCancelActivityState" xml:space="preserve">
+    <value>Cannot mark activity as canceled in its current state.</value>
+  </data>
+  <data name="Error_DynamicActivity2" xml:space="preserve">
+    <value>CompositeActivity '{0}' status is currently '{1}'. Workflow changes for '{2}' activity are allowed only when the activity is 'Initialized' or 'Executing' or 'Closed'.</value>
+  </data>
+  <data name="Error_RecursionDetected" xml:space="preserve">
+    <value>Recursive call detected: {0}</value>
+  </data>
+  <data name="TransactionalContextActivityDescription" xml:space="preserve">
+    <value>Executes contained activities sequentially and in transaction.</value>
+  </data>
+  <data name="FaultHandlerActivityDescription" xml:space="preserve">
+    <value>Enables execution of contained activities based on specified exception.</value>
+  </data>
+  <data name="CustomActivityBaseTypeDesc" xml:space="preserve">
+    <value>Please specify base class of the activity.</value>
+  </data>
+  <data name="Error_ValidatorTypeIsInvalid" xml:space="preserve">
+    <value>validatorType must derive from Validator.</value>
+  </data>
+  <data name="Error_CompilerValidationFailed" xml:space="preserve">
+    <value>Workflow failed to compile. Check the 'Errors' property for a complete list of validation errors.</value>
+  </data>
+  <data name="Error_ExceptionTypeNotException" xml:space="preserve">
+    <value>Value '{0}' is invalid. Property '{1}' of Exception variable must inherit from Exception.</value>
+  </data>
+  <data name="Error_CompensantionParentNotScope" xml:space="preserve">
+    <value>Parent of Compensation must be a Scope.</value>
+  </data>
+  <data name="IsolationLevelDescr" xml:space="preserve">
+    <value>Specify Isolation level for TransactionScopeActivity.</value>
+  </data>
+  <data name="Error_TypeNotResolved" xml:space="preserve">
+    <value>The type '{0}' could not be resolved.</value>
+  </data>
+  <data name="Error_CollectionHasNullEntry" xml:space="preserve">
+    <value>The collection contains a null object.</value>
+  </data>
+  <data name="FilterDescription_UITypeEditor" xml:space="preserve">
+    <value>Showing types which inherit from UITypeEditor.</value>
+  </data>
+  <data name="Error_SerializerNoMemberFound" xml:space="preserve">
+    <value>Could not find property or event '{0}' on type '{1}'.</value>
+  </data>
+  <data name="Error_TypeNotResolvedInFieldName" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type containing field is not resolved.</value>
+  </data>
+  <data name="SupportsTransaction" xml:space="preserve">
+    <value>Supports Transaction</value>
+  </data>
+  <data name="Error_CantDetermineBaseType" xml:space="preserve">
+    <value>Cannot determine the base type of the property being promoted.</value>
+  </data>
+  <data name="Error_BindDialogWrongPropertyType" xml:space="preserve">
+    <value>Currently selected property has a wrong type of '{0}' instead of '{1}'.</value>
+  </data>
+  <data name="RootActivityNameDesc" xml:space="preserve">
+    <value>Please specify name of the activity used to generate associated type.</value>
+  </data>
+  <data name="Error_CompilationFailed" xml:space="preserve">
+    <value>Compilation failed. {0}</value>
+  </data>
+  <data name="DuplicateActivityIdentifier" xml:space="preserve">
+    <value>There is already a component named '{0}'.  Components must have unique names, and names must be case-insensitive.  A name also cannot conflict with the name of any component in an inherited class.</value>
+  </data>
+  <data name="Error_TypeIsNotRootActivity" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type needs to be a root activity.</value>
+  </data>
+  <data name="Error_RemoveExecutingActivity" xml:space="preserve">
+    <value>Cannot remove activity '{0}'. It is currently 'Executing'.</value>
+  </data>
+  <data name="Error_SerializerComplexPropertySetFailed" xml:space="preserve">
+    <value>Could not deserialize complex property '{0}'. Could not set property '{1}' on object of type '{2}'.</value>
+  </data>
+  <data name="Error_XomlWorkflowHasCode" xml:space="preserve">
+    <value>'x:Code' cannot be used the because the root activity doesn't have the 'x:Class' property.</value>
+  </data>
+  <data name="Error_DPAddHandlerNonEvent" xml:space="preserve">
+    <value>DependencyProperty is not an event.</value>
+  </data>
+  <data name="Error_InvalidDataFoundForType" xml:space="preserve">
+    <value>Invalid data found while deserializing an object of type '{0}'.</value>
+  </data>
+  <data name="Bind_ActivityDataSourceRecursionDetected" xml:space="preserve">
+    <value>Bind ActivityReference Recursion detected.</value>
+  </data>
+  <data name="Error_TypeSystemAttributeArgument" xml:space="preserve">
+    <value>Type system could not construct the Attribute argument.</value>
+  </data>
+  <data name="Error_BindDialogNoValidPropertySelected" xml:space="preserve">
+    <value>Please select a property of type '{0}'.</value>
+  </data>
+  <data name="Error_SerializerAttributesFoundInComplexProperty" xml:space="preserve">
+    <value>Attributes found in complex property '{0}' while deserializing an object of type '{1}'. You cannot specify attributes in a Complex Property element.</value>
+  </data>
+  <data name="Error_SerializerMemberSetFailed" xml:space="preserve">
+    <value>Could not deserialize member '{0}'. Could not set value '{1}' on member '{2}' of type '{3}'. {4}</value>
+  </data>
+  <data name="Error_Recursion" xml:space="preserve">
+    <value>Adding an activity '{0}' to itself is disallowed.</value>
+  </data>
+  <data name="Error_FieldTypeNotResolved" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Could not resolve field type of field '{1}'.</value>
+  </data>
+  <data name="Error_InvalidShadowRectangle" xml:space="preserve">
+    <value>Shadow rectangle cannot be empty and its height and width should be positive values.</value>
+  </data>
+  <data name="EnabledDescr" xml:space="preserve">
+    <value>Please specify if the activity is enabled or not. If an activity is not enabled it will not participate in the execution and validation.</value>
+  </data>
+  <data name="Error_DPReadOnly" xml:space="preserve">
+    <value>The property is read only.</value>
+  </data>
+  <data name="General_MissingService" xml:space="preserve">
+    <value>The service '{0}' must be installed for this operation to succeed.  Ensure that this service is available.</value>
+  </data>
+  <data name="Error_MustHaveParent" xml:space="preserve">
+    <value>This activity cannot be executed stand alone, it must be nested inside a activity.</value>
+  </data>
+  <data name="Error_SerializerPropertyGetFailed" xml:space="preserve">
+    <value>Could not serialize property '{0}'. Could not get value for property '{0}' of type '{1}'. {2}</value>
+  </data>
+  <data name="Error_NotReadOnlyProperty" xml:space="preserve">
+    <value>Dependency Property '{0}:{1}' is not Read Only. SetReadOnlyPropertyValue can only be called on Read Only Dependency Properties.</value>
+  </data>
+  <data name="Error_TypeNotResolvedInPropertyName" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type containing property is not resolved.</value>
+  </data>
+  <data name="Error_UnboundGenericType" xml:space="preserve">
+    <value>You must bind all parameter of a generic type used in a custom property.</value>
+  </data>
+  <data name="FaultTypeDescription" xml:space="preserve">
+    <value>Please specify the Type of Exception to throw.</value>
+  </data>
+  <data name="Error_PropertyTypeMismatch" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Property type '{1}' does not match with the expected type '{2}'.</value>
+  </data>
+  <data name="TimeoutDescr" xml:space="preserve">
+    <value>Specify timeout duration for TransactionScopeActivity.</value>
+  </data>
+  <data name="ParameterTypeDescription" xml:space="preserve">
+    <value>Specify the type of this parameter.</value>
+  </data>
+  <data name="Error_SerializerNoSerializeLogic" xml:space="preserve">
+    <value>Could not serialize property '{0}' on object of type '{1}' as simple property. Please override SerializeToString() method in your serializer or checkout the exceptions thrown by SerializeToString() method.</value>
+  </data>
+  <data name="Error_InvalidAttributes" xml:space="preserve">
+    <value>One or more attributes specified on object of type '{0}' may have invalid parameters. Please make sure that attributes have valid parameters.</value>
+  </data>
+  <data name="Error_LanguageNeedsToBeVBCSharp" xml:space="preserve">
+    <value>Language '{0}' is not supported. Only Visual Basic and C# languages are supported.</value>
+  </data>
+  <data name="Error_ConfigFileMissingOrInvalid" xml:space="preserve">
+    <value>Application configuration file is either missing or does not contain authorizedTypes related configuration information.</value>
+  </data>
+  <data name="Warning_EmptyBehaviourActivity" xml:space="preserve">
+    <value>Empty behavior activity '{1}' of type {0} found, this might override default behavior from execution, check whether this is intended.</value>
+  </data>
+  <data name="Error_TargetFxNotSupported" xml:space="preserve">
+    <value>Target framework '{0}' is not supported. Only 'v3.0', 'v3.5' and 'v4.0' frameworks are supported.</value>
+  </data>
+  <data name="Error_CanNotAddActivityInBlackBoxActivity" xml:space="preserve">
+    <value>Can not add activity in a CompositeActivity which has built in children.</value>
+  </data>
+  <data name="NameDescr" xml:space="preserve">
+    <value>Please specify the identifier of the activity. It has to be unique in the workflow.</value>
+  </data>
+  <data name="Error_PropertyDefaultIsReference" xml:space="preserve">
+    <value>A default value cannot be supplied for DependencyProperty '{0}' because its type is a reference type.  Default values are only supported on value types.</value>
+  </data>
+  <data name="Error_MethodReturnTypeMismatch" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Return type for method specified in 'Path' property should be '{1}'.</value>
+  </data>
+  <data name="Error_MissingRootActivity" xml:space="preserve">
+    <value>Cannot find the root activity component.</value>
+  </data>
+  <data name="DescriptionDescr" xml:space="preserve">
+    <value>Please specify the description of the activity.</value>
+  </data>
+  <data name="Error_NoPasteSupport" xml:space="preserve">
+    <value>Component does not support paste.</value>
+  </data>
+  <data name="Error_SerializerPrimitivePropertyNoLogic" xml:space="preserve">
+    <value>Could not deserialize simple property '{0}'. Don't know how to deserialize property '{1}' on object of type '{2}'.</value>
+  </data>
+  <data name="Error_MultipleRootActivityCreator" xml:space="preserve">
+    <value>Cannot have multiple Root Activity creator methods.</value>
+  </data>
+  <data name="Error_PropertyHasIndexParameters" xml:space="preserve">
+    <value>Bind with PropertyReference '{1}' resolves to a property which has index parameters. Indexers are not allowed when binding to property.</value>
+  </data>
+  <data name="Error_FaultHandlerActivityWrongOrder" xml:space="preserve">
+    <value>A FaultHandlerActivity for exception type '{0}' must be added before the handler for exception type '{1}'.</value>
+  </data>
+  <data name="Error_InvalidLightSource" xml:space="preserve">
+    <value>Light source intensity needs to be between 0.0f and 1.0f.</value>
+  </data>
+  <data name="Error_MoreThanOneCancelHandler" xml:space="preserve">
+    <value>{0} can have only one CancellationHandlerActivity activity.</value>
+  </data>
+  <data name="RootActivityName" xml:space="preserve">
+    <value>Name</value>
+  </data>
+  <data name="Error_MoreThanOneCompensationDecl" xml:space="preserve">
+    <value>{0} can have only one CompensationHandlerActivity activity.</value>
+  </data>
+  <data name="Error_InvalidConnectorSegment" xml:space="preserve">
+    <value>ConnectorSegment needs to be either vertical or horizontal.</value>
+  </data>
+  <data name="Error_RootActivityTypeInvalid2" xml:space="preserve">
+    <value>The root activity type is invalid. A root activity must inherit from the CompositeActivity class and must not have a Parent.</value>
+  </data>
+  <data name="Error_CompensateBadNesting" xml:space="preserve">
+    <value>CompensateActivity must be nested in a CompensationHandlerActivity or FaultHandlerActivity.</value>
+  </data>
+  <data name="ActivityBindPathDescription" xml:space="preserve">
+    <value>Specify the path of the activity member for binding. Examples: MemberName, MemberName.PropertyName, MemberName.PropertyName[0].PropertyName</value>
+  </data>
+  <data name="Error_PropertyTypeNotDefined" xml:space="preserve">
+    <value>Could not set binding for property '{0}' as property type is not specified. The type of property should other than '{1}'. For property of type '{1}'; specify the type by implementing '{2}'.</value>
+  </data>
+  <data name="Error_MissingDefaultConstructor" xml:space="preserve">
+    <value>Type '{0}' does not have a default constructor.</value>
+  </data>
+  <data name="Error_ActivityBindTypeConversionError" xml:space="preserve">
+    <value>Value '{0}' specified for Property '{1}' could not be converted to type '{2}'.</value>
+  </data>
+  <data name="Error_EmptyToolTipRectangle" xml:space="preserve">
+    <value>ToolTip rectangle cannot be empty.</value>
+  </data>
+  <data name="Error_WrongParamForActivityResolveEventArgs" xml:space="preserve">
+    <value>Either 'activityType' or 'workflowMarkup' must contain valid value, but at least one of them must be null.</value>
+  </data>
+  <data name="Error_LRTScopeNestedInNonLRT" xml:space="preserve">
+    <value>An activity with PersistOnClose attribute can not be nested inside a TransactionScopeActivity.</value>
+  </data>
+  <data name="TypeDescr" xml:space="preserve">
+    <value>Please specify the type.</value>
+  </data>
+  <data name="DragDropActivities" xml:space="preserve">
+    <value>Dragging and dropping Activities.</value>
+  </data>
+  <data name="Error_ParameterCannotBeEmpty" xml:space="preserve">
+    <value>Parameter cannot be empty.</value>
+  </data>
+  <data name="Error_SerializerStackOverflow" xml:space="preserve">
+    <value>Failed to serialize Object '{0}' of type '{1}'. The object has a circular reference which could potentially lead to Stack Overflow.</value>
+  </data>
+  <data name="Error_MoreThanOneFaultHandlersActivityDecl" xml:space="preserve">
+    <value>{0} can have only one FaultHandlersActivity activity.</value>
+  </data>
+  <data name="Error_DerivationFromTypeWithLocalDataContext" xml:space="preserve">
+    <value>Activity can not inherit from the class which has local data context.</value>
+  </data>
+  <data name="Error_ActivityCircularReference" xml:space="preserve">
+    <value>Circular reference detected in the activity tree.</value>
+  </data>
+  <data name="Error_SerializerPrimitivePropertyReadOnly" xml:space="preserve">
+    <value>Could not deserialize simple property '{0}'. The property '{1}' is readonly on type '{2}'.</value>
+  </data>
+  <data name="Error_InvalidExecutionState" xml:space="preserve">
+    <value>Activity status must be 'Initialized' for executing.</value>
+  </data>
+  <data name="Error_InvalidDockStyle" xml:space="preserve">
+    <value>Argument value is invalid.</value>
+  </data>
+  <data name="Error_InvalidStateToExecuteChild" xml:space="preserve">
+    <value>Activity execution status must be 'Executing', 'Canceling', 'Faulting' OR 'Compensating' to perform operations on a child activity.</value>
+  </data>
+  <data name="Error_ContextStackItemMissing" xml:space="preserve">
+    <value>Context stack does not contain required item of type {0}.</value>
+  </data>
+  <data name="Error_InvalidArgumentIndex" xml:space="preserve">
+    <value>The index is greater than the number of attribute arguments</value>
+  </data>
+  <data name="Error_ActivityIdentifierCanNotBeEmpty" xml:space="preserve">
+    <value>Activity name can not be empty.</value>
+  </data>
+  <data name="Standard" xml:space="preserve">
+    <value>Standard</value>
+  </data>
+  <data name="Error_InvalidArgumentValue" xml:space="preserve">
+    <value>Argument value is invalid.</value>
+  </data>
+  <data name="ExceptionTypeDescr" xml:space="preserve">
+    <value>Please specify the Type of Exception to catch.</value>
+  </data>
+  <data name="ToolboxItem" xml:space="preserve">
+    <value>ToolboxItem</value>
+  </data>
+  <data name="Bind_DuplicateDataSourceNames" xml:space="preserve">
+    <value>Data Source '{1}' already exists in the Scope '{0}'.</value>
+  </data>
+  <data name="InvokeParameterDescription" xml:space="preserve">
+    <value>Please specify a value for property of type '{0}'.</value>
+  </data>
+  <data name="ParameterDlgDescription" xml:space="preserve">
+    <value>Add, remove or edit a workflow parameter.  Parameters added here will appear in the code beside file as properties.</value>
+  </data>
+  <data name="RoleDescr" xml:space="preserve">
+    <value>Please specify the role to which this task will be assigned to.</value>
+  </data>
+  <data name="Error_MissingAddHandler" xml:space="preserve">
+    <value>Attached DependencyProperty '{0}:{1}' of type Event does not have static accessor 'Add{0}Handler'.</value>
+  </data>
+  <data name="Error_ContentPropertyValueInvalid" xml:space="preserve">
+    <value>Type '{0}' of value specified for Content Property '{1}' is invalid. The type of needs to be of type '{2}'.</value>
+  </data>
+  <data name="CurrentProject" xml:space="preserve">
+    <value>&lt;Current Project&gt;</value>
+  </data>
+  <data name="Error_MethodDataSourceIsReadOnly" xml:space="preserve">
+    <value>Cannot set value for Bind with MethodDataSource. MethodDataSource is Read Only.</value>
+  </data>
+  <data name="AEC_InvalidNestedActivity" xml:space="preserve">
+    <value>The passed in activity must be nested child or self of the current activity of the ActivityExecutionContext..</value>
+  </data>
+  <data name="ChooseActivityDatasource" xml:space="preserve">
+    <value>&lt;Activity Reference...&gt;</value>
+  </data>
+  <data name="Error_ContentCanNotBeConverted" xml:space="preserve">
+    <value>Contents '0' specified for Content Property '{1}' on type '{2}' could not be converted to property type '{3}'.</value>
+  </data>
+  <data name="GetDynamicActivities_InvalidActivity" xml:space="preserve">
+    <value>The activity parameter must be a child of the activity being invoked.</value>
+  </data>
+  <data name="Error_BaseTypeMustBeActivity" xml:space="preserve">
+    <value>The base type for a custom activity must derive from the Activity class.</value>
+  </data>
+  <data name="Error_UITypeEditorTypeNotUITypeEditor" xml:space="preserve">
+    <value>The type chosen as the UITypeEditor of the CustomProperty does not derive from UITypeEditor</value>
+  </data>
+  <data name="NonDelegateTargetType" xml:space="preserve">
+    <value>TargetType '{0}' is not a delegate. TargetType should be a delegate type for MethodBind.</value>
+  </data>
+  <data name="NamespaceAndDeclaringTypeCannotBeNull" xml:space="preserve">
+    <value>Type system could not create design time type as both namespace and declaring type are null.</value>
+  </data>
+  <data name="Error_MethodNotExists" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Method '{1}' does not exist.</value>
+  </data>
+  <data name="Error_IDNotSetForActivitySource" xml:space="preserve">
+    <value>Property 'Name' is not set for activity source bind.</value>
+  </data>
+  <data name="FilterDescription_GenericArgument" xml:space="preserve">
+    <value>Showing types for parameter {0}</value>
+  </data>
+  <data name="Error_InvalidRootForWorkflowChanges" xml:space="preserve">
+    <value>Could not clone the root activity.  The WorkflowLoader failed to create an instance of the workflow.</value>
+  </data>
+  <data name="Error_BindDialogBindNotValid" xml:space="preserve">
+    <value>Please correct the following errors in specified binding: </value>
+  </data>
+  <data name="Error_ChangingDock" xml:space="preserve">
+    <value>Docking can not be changed after construction.</value>
+  </data>
+  <data name="Parameters" xml:space="preserve">
+    <value>Parameters</value>
+  </data>
+  <data name="Error_NestedPersistOnClose" xml:space="preserve">
+    <value>Activity {0} is marked with PersistOnClose attribute and cannot be nested inside a TransactionScopeActivity.</value>
+  </data>
+  <data name="Error_ActiveChildExist" xml:space="preserve">
+    <value>CompositeActivity cannot transition to 'Closed' status when there are active child activity.</value>
+  </data>
+  <data name="Error_InvalidCloseActivityState" xml:space="preserve">
+    <value>Cannot mark activity as closed in its current state.</value>
+  </data>
+  <data name="Error_InvalidClosingState" xml:space="preserve">
+    <value>Activity status not suitable for closing.</value>
+  </data>
+  <data name="Error_InvalidMemberPath" xml:space="preserve">
+    <value>'Path' property has invalid value. '{0}' specified in Binding does not contain member with name '{1}'.</value>
+  </data>
+  <data name="Error_InvalidMemberType" xml:space="preserve">
+    <value>Path '{0}' resolves to a Method. You can bind to a Method only for Events. '{1}' is not an Event.</value>
+  </data>
+  <data name="Error_PropertyNotSet" xml:space="preserve">
+    <value>Property '{0}' is not set.</value>
+  </data>
+  <data name="Error_DataSourceNotExist" xml:space="preserve">
+    <value>DataSource '{0}' does not exist in the context of ISupportDataContext '{1}'.</value>
+  </data>
+  <data name="Error_NotRegisteredAs" xml:space="preserve">
+    <value>Not registered as: {0}.</value>
+  </data>
+  <data name="Error_XSDObjectTypeNotSerializable" xml:space="preserve">
+    <value>Property 'Path' has an invalid value. The type '{0}' of '{1}' needs to be Serializable.</value>
+  </data>
+  <data name="Error_MethodSignatureMismatch" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Method and handler signatures do not match.</value>
+  </data>
+  <data name="Error_MemberWithSameNameExists" xml:space="preserve">
+    <value>Member '{0}' already exists in Type '{1}' or one of its base type. Could not create a member with same name.</value>
+  </data>
+  <data name="Promote" xml:space="preserve">
+    <value>&lt;Promote...&gt;</value>
+  </data>
+  <data name="Error_TargetTypeDataSourcePathMismatch" xml:space="preserve">
+    <value>Bind property type doesn't match with target type '{0}'.</value>
+  </data>
+  <data name="Error_AtomicScopeWithFaultHandlersActivityDecl" xml:space="preserve">
+    <value>TransactionScopeActivity {0} cannot contain a FaultHandlersActivity.</value>
+  </data>
+  <data name="Error_PropertyCanBeOnlyCleared" xml:space="preserve">
+    <value>This property can be only set to a value of null.</value>
+  </data>
+  <data name="Error_FaultHandlerActivityParentNotFaultHandlersActivity" xml:space="preserve">
+    <value>A parent of FaultHandlerActivity must be a FaultHandlersActivity.</value>
+  </data>
+  <data name="Error_SerializationInsufficientState" xml:space="preserve">
+    <value>Insufficient state during de-serialization.</value>
+  </data>
+  <data name="CompensatableActivityDescr" xml:space="preserve">
+    <value>Please specify the name of the activity which will be compensated.</value>
+  </data>
+  <data name="ParameterElementDescription" xml:space="preserve">
+    <value>Specify the data source which will receive the element value.</value>
+  </data>
+  <data name="Conditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="Error_WorkflowLoadValidationFailed" xml:space="preserve">
+    <value>Workflow validation failed.</value>
+  </data>
+  <data name="Error_CannotCompleteContext" xml:space="preserve">
+    <value>Context cannot be completed at this time, when associated ContextActivity is not 'Closed'.</value>
+  </data>
+  <data name="Error_ActivitySaveLoadNotCalled" xml:space="preserve">
+    <value>Please use Activity.Save()/Activity.Load() while serializing/deserializing the activity.</value>
+  </data>
+  <data name="Error_AtomicScopeNestedInNonLRT" xml:space="preserve">
+    <value>A TransactionScopeActivity cannot be nested within another TransactionScopeActivity activity.</value>
+  </data>
+  <data name="Error_InvalidRuntimeType" xml:space="preserve">
+    <value>Runtime type's assembly value cannot be null.</value>
+  </data>
+  <data name="Error_MissingCLRProperty" xml:space="preserve">
+    <value>DependencyProperty '{0}:{1}' does not have an associated CLR property. All non-attached Dependency Properties should have a corresponding CLR property.</value>
+  </data>
+  <data name="SynchronizationHandlesDesc" xml:space="preserve">
+    <value>Please specify the synchronization handles to be acquired before executing the activity. Synchronization handles needs to be a list of comma separated identifier containing existing or new identifiers.</value>
+  </data>
+  <data name="Error_EventMustBeDelegate" xml:space="preserve">
+    <value>Event '{0}' has invalid value. The type of Event needs to be of type delegate.</value>
+  </data>
+  <data name="Error_MissingAttribute" xml:space="preserve">
+    <value>Markup document missing required attribute '{0}' on '{1}'.</value>
+  </data>
+  <data name="Error_TypeNotDelegate" xml:space="preserve">
+    <value>Type '{0}' is not a Delegate.</value>
+  </data>
+  <data name="Error_CreateValidator" xml:space="preserve">
+    <value>Cannot create validator of type '{0}'.</value>
+  </data>
+  <data name="Error_Missing_CanModifyProperties_True" xml:space="preserve">
+    <value>Cannot modify 'Activities' collection for the Activity '{0}'. Set the property 'CanModifyActivities' to 'True'.</value>
+  </data>
+  <data name="SuspendReason_WorkflowChange" xml:space="preserve">
+    <value>WorkflowChanges in progress.</value>
+  </data>
+  <data name="CustomPropertiesCollectionFormDescription" xml:space="preserve">
+    <value>Custom defined properties for this activity.</value>
+  </data>
+  <data name="Error_SynchronizedNeedsDataContext" xml:space="preserve">
+    <value>Activity supporting synchronization needs to support data context.</value>
+  </data>
+  <data name="Error_TypeNotPrimitive" xml:space="preserve">
+    <value>The literal RuntimeType should be a primitive datatype or System.String.</value>
+  </data>
+  <data name="AddingImplicitActivity" xml:space="preserve">
+    <value>Adding Implicit Activity</value>
+  </data>
+  <data name="IncorrectSyntax" xml:space="preserve">
+    <value>'{0}' is an incorrect syntax for representing objects in Compact format.</value>
+  </data>
+  <data name="Error_NoEnclosingContext" xml:space="preserve">
+    <value>Activity '{0}' cannot be resolved for an activity bind.</value>
+  </data>
+  <data name="Activity" xml:space="preserve">
+    <value>Activity</value>
+  </data>
+  <data name="Error_DataSourceInvalidIdentifier" xml:space="preserve">
+    <value>FieldDeclaration '{0}' has invalid name. {1}</value>
+  </data>
+  <data name="Error_MissingContextActivityProperty" xml:space="preserve">
+    <value>ContextActivity property not specified on Activity member.</value>
+  </data>
+  <data name="Error_LayoutSerialization" xml:space="preserve">
+    <value>Designer could not save the layout information.</value>
+  </data>
+  <data name="Error_CantCreateInstanceOfComponent" xml:space="preserve">
+    <value>Failed to create an instance of type '{0}'. {1}</value>
+  </data>
+  <data name="Error_TypeNotAuthorized" xml:space="preserve">
+    <value>Type {0} is not marked as authorized in the application configuration file.</value>
+  </data>
+  <data name="Error_CannotAddRemoveChildActivities" xml:space="preserve">
+    <value>Cannot add or remove child activities on a non-editable activity.</value>
+  </data>
+  <data name="Error_AddAssemblyRef" xml:space="preserve">
+    <value>A reference to '{0}' could not be added. {1}</value>
+  </data>
+  <data name="Designer" xml:space="preserve">
+    <value>Activity Designer</value>
+  </data>
+  <data name="Error_NullOrEmptyValue" xml:space="preserve">
+    <value>Argument value cannot be null or empty.</value>
+  </data>
+  <data name="Error_BindBaseTypeNotSpecified" xml:space="preserve">
+    <value>Missing ''BaseTypeAttribute' for property '{0}'. Specify either a 'BaseTypeAttribute' or implement 'IBaseTypeProvider' interface on the declaring type for a property whose type is 'Bind' or any of its derived types.</value>
+  </data>
+  <data name="ExistingActivityBindTitle" xml:space="preserve">
+    <value>Existing Activity Reference</value>
+  </data>
+  <data name="Error_UnexpectedArgumentType" xml:space="preserve">
+    <value>Argument is not of type {0}.</value>
+  </data>
+  <data name="Error_SuspendInAtomicScope" xml:space="preserve">
+    <value>SuspendActivity cannot be nested inside a TransactionScopeActivity</value>
+  </data>
+  <data name="Error_PropertyHasNoSetterDefined" xml:space="preserve">
+    <value>Property '{0}' has no setter defined.</value>
+  </data>
+  <data name="SupportsEvents" xml:space="preserve">
+    <value>Supports Event Handlers</value>
+  </data>
+  <data name="Error_ReturnTypeNotVoid" xml:space="preserve">
+    <value>Method/delegate {0} is invalid. It should not have a return type.</value>
+  </data>
+  <data name="CompensateActivityDescription" xml:space="preserve">
+    <value>Enables compensating for scope supporting Long Running Transaction.</value>
+  </data>
+  <data name="GenericParameters" xml:space="preserve">
+    <value>Generic Parameters</value>
+  </data>
+  <data name="LocalDataContext" xml:space="preserve">
+    <value>Local Data Context</value>
+  </data>
+  <data name="Error_CannotResolveRelativeActivity" xml:space="preserve">
+    <value>Cannot resolve Activity with relative source '{0}'. Make sure that the relative source format is '/Parent/Parent'.</value>
+  </data>
+  <data name="Error_PropertyDefaultTypeMismatch" xml:space="preserve">
+    <value>The default value supplied for DependencyProperty '{0}' does not have the correct type.  DependencyProperty is of type '{1}' and default value is of type '{2}'.</value>
+  </data>
+  <data name="TerminateActivityDescription" xml:space="preserve">
+    <value>Terminates execution of Workflow.</value>
+  </data>
+  <data name="SuspendActivityDescription" xml:space="preserve">
+    <value>Suspends execution of Workflow.</value>
+  </data>
+  <data name="Error_LayoutSerializationAssociatedActivityNotFound" xml:space="preserve">
+    <value>Designer can not load the layout information for '{0}'. Activity associated with designer is not specified using the '{1}' property.</value>
+  </data>
+  <data name="Error_InvalidInvokingState" xml:space="preserve">
+    <value>Activity status must be 'Executing', 'Canceling', 'Faulting' OR 'Compensating' to perform this operation.</value>
+  </data>
+  <data name="CompanionClass" xml:space="preserve">
+    <value>CompanionClass</value>
+  </data>
+  <data name="Error_InvalidServiceProvider" xml:space="preserve">
+    <value>The parameter '{0}' is invalid.</value>
+  </data>
+  <data name="Error_EmptyPathValue" xml:space="preserve">
+    <value>Path value cannot be empty.</value>
+  </data>
+  <data name="Error_ActivityValidation" xml:space="preserve">
+    <value>Activity '{0}' validation failed:</value>
+  </data>
+  <data name="Error_DPSetValueHandler" xml:space="preserve">
+    <value>Use AddHandler method for adding a event handler.</value>
+  </data>
+  <data name="ChangingEnabled" xml:space="preserve">
+    <value>Changing Enabled Property.</value>
+  </data>
+  <data name="CutSingleActivity" xml:space="preserve">
+    <value>Cut Activity: {0}.</value>
+  </data>
+  <data name="Error_DynamicPropertyNotSupported" xml:space="preserve">
+    <value>Type '{0}' does not define a static dependency property with name '{1}Property'.</value>
+  </data>
+  <data name="Error_PathNotSetForActivitySource" xml:space="preserve">
+    <value>Property 'Path' is not set for activity source bind.</value>
+  </data>
+  <data name="DeletingActivities" xml:space="preserve">
+    <value>Deleting Activities.</value>
+  </data>
+  <data name="Error_InvalidDataFound" xml:space="preserve">
+    <value>Invalid data found while deserializing the document.</value>
+  </data>
+  <data name="Error_FaultIsNotOfFaultType" xml:space="preserve">
+    <value>Fault instance is not of specified FaultType.</value>
+  </data>
+  <data name="Error_EmptyArgument" xml:space="preserve">
+    <value>DependencyProperty could not be registered.  Property name is empty.</value>
+  </data>
+  <data name="Error_MethodDataSourceWithPath" xml:space="preserve">
+    <value>Bind with MethodDataSource should not specify Path.</value>
+  </data>
+  <data name="Error_EmptyRectangleValue" xml:space="preserve">
+    <value>Rectangle value cannot be empty.</value>
+  </data>
+  <data name="Error_HandlerReadOnly" xml:space="preserve">
+    <value>'Handler' type is read only. Use 'Bind' type for read write properties.</value>
+  </data>
+  <data name="Error_RefBindCantFindRef" xml:space="preserve">
+    <value>Cannot find reference '{0}'.  Make sure the reference is declared in the 'References' section of the markup file.</value>
+  </data>
+  <data name="Error_DynamicEventNotSupported" xml:space="preserve">
+    <value>Type '{0}' does not define a static dependency event with name '{1}Event'.</value>
+  </data>
+  <data name="Error_DynamicActivity" xml:space="preserve">
+    <value>CompositeActivity '{0}' status is currently '{1}'. Workflow changes are allowed only when the activity status is 'Initialized', 'Executing' or 'Closed'.</value>
+  </data>
+  <data name="ParameterCategory" xml:space="preserve">
+    <value>Parameter Properties</value>
+  </data>
+  <data name="Error_InvalidParameterType" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Parameter type is invalid.</value>
+  </data>
+  <data name="Error_InvalidParameterName" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Parameter name is invalid.</value>
+  </data>
+  <data name="Error_CodeWithinNotAllowed" xml:space="preserve">
+    <value>Inline code cannot be compiled for workflow projects with NoCode option set.</value>
+  </data>
+  <data name="ParameterDescription" xml:space="preserve">
+    <value>Please specify a value for parameter of type '{0}'.</value>
+  </data>
+  <data name="AEC_InvalidActivity" xml:space="preserve">
+    <value>The passed in activity must be a child activity in the same ActivityExecutionContext.</value>
+  </data>
+  <data name="Error_NoHelpAvailable" xml:space="preserve">
+    <value>No help is available for this topic.</value>
+  </data>
+  <data name="Error_PropertyReferenceNoGetter" xml:space="preserve">
+    <value>ActivityBind specified for property '{0}' resolves to PropertyInfo '{1}' which has no Getter.</value>
+  </data>
+  <data name="Error_MarkupExtensionMissingTerminatingCharacter" xml:space="preserve">
+    <value>Missing terminating character '}'.</value>
+  </data>
+  <data name="Required" xml:space="preserve">
+    <value>required</value>
+  </data>
+  <data name="In" xml:space="preserve">
+    <value>in</value>
+  </data>
+  <data name="Error_MemberNotFound" xml:space="preserve">
+    <value>Member cannot be found.</value>
+  </data>
+  <data name="Error_TypeTypeMismatch" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type is not assignable from '{1}'.</value>
+  </data>
+  <data name="Error_MetaDataInterfaceMissing" xml:space="preserve">
+    <value>Error reading metadata for assembly '{0}'. {1} interface not found.</value>
+  </data>
+  <data name="Error_SerializerTypeNotResolved" xml:space="preserve">
+    <value>Could not deserialize object. The type '{0}' could not be resolved.</value>
+  </data>
+  <data name="Error_DPMetaPropertyBinding" xml:space="preserve">
+    <value>Meta properties cannot be bound; you must provide the literal value for them.</value>
+  </data>
+  <data name="Error_InvalidCompensatingState" xml:space="preserve">
+    <value>Activity status must be 'Closed' for 'Compensating'.</value>
+  </data>
+  <data name="Error_SerializerTypeNotResolvedWithInnerError" xml:space="preserve">
+    <value>Could not deserialize object. The type '{0}' could not be resolved. {1}</value>
+  </data>
+  <data name="Error_ParallelActivationNoCorrelation" xml:space="preserve">
+    <value>A HandleExternalEventActivity with Activation set to 'True' in a ParallelActivity must initialize a correlation.</value>
+  </data>
+  <data name="Error_DOIsNotAnActivity" xml:space="preserve">
+    <value>Target dependency object for this operation is not an activity.</value>
+  </data>
+  <data name="SynchronizationHandles" xml:space="preserve">
+    <value>SynchronizationHandles</value>
+  </data>
+  <data name="Error_CantCreateInstanceOfBaseType" xml:space="preserve">
+    <value>Can not create an instance of type '{0}'.</value>
+  </data>
+  <data name="Failure_FieldAlreadyExist" xml:space="preserve">
+    <value>Field or property already exists</value>
+  </data>
+  <data name="Error_InvalidActivityIdentifier" xml:space="preserve">
+    <value>Activity '{0}' does not exist.</value>
+  </data>
+  <data name="Error_ScopeDuplicatedNameActivity" xml:space="preserve">
+    <value>{0} has activities with duplicate name '{1}'.</value>
+  </data>
+  <data name="Error_ParameterTypeNotExist" xml:space="preserve">
+    <value>Parameter '{0}' has invalid type. Type '{1}' does not exist.</value>
+  </data>
+  <data name="Out" xml:space="preserve">
+    <value>out</value>
+  </data>
+  <data name="Ref" xml:space="preserve">
+    <value>ref</value>
+  </data>
+  <data name="Error_DPPropertyTypeMissing" xml:space="preserve">
+    <value>PropertyType not specified for dependency property.</value>
+  </data>
+  <data name="Error_WorkflowDefinitionModified" xml:space="preserve">
+    <value>The workflow definition of the passed in Activity is different from the workflow definition passed into the constructor of WorkflowChanges.</value>
+  </data>
+  <data name="OnAfterEventDescr" xml:space="preserve">
+    <value>Please specify the function to be called after listening the event.</value>
+  </data>
+  <data name="Error_DPSetValueBind" xml:space="preserve">
+    <value>Use SetBinding method for property binding.</value>
+  </data>
+  <data name="ProxyClassDescr" xml:space="preserve">
+    <value>Please specify the proxy class, which will used to call web service.</value>
+  </data>
+  <data name="Error_ReferencedActivityPropertyNotBind" xml:space="preserve">
+    <value>Property '{1}' of the referenced activity '{0}' is not of type ActivityBind.</value>
+  </data>
+  <data name="CreateActivityFromToolbox" xml:space="preserve">
+    <value>Create Activity from Toolbox: {0}.</value>
+  </data>
+  <data name="Error_LayoutSerializationPersistenceSupport" xml:space="preserve">
+    <value>Could not persist the designer layout. Root designer does not support layout persistence.</value>
+  </data>
+  <data name="Error_LayoutDeserialization" xml:space="preserve">
+    <value>Designer could not load the layout information.</value>
+  </data>
+  <data name="Error_InvalidActivityForWorkflowChanges" xml:space="preserve">
+    <value>WorkflowChanges can only be applied to the root activity. A root activity must not have a Parent.</value>
+  </data>
+  <data name="AdvancedCategory" xml:space="preserve">
+    <value>Advanced</value>
+  </data>
+  <data name="Error_ContentPropertyCanNotBeNull" xml:space="preserve">
+    <value>Value returned by Content Property '{0}' on object of type '{1}' is null. Contents Property value should be not null.</value>
+  </data>
+  <data name="CompensatableTransactionalContextActivityDescription" xml:space="preserve">
+    <value>Executes contained activities sequentially and in transaction and supports compensation.</value>
+  </data>
+  <data name="Warning_UnverifiedRecursion" xml:space="preserve">
+    <value>Unable to check for recursion.</value>
+  </data>
+  <data name="Error_InvalidListItem" xml:space="preserve">
+    <value>Invalid Item. The collection is of type '{0}'.</value>
+  </data>
+  <data name="Error_CantCreateMethod" xml:space="preserve">
+    <value>Cannot create method in the associated activity '{0}'. Make sure a class with this activity name exists.</value>
+  </data>
+  <data name="Error_InvalidDesignerVerbValue" xml:space="preserve">
+    <value>Collection can only contain ActivityDesignerVerb instances.</value>
+  </data>
+  <data name="Error_DPRemoveHandlerBind" xml:space="preserve">
+    <value>RemoveHandler cannot be used to remove Bind values.</value>
+  </data>
+  <data name="Error_ExtraCharacterFoundAtEnd" xml:space="preserve">
+    <value>Extra character(s) found at the end.</value>
+  </data>
+  <data name="ConditionedActivityConditions" xml:space="preserve">
+    <value>Conditions</value>
+  </data>
+  <data name="Error_CancelHandlerParentNotScope" xml:space="preserve">
+    <value>Parent of CancellationHandlerActivity must be annotated with SupportsCancellationHandlerAttribute.</value>
+  </data>
+  <data name="Error_ReferenceInvalidResourceFile" xml:space="preserve">
+    <value>Resource reference has invalid source name.  Source must contain a valid resource file name that ends with '.resx'. </value>
+  </data>
+  <data name="Warning_ParameterBinding" xml:space="preserve">
+    <value>ActivityBind path '{0}' resolves to WorkflowParameterBinding.Value on Activity '{1}' whose type is System.Object. Expected type for ActivityBind is '{2}'.</value>
+  </data>
+  <data name="Error_CantHaveContextActivity" xml:space="preserve">
+    <value>Activity '{0}' is invalid.  Activities that support DataContext can not be used in this workflow because the root activity does not support DataContext.</value>
+  </data>
+  <data name="Error_SerializerTypeMismatch" xml:space="preserve">
+    <value>Object needs to be of type '{0}' in order to be serialized.</value>
+  </data>
+  <data name="ErrorMessageDescr" xml:space="preserve">
+    <value>Please specify an error message. The value in "" (quotes) will be treated as literal, otherwise it will be treated as the name of the variable of type System.String.</value>
+  </data>
+  <data name="Error_MethodNotAccessible" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Method '{1}' is not accessible.</value>
+  </data>
+  <data name="Error_MissingMethodName" xml:space="preserve">
+    <value>The activity '{0}' must return a valid method name.  Property {1} returns null or empty string.</value>
+  </data>
+  <data name="Error_InvalidCompensateActivityState" xml:space="preserve">
+    <value>Cannot mark activity as compensated in its current state.</value>
+  </data>
+  <data name="Error_ApplyDynamicChangeFailed" xml:space="preserve">
+    <value>Failed to Apply WorkflowChangeAction.</value>
+  </data>
+  <data name="Error_CustomActivityCantCreate" xml:space="preserve">
+    <value>Could not create activity of type '{0}'. {1}</value>
+  </data>
+  <data name="Error_PropertyHasNoGetterDefined" xml:space="preserve">
+    <value>Property '{0}' has no getter defined.</value>
+  </data>
+  <data name="Error_ScopeDuplicateFaultHandlerActivityFor" xml:space="preserve">
+    <value>{0} can have only one FaultHandlerActivity activity for {1}. </value>
+  </data>
+  <data name="TransactionDesc" xml:space="preserve">
+    <value>Please specify the type of Transaction for activity.</value>
+  </data>
+  <data name="EmptyValue" xml:space="preserve">
+    <value>&lt;Empty&gt;</value>
+  </data>
+  <data name="Error_InvalidRadiusValue" xml:space="preserve">
+    <value>Radius should be a positive value.</value>
+  </data>
+  <data name="SenderMustBeActivityExecutionContext" xml:space="preserve">
+    <value>The sender parameter is not an ActivityExecutionContext.</value>
+  </data>
+  <data name="Error_DuplicatedActivityID" xml:space="preserve">
+    <value>There is already an activity named '{0}'. Activity names must be unique.</value>
+  </data>
+  <data name="Error_ScopeDuplicateFaultHandlerActivityForAll" xml:space="preserve">
+    <value>{0} can have only one FaultHandlerActivity activity for CatchType All.</value>
+  </data>
+  <data name="NullConditionExpression" xml:space="preserve">
+    <value>(None)</value>
+  </data>
+  <data name="Error_MarkupExtensionDeserializeFailed" xml:space="preserve">
+    <value>Failed to deserialize MarkupExtension with value '{0}'. {1}</value>
+  </data>
+  <data name="Error_PropertyNotAccessible" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Property '{1}' is not accessible.</value>
+  </data>
+  <data name="ToolTipString" xml:space="preserve">
+    <value>AbC</value>
+  </data>
+  <data name="FaultDescription" xml:space="preserve">
+    <value>Please specify the variable which will get the value of the exception.</value>
+  </data>
+  <data name="Error_EventCantBeMetaProperty" xml:space="preserve">
+    <value>Event '{0}' has invalid value. Events can not have be shared across workflow instances.</value>
+  </data>
+  <data name="Error_MissingActivityProperty" xml:space="preserve">
+    <value>Activity property not specified.</value>
+  </data>
+  <data name="Error_RuntimeValidationFailed" xml:space="preserve">
+    <value>Runtime Validation Errors.</value>
+  </data>
+  <data name="Error_RootActivityTypeInvalid" xml:space="preserve">
+    <value>The root activity type is invalid.</value>
+  </data>
+  <data name="Error_CompanionTypeDerivationError" xml:space="preserve">
+    <value>Companion Type '{0}' needs to inherit from '{1}' which is companion type of base activity.</value>
+  </data>
+  <data name="Error_CanNotChangeAtRuntime" xml:space="preserve">
+    <value>This operation can not be performed at runtime.</value>
+  </data>
+  <data name="UnknownDefinitionTag" xml:space="preserve">
+    <value>Unknown/Misplaced tag {0}:{1} in namespace '{2}'. Tags belonging to '{2}' namespace have special meaning and can be placed only on the Elements which are recognized by the serializer as valid containers of these tags. Examples of such elements include elements representing Arrays, Dictionaries and Root Activity.</value>
+  </data>
+  <data name="Error_SerializerCreateInstanceFailed" xml:space="preserve">
+    <value>CreateInstance failed for type '{0}'. {1}.</value>
+  </data>
+  <data name="Error_DictionarySerializerNonDictionaryObject" xml:space="preserve">
+    <value>Dictionary serializer can not serialize objects not supporting IDictionary.</value>
+  </data>
+  <data name="Error_CompensateBadTargetTX" xml:space="preserve">
+    <value>{0} '{1}' specified for CompensateActivity '{2}' is not valid, either the activity is not in current compensatable scope or it does not support compensation handler.</value>
+  </data>
+  <data name="ParameterDlgHeader" xml:space="preserve">
+    <value>Workflow Parameters Editor</value>
+  </data>
+  <data name="InvalidExecutionStatus" xml:space="preserve">
+    <value>The activity '{0}' returned an invalid ActivityExecutionStatus '{1}'. Valid values are '{2}' and 'Closed'.</value>
+  </data>
+  <data name="Error_NestedCompensatableActivity" xml:space="preserve">
+    <value>Activity {0} supports compensation and cannot be nested inside a TransactionScopeActivity.</value>
+  </data>
+  <data name="Error_DynamicPropertyTypeValueMismatch" xml:space="preserve">
+    <value>Type '{0}' for dependency property '{1}' does not match with value type '{2}'.</value>
+  </data>
+  <data name="Error_DragDropInvalid" xml:space="preserve">
+    <value>Drag and drop is only valid on composite activities.</value>
+  </data>
+  <data name="Error_InvalidShadowDepth" xml:space="preserve">
+    <value>Shadow Depth needs to be between 4 and 16.</value>
+  </data>
+  <data name="Error_DPAddHandlerMetaProperty" xml:space="preserve">
+    <value>Events cannot be meta properties.</value>
+  </data>
+  <data name="SynchronizationScopeActivityDescription" xml:space="preserve">
+    <value>Executes contained activities sequentially in a synchronized domain.</value>
+  </data>
+  <data name="Error_DelegateNoInvoke" xml:space="preserve">
+    <value>Delegate type '{0}' does not have 'Invoke' method.</value>
+  </data>
+  <data name="Error_MultipleSelectNotSupportedForBindAndPromote" xml:space="preserve">
+    <value>Can not bind selected property. Property binding is not supported for non Dependency Properties, selecting multiple activities for configuration and when viewing events in property browser.</value>
+  </data>
+  <data name="CustomPropertiesCollectionFormHeader" xml:space="preserve">
+    <value>Custom Properties</value>
+  </data>
+  <data name="PastingActivities" xml:space="preserve">
+    <value>Pasting Activities.</value>
+  </data>
+  <data name="TextSection" xml:space="preserve">
+    <value>text content</value>
+  </data>
+  <data name="Error_PropertyNotExists" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Property '{1}' does not exist.</value>
+  </data>
+  <data name="Error_InvalidStateImages" xml:space="preserve">
+    <value>Button needs exactly 1 or 4 images.</value>
+  </data>
+  <data name="AtomicTransaction" xml:space="preserve">
+    <value>Atomic</value>
+  </data>
+  <data name="MovingActivities" xml:space="preserve">
+    <value>Moving Activities.</value>
+  </data>
+  <data name="SupportsExceptions" xml:space="preserve">
+    <value>Supports Exception Handlers</value>
+  </data>
+  <data name="Error_MissingContextProperty" xml:space="preserve">
+    <value>Context property not specified.</value>
+  </data>
+  <data name="Error_ActiveChildContextExist" xml:space="preserve">
+    <value>CompositeActivity cannot transition to 'Closed' status when there are active child context still exist for child activity.</value>
+  </data>
+  <data name="ParameterDirectionDescription" xml:space="preserve">
+    <value>Specify the direction of this parameter.</value>
+  </data>
+  <data name="Error_MissingOwnerTypeProperty" xml:space="preserve">
+    <value>OwnerType property not specified.</value>
+  </data>
+  <data name="Error_TypeNotResolvedInMethodName" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type containing method is not resolved.</value>
+  </data>
+  <data name="Error_ModelingConstructsCanNotContainModelingConstructs" xml:space="preserve">
+    <value>CancellationHandlerActivity, CompensationHandlerActivity, FaultHandlersActivity, FaultHandlerActivity can not contain FaultHandlersActivity, CancellationHandlerActivity and CompensationHandlerActivity.</value>
+  </data>
+  <data name="Error_ReferencedAssemblyIsInvalid" xml:space="preserve">
+    <value>Metadata file '{0}' could not be found.</value>
+  </data>
+  <data name="Error_InvalidCancelingState" xml:space="preserve">
+    <value>Activity status must be 'Executing' for 'Canceling'.</value>
+  </data>
+  <data name="Error_DynamicUpdateEvaluation" xml:space="preserve">
+    <value>Workflow changes can not be applied to instance '{0}' at this time. The WorkflowChanges Condition property on the root activity has evaluated to false.</value>
+  </data>
+  <data name="FilterDescription_ParameterDeclaration" xml:space="preserve">
+    <value>Showing serializable types.</value>
+  </data>
+  <data name="Error_SealedPropertyMetadata" xml:space="preserve">
+    <value>Cannot set value while property metadata is sealed.</value>
+  </data>
+  <data name="Error_InvalidParameterElement" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Parameter element is invalid.</value>
+  </data>
+  <data name="Error_CanNotBindProperty" xml:space="preserve">
+    <value>Could not bind property '{0}'.</value>
+  </data>
+  <data name="Error_TypeNotExist" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type '{1}' does not exist. Are you missing an assembly reference?</value>
+  </data>
+  <data name="Error_PropertyNoGetter" xml:space="preserve">
+    <value>Bind for property '{0}' resolves to path  '{1}' which has no Getter.</value>
+  </data>
+  <data name="CollectionText" xml:space="preserve">
+    <value>(Collection)</value>
+  </data>
+  <data name="CollectionItem" xml:space="preserve">
+    <value>Changing collection item.</value>
+  </data>
+  <data name="Error_NotCodeGeneratorType" xml:space="preserve">
+    <value>CodeGeneratorAttribute has incorrect parameter value.  Code generator types must inherit from CodeGenerator.</value>
+  </data>
+  <data name="FaultActivityDescription" xml:space="preserve">
+    <value>Enables raising exception in Workflow.</value>
+  </data>
+  <data name="NoChildActivities_Caption" xml:space="preserve">
+    <value>Changing the base type</value>
+  </data>
+  <data name="Error_InvalidInitializingState" xml:space="preserve">
+    <value>Activity status must be 'Initialized' for Initializing.</value>
+  </data>
+  <data name="Error_ParentDoesNotSupportCompensation" xml:space="preserve">
+    <value>Parent of CompensationHandlerActivity must be compensatable (implement ICompensatableActivity).</value>
+  </data>
+  <data name="Error_ValidatorThrewException" xml:space="preserve">
+    <value>'{0}' while invoking the validator '{1}' on activity '{2}': {3}</value>
+  </data>
+  <data name="Executor" xml:space="preserve">
+    <value>Activity Executor</value>
+  </data>
+  <data name="Error_ReadOnlyField" xml:space="preserve">
+    <value>Cannot set value to read only field '{0}' referred to in binding.</value>
+  </data>
+  <data name="ReferencedAssemblies" xml:space="preserve">
+    <value>Referenced Assemblies</value>
+  </data>
+  <data name="Error_ContentPropertyNoSetter" xml:space="preserve">
+    <value>Content Property '{0}' on type '{1}' needs to have a public set method.</value>
+  </data>
+  <data name="Error_MissingSetAccessor" xml:space="preserve">
+    <value>Attached DependencyProperty '{0}:{1}' should have static accessors 'Set{0}' and 'Get{0}' .</value>
+  </data>
+  <data name="CutMultipleActivities" xml:space="preserve">
+    <value>Cut {0} activities.</value>
+  </data>
+  <data name="ExecutorCreationFailedErrorMessage" xml:space="preserve">
+    <value>Workflow runtime failed to create ActivityExecutor instance for activity type '{0}'. Please check whether the activity has valid value for ActivityExecutor attribute.</value>
+  </data>
+  <data name="Error_TypeNotAsseblyQualified" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type name must be assembly qualified.</value>
+  </data>
+  <data name="Error_InvalidConnectorValue" xml:space="preserve">
+    <value>Connector value cannot be less than zero.</value>
+  </data>
+  <data name="Error_ActivityRefNotResolved" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Activity '{1}' could not be resolved.</value>
+  </data>
+  <data name="Error_ParameterTypeResolution" xml:space="preserve">
+    <value>Could not resolve the parameter type for parameter {0}.</value>
+  </data>
+  <data name="Error_NegativeValue" xml:space="preserve">
+    <value>'{0}' is not a valid value for '{1}'. '{1}' must not be negative value.</value>
+  </data>
+  <data name="Error_ParameterPropertyNotSet" xml:space="preserve">
+    <value>Parameter '{0}' is invalid. Property '{1}' is not set.</value>
+  </data>
+  <data name="Error_DPGetValueHandler" xml:space="preserve">
+    <value>Cannot call GetValue for an event property.</value>
+  </data>
+  <data name="Error_ActivityNameExist" xml:space="preserve">
+    <value>Cannot change the activity name.  Name '{0}' already exists.</value>
+  </data>
+  <data name="Error_DictionarySerializerKeyNotFound" xml:space="preserve">
+    <value>Dictionary serializer could not add an item of type '{0}' to dictionary as key for the item could not be found.</value>
+  </data>
+  <data name="Error_RootActivity" xml:space="preserve">
+    <value>Cannot add a RootActivity '{0}' as a child activity.</value>
+  </data>
+  <data name="Error_WorkflowChangesNotSupported" xml:space="preserve">
+    <value>ActivityExecutor for Activity '{0}' does NOT support WorkflowChanges.</value>
+  </data>
+  <data name="Error_CantResolveEventHandler" xml:space="preserve">
+    <value>Method '{1}' could not be resolved.  Either method could not be found or method signature does not match the delegate type.</value>
+  </data>
+  <data name="Error_FaultHandlersActivityDeclNotAllFaultHandlerActivityDecl" xml:space="preserve">
+    <value>All children must be FaultHandlerActivity activities.</value>
+  </data>
+  <data name="Error_FaultTypeNoDefaultConstructor" xml:space="preserve">
+    <value>Specified FaultType '{0}' does not have default constructor.</value>
+  </data>
+  <data name="Error_InvalidIdentifier" xml:space="preserve">
+    <value>Property '{0}' has invalid value. {1}</value>
+  </data>
+  <data name="Error_InvalidDependencyProperty" xml:space="preserve">
+    <value>Dependency Object type '{0}' doesn't define this DependencyProperty '{1}:{2}'.</value>
+  </data>
+  <data name="Error_AssociatedDesignerMissing" xml:space="preserve">
+    <value>AssociatedDesigner property not specified.</value>
+  </data>
+  <data name="Error_ScopeCouldNotBeResolved" xml:space="preserve">
+    <value>Could not resolve the activity or the data context in which data source '{0}' is defined.</value>
+  </data>
+  <data name="Error_SerializerThrewException" xml:space="preserve">
+    <value>Could not deserialize object. Serializer for type '{0}' threw an exception during deserialization. Exception was thrown with error message '{1}'.</value>
+  </data>
+  <data name="Error_CreatingToolTip" xml:space="preserve">
+    <value>Could not create ToolTip window.</value>
+  </data>
+  <data name="CutActivity" xml:space="preserve">
+    <value>Cut Activity.</value>
+  </data>
+  <data name="Error_OutRefParameterNotSupported" xml:space="preserve">
+    <value>Method/delegate {0} is invalid. Methods with out/retval are not supported. Parameter {1} is an out/retval parameter.</value>
+  </data>
+  <data name="Error_UnknownSerializationStore" xml:space="preserve">
+    <value>Unknown CodeDOM Serialization Service Store.</value>
+  </data>
+  <data name="Error_NonActivityExecutor" xml:space="preserve">
+    <value>Type '{0}' is not derived from ActivityExecutor class.</value>
+  </data>
+  <data name="Error_ListenNotMoreThanOneDelay" xml:space="preserve">
+    <value>Only one EventDrivenActivity can have a DelayActivity as the first executable activity.</value>
+  </data>
+  <data name="Error_AtomicScopeWithCancellationHandlerActivity" xml:space="preserve">
+    <value>TransactionScopeActivity {0} cannot contain a CancellationHandlerActivity.</value>
+  </data>
+  <data name="LibraryPathIsInvalid" xml:space="preserve">
+    <value>Invalid library path '{0}'.</value>
+  </data>
+  <data name="Error_PropertyReferenceGetterNoAccess" xml:space="preserve">
+    <value>ActivityBind specified for property '{0}' resolves to a PropertyInfo '{1}' whose Getter is not accessible.</value>
+  </data>
+  <data name="Error_FieldNotExists" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Field '{1}' does not exist.</value>
+  </data>
+  <data name="Error_UserCodeFilesNotAllowed" xml:space="preserve">
+    <value>User code files cannot be compiled for workflow projects with NoCode option set.</value>
+  </data>
+  <data name="Error_ActivityHasParent" xml:space="preserve">
+    <value>Activity '{0}' is already a child of CompositeActivity '{1}'.</value>
+  </data>
+  <data name="Error_PropertyAlreadyExists" xml:space="preserve">
+    <value>There already exits a member named '{0}'.  Please specify a unique name for this property.</value>
+  </data>
+  <data name="Error_TransactionAlreadyApplied" xml:space="preserve">
+    <value>WorkflowChanges have already been applied.  Create a new WorkflowChanges object to apply new changes or to re-apply previously failed changes.</value>
+  </data>
+  <data name="ExecutionTypeDescr" xml:space="preserve">
+    <value>Please specify the execution type for this task.</value>
+  </data>
+  <data name="Error_InvalidLanguageIdentifier" xml:space="preserve">
+    <value>The identifier '{0}' is not a valid name.</value>
+  </data>
+  <data name="Error_WorkflowTerminated" xml:space="preserve">
+    <value>Workflow terminated abnormally.</value>
+  </data>
+  <data name="FilterDescription_FaultHandlerActivity" xml:space="preserve">
+    <value>Showing types deriving from System.Exception.</value>
+  </data>
+  <data name="Properties" xml:space="preserve">
+    <value>Properties</value>
+  </data>
+  <data name="Error_DifferentTypeFieldExists" xml:space="preserve">
+    <value>Could not create field with name '{0}'. There is already a member with this name in the companion class.</value>
+  </data>
+  <data name="Error_FieldTypeMismatch" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Field type '{1}' does not match with the expected type '{2}'.</value>
+  </data>
+  <data name="Error_InsertingChildControls" xml:space="preserve">
+    <value>Child controls are not allowed to be inserted in WorkflowView.</value>
+  </data>
+  <data name="Error_ContentPropertyNoMultipleContents" xml:space="preserve">
+    <value>Content property '{0}' on object of type '{1}' is not a collection and does not allow multiple content nodes.</value>
+  </data>
+  <data name="Warning_ActivityValidation" xml:space="preserve">
+    <value>Activity '{0}' validation warning:</value>
+  </data>
+  <data name="Error_AssemblyBadImage" xml:space="preserve">
+    <value>A reference to '{0}' could not be added. This is not a valid assembly or COM component.  Only assemblies with extension 'dll' or 'manifest' or COM components can be referenced.  Please make sure that the file is accessible, and that it is a valid assembly or COM component.</value>
+  </data>
+  <data name="Error_SerializerNotAvailableForSerialize" xml:space="preserve">
+    <value>Could not serialize object of type '{0}'. The type has no appropriate WorkflowMarkupSerializer associated.</value>
+  </data>
+  <data name="Error_RefBindMissingReferenceName" xml:space="preserve">
+    <value>ReferenceBind is invalid. Reference name is missing.</value>
+  </data>
+  <data name="Error_SerializerNotAvailable" xml:space="preserve">
+    <value>Could not deserialize object. The type '{0}' has no appropriate serializer associated.</value>
+  </data>
+  <data name="CDATASection" xml:space="preserve">
+    <value>a CDATA section</value>
+  </data>
+  <data name="Optional" xml:space="preserve">
+    <value>optional</value>
+  </data>
+  <data name="Error_DataSourceTypeConversionFailed" xml:space="preserve">
+    <value>Failed to convert value '{1}' to type '{2}' for DataSource '{0}'.</value>
+  </data>
+  <data name="Error_DataSourceNameNotSet" xml:space="preserve">
+    <value>DataSource name is not set.</value>
+  </data>
+  <data name="Error_XmlDataSourceReadOnly" xml:space="preserve">
+    <value>XmlDataSource '{0}' cannot be used for Write-able properties.</value>
+  </data>
+  <data name="Error_CannotCompile_No_XClass" xml:space="preserve">
+    <value>Cannot compile a markup file which does not contain declaration of the new workflow type.</value>
+  </data>
+  <data name="TerminateErrorMessageDescr" xml:space="preserve">
+    <value>Please specify an error message used when terminating the workflow.</value>
+  </data>
+  <data name="Error_PathNotSetForXmlDataSource" xml:space="preserve">
+    <value>Path is not set while referring XmlDataSource '{0}'.</value>
+  </data>
+  <data name="Error_InsideAtomicScope" xml:space="preserve">
+    <value>Workflow changes are disallowed when a TransactionScopeActivity is being executed.</value>
+  </data>
+  <data name="MoveSingleActivity" xml:space="preserve">
+    <value>Move Activity: {0}.</value>
+  </data>
+  <data name="Error_TargetTypeMismatch" xml:space="preserve">
+    <value>Path resolved to Referenced activity Property '{0}' whose PropertyType '{1}' does not match with the Target Type '{2}'.</value>
+  </data>
+  <data name="Validator" xml:space="preserve">
+    <value>Activity Validator</value>
+  </data>
+  <data name="Error_InvalidElementFoundForType" xml:space="preserve">
+    <value>Invalid Element '{0}' found while deserializing an object of type '{1}'.</value>
+  </data>
+  <data name="Error_PropertyNoSetter" xml:space="preserve">
+    <value>Bind for property '{0}' resolves to a property '{1}' which has no Setter.</value>
+  </data>
+  <data name="Error_FaultHandlerActivityAllMustBeLast" xml:space="preserve">
+    <value>If more than one FaultHandlerActivity is added to a FaultHandlersActivity, only the last should have CatchType set to 'All'.</value>
+  </data>
+  <data name="Error_LayoutSerializationActivityNotFound" xml:space="preserve">
+    <value>Designer can not load the layout information for '{0}'. Could not find activity with name '{1}' specified using the '{2}' property.</value>
+  </data>
+  <data name="Error_InvalidActivityExecutionContext" xml:space="preserve">
+    <value>ActivityExecutionContext passed is invalid.</value>
+  </data>
+  <data name="Error_NoTargetTypeForMethod" xml:space="preserve">
+    <value>TargetType is required for retrieving the value of a MethodDataSource.</value>
+  </data>
+  <data name="ActivationDescr" xml:space="preserve">
+    <value>Specify whether this HandleExternalEventActivity will activate the workflow.</value>
+  </data>
+  <data name="Error_InvalidAttribute" xml:space="preserve">
+    <value>'{0}' attribute specified on object of type '{1}' has invalid parameters.</value>
+  </data>
+  <data name="Error_Missing_CanModifyProperties_False" xml:space="preserve">
+    <value>Set the property 'CanModifyActivities' to 'False' after modifying the 'Activities' collection for Activity '{0}'.</value>
+  </data>
+  <data name="NoChildActivities_Message" xml:space="preserve">
+    <value>Changing the base type of an activity which contains child activities will lead to the loss of the child activities. Continue replacing the base type?</value>
+  </data>
+  <data name="Error_PathCouldNotBeResolvedToMember" xml:space="preserve">
+    <value>Path '{0}' used to specify member for '{1}' is invalid. Path needs to point to valid member.</value>
+  </data>
+  <data name="Error_GeneratorShouldContainSingleActivity" xml:space="preserve">
+    <value>ReplicatorActivity must contain one Activity.</value>
+  </data>
+  <data name="Error_BindActivityReference" xml:space="preserve">
+    <value>Activity '{0}' may not be executed before activity '{1}'. The binding properties of such activities may result in unexpected errors.</value>
+  </data>
+  <data name="Error_DuplicatedParameterName" xml:space="preserve">
+    <value>There is already a parameter with name '{0}'. Parameter names must be unique.</value>
+  </data>
+  <data name="Error_BindPathNullValue" xml:space="preserve">
+    <value>GetRuntimeValue failed since Path '{0}' evaluated to 'null' value.</value>
+  </data>
+  <data name="Error_CannotResolveActivity" xml:space="preserve">
+    <value>Cannot resolve Activity '{0}'.</value>
+  </data>
+  <data name="Error_DPAlreadyExist" xml:space="preserve">
+    <value>DependencyProperty '{0}' could not be registered.  A property with the same name already exists for type '{1}'.</value>
+  </data>
+  <data name="CannotCreateAttribute" xml:space="preserve">
+    <value>Type system could not create wrapper class for design time attributes.</value>
+  </data>
+  <data name="Error_FieldNotAccessible" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Field '{1}' is not accessible.</value>
+  </data>
+  <data name="Error_PropertyTypeNotResolved" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Could not resolve property type of property '{1}'.</value>
+  </data>
+  <data name="Error_ArgumentTypeNotMatchParameter" xml:space="preserve">
+    <value>Type does not match the generic parameter type</value>
+  </data>
+  <data name="Error_SerializerNoChildNotion" xml:space="preserve">
+    <value>Element of type '{0}' can not have contents within it.</value>
+  </data>
+  <data name="Error_NoRuntimeAvailable" xml:space="preserve">
+    <value>This is an invalid design time operation. You can only perform the operation at runtime.</value>
+  </data>
+  <data name="Error_ActivityCollectionSerializer" xml:space="preserve">
+    <value>The object is of type '{0}' instead of being an Activity. Only activities can be added in ActivitiesCollection.</value>
+  </data>
+  <data name="Error_InternalSerializerError" xml:space="preserve">
+    <value>Unexpected error occurred in WorkflowMarkupSerializer. Parts of the object graphs may not be saved.</value>
+  </data>
+  <data name="Error_ContentPropertyCouldNotBeFound" xml:space="preserve">
+    <value>Content Property '{0}' specified by object of type '{1}' could not be found.</value>
+  </data>
+  <data name="OnBeforeMethodInvokeDescr" xml:space="preserve">
+    <value>Please specify the function to be called before invoking the method.</value>
+  </data>
+  <data name="ActivityBindIDDescription" xml:space="preserve">
+    <value>Specify the name of the activity for binding.</value>
+  </data>
+  <data name="NotElementType" xml:space="preserve">
+    <value>Type system could not create design time type. Parameter passed to constructor is not a valid element.</value>
+  </data>
+  <data name="Error_LiteralConversionFailed" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Failed to convert value '{1}' to type '{2}'.</value>
+  </data>
+  <data name="Error_CantDeterminePropertyBaseType" xml:space="preserve">
+    <value>The designer is unable to determine the base type of property {0}. Property promotion failed.</value>
+  </data>
+  <data name="Error_TypeTypeMismatchAmbiguity" xml:space="preserve">
+    <value>Property '{0}' has invalid value. Type '{1}' is not declared or not assignable from '{2}'.</value>
+  </data>
+  <data name="Error_SerializerTypeRequirement" xml:space="preserve">
+    <value>The object of type '{0}' needs to implement '{1}' or '{2}' in order to be serialized as a Collection.</value>
+  </data>
+  <data name="Error_MarkupSerializerTypeNotResolved" xml:space="preserve">
+    <value>Could not deserialize object. The type '{0}' could not be resolved. Attribute values starting with '{{' and ending with '}}' are used to represent MarkupExtension values. If the value is not a MarkupExtension, then it should be prefixed with '{{}}'.</value>
+  </data>
+  <data name="Error_CompanionClassNameCanNotBeEmpty" xml:space="preserve">
+    <value>Activity supporting data context needs to have companion class name set.</value>
+  </data>
+  <data name="Base" xml:space="preserve">
+    <value>Base</value>
+  </data>
+  <data name="None" xml:space="preserve">
+    <value>None</value>
+  </data>
+  <data name="Type" xml:space="preserve">
+    <value>Type</value>
+  </data>
+  <data name="Error_BindDialogCanNotBindToItself" xml:space="preserve">
+    <value>Can not bind activity property to itself.</value>
+  </data>
+  <data name="MoveMultipleActivities" xml:space="preserve">
+    <value>Move {0} activities.</value>
+  </data>
+  <data name="Error_RootIsNotEnabled" xml:space="preserve">
+    <value>The root activity cannot have the 'Enabled' property set to 'False'.</value>
+  </data>
+  <data name="Error_WorkflowLoadDeserializationFailed" xml:space="preserve">
+    <value>Workflow could not be deserialized.</value>
+  </data>
+  <data name="CustomProperties" xml:space="preserve">
+    <value>Custom Properties</value>
+  </data>
+</root>

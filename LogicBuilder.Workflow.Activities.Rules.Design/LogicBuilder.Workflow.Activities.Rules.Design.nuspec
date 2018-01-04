@@ -1,0 +1,17 @@
+﻿<?xml version="1.0"?>
+<package >
+  <metadata>
+    <id>LogicBuilder.Workflow.Activities.Rules.Design</id>
+    <version>1.0.0-preview06</version>
+    <title>LogicBuilder.Workflow.Activities.Rules.Design</title>
+    <authors>BlaiseD</authors>
+    <owners>BlaiseD</owners>
+    <licenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</licenseUrl>
+    <projectUrl>https://github.com/BlaiseD/LogicBuilder.Rules</projectUrl>
+    <requireLicenseAcceptance>false</requireLicenseAcceptance>
+    <description>This package makes the RuleSetDialog for System.Workflow.Activities.Rules compatible with .NetStandard.</description>
+    <releaseNotes>First release.</releaseNotes>
+    <copyright>Copyright © Microsoft 2017</copyright>
+    <tags>rules editing serialization</tags>
+  </metadata>
+</package>
