@@ -1,20 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Workflow</RootNamespace>
     <PackageId>LogicBuilder.Workflow.ComponentModel.Serialization</PackageId>
-    <PackageVersion>1.0.0-preview06</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>BlaiseD</Authors>
-    <Description>Updates WorkflowMarkupSerializer to allow serialization of rule sets in .NetStandard projects.</Description>
+    <Description>Manages serialization of rule sets for .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageReleaseNotes>orting component for https://github.com/BlaiseD/LogicBuilder.Rules </PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicenseUrl>
+    <PackageLicense>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicense>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
   </PropertyGroup>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.0-preview06" />
+    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.0" />
     <PackageReference Include="System.CodeDom" Version="4.4.0" />
   </ItemGroup>
 

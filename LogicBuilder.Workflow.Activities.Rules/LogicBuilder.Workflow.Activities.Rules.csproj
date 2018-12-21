@@ -1,20 +1,20 @@
-<Project Sdk="Microsoft.NET.Sdk">
+﻿<Project Sdk="Microsoft.NET.Sdk">
 
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Workflow.Activities</RootNamespace>
     <PackageId>LogicBuilder.Workflow.Activities.Rules</PackageId>
-    <PackageVersion>1.0.0-preview06</PackageVersion>
+    <PackageVersion>1.0.0</PackageVersion>
     <Authors>BlaiseD</Authors>
-    <Description>Updates System.Workflow.Activities.Rules to bring the RuleEngine functionality to .NetStandard projects.</Description>
+    <Description>Updates System.Workflow.Activities.Rules to bring the RuleEngine functionality to .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First release</PackageReleaseNotes>
+    <PackageReleaseNotes>LogicBuilder.Workflow.Activities.Rules includes the RuleEngine class and evaluates the rules (https://github.com/BlaiseD/LogicBuilder.Rules).</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
     <FileVersion>1.0.0.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
-    <PackageLicenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicenseUrl>
+    <PackageLicense>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicense>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
   </PropertyGroup>
@@ -24,7 +24,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.0-preview06" />
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.0" />
     <PackageReference Include="System.CodeDom" Version="4.4.0" />
   </ItemGroup>
 

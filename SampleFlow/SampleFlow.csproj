@@ -7,7 +7,7 @@
 
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="1.0.0-preview04" />
+    <PackageReference Include="LogicBuilder.Workflow.Activities.Rules" Version="1.0.0" />
   </ItemGroup>
 
 </Project>
