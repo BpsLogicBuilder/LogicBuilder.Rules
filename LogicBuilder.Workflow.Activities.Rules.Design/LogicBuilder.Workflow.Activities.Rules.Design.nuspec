@@ -7,11 +7,12 @@
     <authors>BlaiseD</authors>
     <owners>BlaiseD</owners>
     <licenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</licenseUrl>
-    <projectUrl>https://github.com/BlaiseD/LogicBuilder.Rules</projectUrl>
+    <projectUrl>https://github.com/BlaiseD/LogicBuilder</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This package makes the RuleSetDialog from System.Workflow.Activities.Rules compatible with .NetStandard.</description>
-    <releaseNotes>Supporting component for https://github.com/BlaiseD/LogicBuilder.Rules .</releaseNotes>
+    <releaseNotes>First Release.</releaseNotes>
     <copyright>Copyright © Microsoft 2017</copyright>
     <tags>rules editing serialization</tags>
+    <repository url="https://github.com/BlaiseD/LogicBuilder.Rules"></repository>
   </metadata>
 </package>
