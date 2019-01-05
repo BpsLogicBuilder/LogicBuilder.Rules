@@ -24,3 +24,18 @@ Serialization is a litte different for each platform because the strong names ar
 * .Net Framework stands alone
 * UWP, Xamarin UWP and .Net Core (.Net Core platform)
 * iOS and Android (Xamarin platform)
+
+# Get the Logic Builder
+BPS Logic Builder defines forms, queries, and business logic for Microsft platfrom (.Net Framework, .Net Core, and Xamarin) applications using Visio.
+
+## System Requirements
+* Windows 10 version 1809 build 17763
+* Visio 2010, 2013, 2106 or 2019
+
+<a href='//www.microsoft.com/store/apps/9NGKP83G750J?ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' style='width: 284px; height: 104px;'/></a>
+
+**If your version of Visio is 64-bit then be sure to get the [64-bit](//www.microsoft.com/store/apps/9PBQ81MNWHLX) version instead.**
+* In the Logic Builder client select **Help** > **Contents**. 
+* Select **Getting Started** at the top of the treeview.
+* Follow the instructions to download the sample applications (C#, Angular 7 and flow diagrams).
+* Follow the instructions to build and deploy the rules.
