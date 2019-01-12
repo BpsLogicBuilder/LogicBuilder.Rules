@@ -32,7 +32,7 @@ BPS Logic Builder defines forms, queries, and business logic for Microsft platfr
 * Windows 10 version 1809 build 17763
 * Visio 2010, 2013, 2106 or 2019
 
-<a href='//www.microsoft.com/store/apps/9NGKP83G750J?ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' style='width: 284px; height: 104px;'/></a>
+<a href='//www.microsoft.com/store/apps/9NGKP83G750J?ocid=badge'><img src='https://assets.windowsphone.com/85864462-9c82-451e-9355-a3d5f874397a/English_get-it-from-MS_InvariantCulture_Default.png' alt='English badge' width="284" height="104" style='width: 284px; height: 104px;'/></a>
 
 **If your version of Visio is 64-bit then be sure to get the [64-bit](//www.microsoft.com/store/apps/9PBQ81MNWHLX) version instead.**
 * In the Logic Builder client select **Help** > **Contents**. 
