@@ -1,5 +1,6 @@
-configuration: Release
-
+image: Visual Studio 2017
+configuration: Debug
+platform: Any CPU
 #Restore nuget packages
 before_build:
  - nuget update -self
@@ -9,6 +10,11 @@ build:
   # MSBuild verbosity level
   verbosity: normal
 
-image: Visual Studio 2017 Preview
+test:
+  assemblies:
+    only:
+    - '**\*.UnitTests.NetCore.dll'
+    - '**\*.UnitTests.NetFramework.dll'
+
 install:
   - appveyor DownloadFile https://dist.nuget.org/win-x86-commandline/v4.0.0/nuget.exe
