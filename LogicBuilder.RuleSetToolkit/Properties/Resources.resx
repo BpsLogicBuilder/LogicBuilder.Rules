@@ -160,17 +160,11 @@
   <data name="NetFramework" xml:space="preserve">
     <value>.Net Framework</value>
   </data>
-  <data name="UWP" xml:space="preserve">
-    <value>UWP</value>
+  <data name="Xamarin" xml:space="preserve">
+    <value>Xamarin</value>
   </data>
-  <data name="XamarinAndroid" xml:space="preserve">
-    <value>Xamarin Android</value>
-  </data>
-  <data name="XamarinIOS" xml:space="preserve">
-    <value>Xamarin IOS</value>
-  </data>
-  <data name="XamarinUWP" xml:space="preserve">
-    <value>Xamarin UWP</value>
+  <data name="NetNative" xml:space="preserve">
+    <value>.Net Native</value>
   </data>
   <data name="ReevaluationAlways" xml:space="preserve">
     <value>Always</value>

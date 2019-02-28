@@ -1,5 +1,5 @@
 REM To Use update the version number and call: PackNuget
-SET "version=1.0.0"
+SET "version=1.0.1"
 CD /d %0\..
 msbuild /t:pack /p:Configuration=Release
 nuget add bin\Release\LogicBuilder.Workflow.Activities.Rules.%version%.nupkg -source C:\LocalNuget\packages

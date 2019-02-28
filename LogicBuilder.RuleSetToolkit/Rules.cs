@@ -53,19 +53,24 @@ namespace LogicBuilder.RuleSetToolkit
             if (ruleSetXml == null) return null;
 
             ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.UWP_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_ANDROID_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_IOS_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_UWP_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_MATCH, AssemblyStrongNames.NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETNATIVE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_XAMARIN_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETNATIVE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
+
             return ruleSetXml;
         }
 
         private static string UpdateStrongNameByPlatForm(this string ruleSetXml, DotNetPlatForm platForm)
         {
             if (ruleSetXml == null) return null;
+            if (platForm == DotNetPlatForm.NetFramework)
+                return ruleSetXml;
 
-            return Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, StrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, StrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETFRAMEWORK_MATCH, CodeDomStrongNames[platForm]);
+            return ruleSetXml;
         }
 
         private static RuleSet DeserializeRuleSet(string ruleSetXml, string fullPath)
@@ -98,10 +103,16 @@ namespace LogicBuilder.RuleSetToolkit
         {
             { DotNetPlatForm.NetCore, AssemblyStrongNames.NETCORE },
             { DotNetPlatForm.NetFramework, AssemblyStrongNames.NETFRAMEWORK },
-            { DotNetPlatForm.UWP, AssemblyStrongNames.UWP },
-            { DotNetPlatForm.XamarinAndroid, AssemblyStrongNames.XAMARIN_ANDROID },
-            { DotNetPlatForm.XamarinIOS, AssemblyStrongNames.XAMARIN_IOS },
-            { DotNetPlatForm.XamarinUWP, AssemblyStrongNames.XAMARIN_UWP }
+            { DotNetPlatForm.Xamarin, AssemblyStrongNames.XAMARIN },
+            { DotNetPlatForm.NetNative, AssemblyStrongNames.NETNATIVE}
+        };
+
+        private static readonly IDictionary<DotNetPlatForm, string> CodeDomStrongNames = new Dictionary<DotNetPlatForm, string>
+        {
+            { DotNetPlatForm.NetCore, AssemblyStrongNames.CODEDOM_NETCORE },
+            { DotNetPlatForm.NetFramework, AssemblyStrongNames.CODEDOM_NETFRAMEWORK },
+            { DotNetPlatForm.Xamarin, AssemblyStrongNames.CODEDOM_XAMARIN },
+            { DotNetPlatForm.NetNative, AssemblyStrongNames.CODEDOM_NETNATIVE}
         };
 
         internal static string SerializeRuleSet(object rules, DotNetPlatForm platForm)

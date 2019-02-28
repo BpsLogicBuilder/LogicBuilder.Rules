@@ -2,15 +2,15 @@
 <package >
   <metadata>
     <id>LogicBuilder.Workflow.Activities.Rules.Design</id>
-    <version>1.0.0</version>
+    <version>1.0.1</version>
     <title>LogicBuilder.Workflow.Activities.Rules.Design</title>
     <authors>BlaiseD</authors>
     <owners>BlaiseD</owners>
-    <licenseUrl>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</licenseUrl>
+    <license type="expression">MIT</license>
     <projectUrl>https://github.com/BlaiseD/LogicBuilder</projectUrl>
     <requireLicenseAcceptance>false</requireLicenseAcceptance>
     <description>This package makes the RuleSetDialog from System.Workflow.Activities.Rules compatible with .NetStandard.</description>
-    <releaseNotes>First Release.</releaseNotes>
+    <releaseNotes>Allow the client to supply reference assemblies because .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</releaseNotes>
     <copyright>Copyright © Microsoft 2017</copyright>
     <tags>rules editing serialization</tags>
     <repository url="https://github.com/BlaiseD/LogicBuilder.Rules"></repository>

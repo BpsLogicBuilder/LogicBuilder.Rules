@@ -142,6 +142,15 @@ namespace LogicBuilder.RuleSetToolkit.Properties {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to .Net Native.
+        /// </summary>
+        internal static string NetNative {
+            get {
+                return ResourceManager.GetString("NetNative", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to New Rule Set.
         /// </summary>
         internal static string newRuleSetDialogTitle {
@@ -214,38 +223,11 @@ namespace LogicBuilder.RuleSetToolkit.Properties {
         }
         
         /// <summary>
-        ///   Looks up a localized string similar to UWP.
+        ///   Looks up a localized string similar to Xamarin.
         /// </summary>
-        internal static string UWP {
+        internal static string Xamarin {
             get {
-                return ResourceManager.GetString("UWP", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Xamarin Android.
-        /// </summary>
-        internal static string XamarinAndroid {
-            get {
-                return ResourceManager.GetString("XamarinAndroid", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Xamarin IOS.
-        /// </summary>
-        internal static string XamarinIOS {
-            get {
-                return ResourceManager.GetString("XamarinIOS", resourceCulture);
-            }
-        }
-        
-        /// <summary>
-        ///   Looks up a localized string similar to Xamarin UWP.
-        /// </summary>
-        internal static string XamarinUWP {
-            get {
-                return ResourceManager.GetString("XamarinUWP", resourceCulture);
+                return ResourceManager.GetString("Xamarin", resourceCulture);
             }
         }
     }

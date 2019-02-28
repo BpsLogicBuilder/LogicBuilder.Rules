@@ -4,9 +4,7 @@
     {
         NetCore,
         NetFramework,
-        UWP,
-        XamarinAndroid,
-        XamarinIOS,
-        XamarinUWP
+        Xamarin,
+        NetNative
     }
 }

@@ -4,11 +4,11 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Workflow.Activities</RootNamespace>
     <PackageId>LogicBuilder.Workflow.Activities.Rules</PackageId>
-    <PackageVersion>1.0.0</PackageVersion>
+    <PackageVersion>1.0.1</PackageVersion>
     <Authors>BlaiseD</Authors>
     <Description>Updates System.Workflow.Activities.Rules to bring the RuleEngine functionality to .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>First Release.</PackageReleaseNotes>
+    <PackageReleaseNotes>Added a new constructor with a List&lt;Assembly&gt; argument to RuleValidation. .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <AssemblyVersion>1.0.0.0</AssemblyVersion>
@@ -25,8 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.0" />
-    <PackageReference Include="System.CodeDom" Version="4.4.0" />
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.1" />
   </ItemGroup>
 
   <ItemGroup>

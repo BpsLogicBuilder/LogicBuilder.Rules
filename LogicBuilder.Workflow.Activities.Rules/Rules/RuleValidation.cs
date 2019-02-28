@@ -799,6 +799,12 @@ namespace LogicBuilder.Workflow.Activities.Rules
             root = startingAssembly;
         }
 
+        public SimpleRunTimeTypeProvider(Assembly startingAssembly, List<Assembly> references)
+        {
+            root = startingAssembly;
+            this.references = references;
+        }
+
         public Type GetType(string name)
         {
             return GetType(name, false);
@@ -939,6 +945,12 @@ namespace LogicBuilder.Workflow.Activities.Rules
         {
             this.thisType = thisType ?? throw new ArgumentNullException("thisType");
             this.typeProvider = new SimpleRunTimeTypeProvider(this.thisType.Assembly);
+        }
+
+        public RuleValidation(Type thisType, List<Assembly> references)
+        {
+            this.thisType = thisType ?? throw new ArgumentNullException("thisType");
+            this.typeProvider = new SimpleRunTimeTypeProvider(this.thisType.Assembly, references);
         }
 
         #endregion
