@@ -923,6 +923,10 @@ namespace UnitTests.NetFramework
             ruleSet.Rules.Add(Rule_set_state_WITH_update_action_set_targeting_AlwaysTrue_property());
             ruleSet.Rules.Add(Rule_get_state_WITH_AlwaysTrue_property_to_reevaluate_update_action());
 
+            string ruleSetString = SerializeRules(ruleSet);
+
+            ruleSet = DeserializeRuleSet(ruleSetString);
+
             RuleValidation ruleValidation = GetValidation(ruleSet, typeof(SampleFlow.FlowEntity));
             ruleEngine = new RuleEngine(ruleSet, ruleValidation);
         }
@@ -971,6 +975,26 @@ namespace UnitTests.NetFramework
             }
 
             return ruleDefinition.ToString();
+        }
+
+        private RuleSet DeserializeRuleSet(string ruleSetXmlDefinition)
+        {
+
+            WorkflowMarkupSerializer serializer = new WorkflowMarkupSerializer();
+            if (!string.IsNullOrEmpty(ruleSetXmlDefinition))
+            {
+                using (System.IO.StringReader stringReader = new System.IO.StringReader(ruleSetXmlDefinition))
+                {
+                    using (System.Xml.XmlTextReader reader = new System.Xml.XmlTextReader(stringReader))
+                    {
+                        return serializer.Deserialize(reader) as RuleSet;
+                    }
+                }
+            }
+            else
+            {
+                return null;
+            }
         }
     }
 }

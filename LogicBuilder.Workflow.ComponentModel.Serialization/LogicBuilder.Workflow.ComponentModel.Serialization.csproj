@@ -4,15 +4,15 @@
     <TargetFramework>netstandard2.0</TargetFramework>
     <RootNamespace>LogicBuilder.Workflow</RootNamespace>
     <PackageId>LogicBuilder.Workflow.ComponentModel.Serialization</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>BlaiseD</Authors>
     <Description>Manages serialization of rule sets for .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
     <PackageReleaseNotes>Allow the client to supply reference assemblies because .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
     <PackageLicense>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicense>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
@@ -25,7 +25,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.1" />
+    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.2" />
     <PackageReference Include="System.CodeDom" Version="4.5.0" />
   </ItemGroup>
 

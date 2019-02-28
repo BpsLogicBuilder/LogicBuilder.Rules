@@ -3,7 +3,7 @@
   <PropertyGroup>
     <TargetFramework>netstandard2.0</TargetFramework>
     <PackageId>LogicBuilder.ComponentModel.Design.Serialization</PackageId>
-    <PackageVersion>1.0.1</PackageVersion>
+    <PackageVersion>1.0.2</PackageVersion>
     <Authors>BlaiseD</Authors>
     <RootNamespace>LogicBuilder.ComponentModel.Design.Serialization</RootNamespace>
     <Description>Implements DesignerSerializationManager for .NetStandard.</Description>
@@ -11,8 +11,8 @@
     <PackageReleaseNotes>Allow the client to supply reference assemblies because .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</PackageReleaseNotes>
     <PackageTags>serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
-    <AssemblyVersion>1.0.0.0</AssemblyVersion>
-    <FileVersion>1.0.0.0</FileVersion>
+    <AssemblyVersion>1.0.2.0</AssemblyVersion>
+    <FileVersion>1.0.2.0</FileVersion>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
     <PackageLicense>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicense>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>

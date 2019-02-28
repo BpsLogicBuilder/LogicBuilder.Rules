@@ -665,7 +665,7 @@ namespace Console.SampleFlow.Uwp.DefineAndSerialize
 
             Windows.Storage.StorageFolder roamingFolder = Windows.Storage.ApplicationData.Current.RoamingFolder;
             Windows.Storage.StorageFile file = Task.Run(async () => await roamingFolder.CreateFileAsync("FlowEntity.Uwp.module", Windows.Storage.CreationCollisionOption.ReplaceExisting)).Result;
-            Task.Run(async () => await Windows.Storage.FileIO.WriteTextAsync(file, rulesSetString)).Wait();
+            Task.Run(async () => await Windows.Storage.FileIO.WriteTextAsync(file, rulesSetString, Windows.Storage.Streams.UnicodeEncoding.Utf16LE)).Wait();
         }
 
         private static string SerializeRules(object drs)
