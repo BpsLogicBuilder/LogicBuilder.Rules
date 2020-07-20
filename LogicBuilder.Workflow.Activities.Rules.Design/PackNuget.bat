@@ -1,7 +1,14 @@
 REM To Use update the version number and call: PackNuget
-SET "version=1.0.2"
+SET "version=1.0.3-preview01"
+SET "solutionPath=C:\.NetStandardGit\LogicBuilder\LogicBuilder.Rules"
+SET "projectName=LogicBuilder.Workflow.Activities.Rules.Design"
 CD /d %0\..
-nuget pack LogicBuilder.Workflow.Activities.Rules.Design.csproj -properties Configuration=Release
-nuget add LogicBuilder.Workflow.Activities.Rules.Design.%version%.nupkg -source C:\LocalNuget\packages
-REM nuget push LogicBuilder.Workflow.Activities.Rules.Design.%version%.nupkg -Source https://www.nuget.org/api/v2/package
+
+
+dotnet restore %solutionPath%\%projectName%\%projectName%.csproj
+REM msbuild %solutionPath%\%projectName%\%projectName%.csproj /p:Configuration=Release
+dotnet build %solutionPath%\%projectName%\%projectName%.csproj --configuration Release
+nuget pack %solutionPath%\%projectName%\%projectName%.csproj -properties Configuration=Release -OutputDirectory %solutionPath%\%projectName%
+nuget add %solutionPath%\%projectName%\%projectName%.%version%.nupkg -source C:\LocalNuget\packages
+
 pause
