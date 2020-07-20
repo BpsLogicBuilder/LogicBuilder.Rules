@@ -5,7 +5,8 @@ SET "projectName=LogicBuilder.Workflow.Activities.Rules.Design"
 CD /d %0\..
 
 
-dotnet restore %solutionPath%\%projectName%\%projectName%.csproj
+REM dotnet restore %solutionPath%\%projectName%\%projectName%.csproj
+msbuild %solutionPath%\%projectName%\%projectName%.csproj -t:restore
 msbuild %solutionPath%\%projectName%\%projectName%.csproj /p:Configuration=Release
 REM dotnet build %solutionPath%\%projectName%\%projectName%.csproj --configuration Release
 nuget pack %solutionPath%\%projectName%\%projectName%.csproj -properties Configuration=Release -OutputDirectory %solutionPath%\%projectName%

@@ -9,7 +9,7 @@ $NUGET_PACKAGE_PATH = ".\artifacts\$($Env:PROJECT_NAME).$($Env:VERSION_NUMBER).n
 Write-Host "Project Path ${PROJECT_PATH}"
 Write-Host "Package Path ${NUGET_PACKAGE_PATH}"
 
-dotnet restore $PROJECT_PATH
+msbuild $PROJECT_PATH -t:restore
 msbuild $PROJECT_PATH /p:Configuration=Release
 
 if ($Env:REPO_OWNER -ne "BlaiseD") {
