@@ -14,5 +14,8 @@
     <copyright>Copyright © Microsoft 2017</copyright>
     <tags>rules editing serialization</tags>
     <repository type="git" url="https://github.com/BlaiseD/LogicBuilder.Rules"></repository>
+    <dependencies>
+      <group targetFramework=".NETFramework4.6.1" />
+    </dependencies>
   </metadata>
 </package>
