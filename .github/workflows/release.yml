@@ -36,7 +36,7 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal
+      run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetFramework.NetFrameworkRulesTests|UnitTests.NetCore.NetCoreRulesTests"
 
     - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
     - name: Build and push
