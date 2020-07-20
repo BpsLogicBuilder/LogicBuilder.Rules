@@ -32,16 +32,16 @@ jobs:
     - name: Restore
       run: dotnet restore
 
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
-    - name: Build and push
-      run: ./Release_Build_Push_Design.ps1
-      shell: pwsh
-
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
       run: dotnet test --no-restore --verbosity normal
+
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
+    - name: Build and push
+      run: ./Release_Build_Push_Design.ps1
+      shell: pwsh
 
     - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.ComponentModel.Design.Serialization'
     - name: Pack and push
