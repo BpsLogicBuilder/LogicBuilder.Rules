@@ -1,0 +1,59 @@
+name: Release
+
+on:
+  release:
+    types: [published]
+
+jobs:
+  build:
+
+    runs-on: windows-latest
+
+    steps:
+    - uses: actions/checkout@v2
+    - name: Add msbuild to PATH
+      uses: microsoft/setup-msbuild@v1.0.0
+    - name: Setup .NET Core
+      uses: actions/setup-dotnet@v1
+      with:
+        dotnet-version: 3.1.302
+        source-url: https://nuget.pkg.github.com/blaised/index.json
+      env:
+        NUGET_AUTH_TOKEN: ${{ secrets.GITHUB_TOKEN }}
+
+    - name: Set Variables
+      run: |
+        echo '::set-env name=VERSION_NUMBER::1.0.3-preview01'
+        echo '::set-env name=NUGET_URL::https://api.nuget.org/v3/index.json'
+        echo '::set-env name=NUGET_API_KEY::${{ secrets.NUGET_API_KEY }}'
+        echo '::set-env name=REPO::${{ github.repository }}'
+        echo '::set-env name=REPO_OWNER::${{ github.repository_owner }}'
+
+    - name: Restore
+      run: dotnet restore
+
+    - name: Build
+      run: dotnet build --configuration Release --no-restore
+
+    - name: Test
+      run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetFramework.NetFrameworkRulesTests|UnitTests.NetCore.NetCoreRulesTests"
+
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
+    - name: Build and push
+      run: ./Release_Build_Push_Design.ps1
+      shell: pwsh
+
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.ComponentModel.Design.Serialization'
+    - name: Pack and push
+      run: ./Release_Pack_Push.ps1
+      shell: pwsh
+
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.ComponentModel.Serialization'
+    - name: Pack and push
+      run: ./Release_Pack_Push.ps1
+      shell: pwsh
+
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules'
+    - name: Pack and push
+      run: ./Release_Pack_Push.ps1
+      shell: pwsh

@@ -157,7 +157,7 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LogicBuilder.Workflow.Activities.Rules">
-      <Version>1.0.2</Version>
+      <Version>1.0.3-preview01</Version>
     </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.3</Version>
