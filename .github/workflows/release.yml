@@ -30,6 +30,11 @@ jobs:
     - name: Restore
       run: dotnet restore
 
+    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
+    - name: Build and push
+      run: ./Release_Build_Push_Design.ps1
+      shell: pwsh
+
     - name: Build
       run: dotnet build --configuration Release --no-restore
 
@@ -49,9 +54,4 @@ jobs:
     - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules'
     - name: Pack and push
       run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - run: echo '::set-env name=PROJECT_NAME::LogicBuilder.Workflow.Activities.Rules.Design'
-    - name: Pack and push
-      run: ./Release_Pack_Push_Design.ps1
       shell: pwsh

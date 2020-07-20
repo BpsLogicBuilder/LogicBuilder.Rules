@@ -6,8 +6,8 @@ CD /d %0\..
 
 
 dotnet restore %solutionPath%\%projectName%\%projectName%.csproj
-REM msbuild %solutionPath%\%projectName%\%projectName%.csproj /p:Configuration=Release
-dotnet build %solutionPath%\%projectName%\%projectName%.csproj --configuration Release
+msbuild %solutionPath%\%projectName%\%projectName%.csproj /p:Configuration=Release
+REM dotnet build %solutionPath%\%projectName%\%projectName%.csproj --configuration Release
 nuget pack %solutionPath%\%projectName%\%projectName%.csproj -properties Configuration=Release -OutputDirectory %solutionPath%\%projectName%
 nuget add %solutionPath%\%projectName%\%projectName%.%version%.nupkg -source C:\LocalNuget\packages
 
