@@ -156,14 +156,15 @@
     </Page>
   </ItemGroup>
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.Activities.Rules">
-      <Version>1.0.3-preview01</Version>
-    </PackageReference>
     <PackageReference Include="Microsoft.NETCore.UniversalWindowsPlatform">
       <Version>6.2.3</Version>
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
+    <ProjectReference Include="..\LogicBuilder.Workflow.Activities.Rules\LogicBuilder.Workflow.Activities.Rules.csproj">
+      <Project>{1c38ce58-c4ac-4f93-9268-a815c5d81786}</Project>
+      <Name>LogicBuilder.Workflow.Activities.Rules</Name>
+    </ProjectReference>
     <ProjectReference Include="..\SampleFlow\SampleFlow.csproj">
       <Project>{b1da0cbe-7c02-4e6d-8ba6-5d21e7262b6c}</Project>
       <Name>SampleFlow</Name>

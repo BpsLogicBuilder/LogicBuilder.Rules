@@ -35,9 +35,6 @@
     <Reference Include="LogicBuilder.ComponentModel.Design.Serialization, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
       <HintPath>..\packages\LogicBuilder.ComponentModel.Design.Serialization.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.ComponentModel.Design.Serialization.dll</HintPath>
     </Reference>
-    <Reference Include="LogicBuilder.Workflow.Activities.Rules, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogicBuilder.Workflow.Activities.Rules.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.Workflow.Activities.Rules.dll</HintPath>
-    </Reference>
     <Reference Include="LogicBuilder.Workflow.ComponentModel.Serialization, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
       <HintPath>..\packages\LogicBuilder.Workflow.ComponentModel.Serialization.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.Workflow.ComponentModel.Serialization.dll</HintPath>
     </Reference>
@@ -86,6 +83,12 @@
       <Generator>ResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>
     </EmbeddedResource>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicBuilder.Workflow.Activities.Rules\LogicBuilder.Workflow.Activities.Rules.csproj">
+      <Project>{1c38ce58-c4ac-4f93-9268-a815c5d81786}</Project>
+      <Name>LogicBuilder.Workflow.Activities.Rules</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
