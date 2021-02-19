@@ -32,6 +32,18 @@ jobs:
         echo "REPO=${{ github.repository }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
         echo "REPO_OWNER=${{ github.repository_owner }}" | Out-File -FilePath $Env:GITHUB_ENV -Encoding utf-8 -Append
 
+    - name: Build and push LogicBuilder.ComponentModel.Design.Serialization
+      env:
+        PROJECT_NAME: LogicBuilder.ComponentModel.Design.Serialization
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
+    - name: Build and push LogicBuilder.Workflow.ComponentModel.Serialization
+      env:
+        PROJECT_NAME: LogicBuilder.Workflow.ComponentModel.Serialization
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
     - name: Restore
       run: dotnet restore
 
@@ -41,26 +53,14 @@ jobs:
     - name: Test
       run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetFramework.NetFrameworkRulesTests|UnitTests.NetCore.NetCoreRulesTests"
 
-    - name: Build and push LogicBuilder.Workflow.Activities.Rules.Design
-      env:
-        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules.Design
-      run: ./Release_Build_Push_Design.ps1
-      shell: pwsh
-
-    - name: Pack and push LogicBuilder.ComponentModel.Design.Serialization
-      env:
-        PROJECT_NAME: LogicBuilder.ComponentModel.Design.Serialization
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - name: Pack and push LogicBuilder.Workflow.ComponentModel.Serialization
-      env:
-        PROJECT_NAME: LogicBuilder.Workflow.ComponentModel.Serialization
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
     - name: Pack and push LogicBuilder.Workflow.Activities.Rules
       env:
         PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules
       run: ./Release_Pack_Push.ps1
+      shell: pwsh
+
+    - name: Build and push LogicBuilder.Workflow.Activities.Rules.Design
+      env:
+        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules.Design
+      run: ./Release_Build_Push_Design.ps1
       shell: pwsh
