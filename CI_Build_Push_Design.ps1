@@ -16,5 +16,5 @@ if ($Env:REPO_OWNER -ne "BlaiseD") {
     Write-Host "${scriptName}: Only create packages on BlaiseD repositories."
 } else {
     nuget pack $PROJECT_PATH -properties Configuration=Release -OutputDirectory .\artifacts
-    dotnet nuget push $NUGET_PACKAGE_PATH --skip-duplicate
+    dotnet nuget push $NUGET_PACKAGE_PATH --skip-duplicate --api-key $Env:GITHUB_NUGET_AUTH_TOKEN
 }
