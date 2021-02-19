@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.3-zzz.1" />
+    <PackageReference Include="LogicBuilder.ComponentModel.Design.Serialization" Version="1.0.3-zzz.3.2" />
     <PackageReference Include="System.CodeDom" Version="4.5.0" />
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
