@@ -92,8 +92,11 @@
   </ItemGroup>
   <ItemGroup>
     <PackageReference Include="LogicBuilder.Workflow.Activities.Rules">
-      <Version>1.0.3-preview01</Version>
+      <Version>1.0.3-zzz.1</Version>
     </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <None Include="LogicBuilder.Workflow.Activities.Rules.Design.nuspec" />
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
