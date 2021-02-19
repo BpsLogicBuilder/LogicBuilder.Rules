@@ -15,7 +15,15 @@
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <SignAssembly>true</SignAssembly>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
+
+  <ItemGroup>
+    <PackageReference Include="MinVer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
+  </ItemGroup>
 
   <ItemGroup>
     <None Remove="PackNuget.bat" />

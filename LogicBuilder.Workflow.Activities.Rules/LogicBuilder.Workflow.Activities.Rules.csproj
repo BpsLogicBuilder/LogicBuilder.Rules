@@ -15,6 +15,7 @@
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
+    <MinVerTagPrefix>v</MinVerTagPrefix>
   </PropertyGroup>
 
   <ItemGroup>
@@ -22,7 +23,11 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.3-preview01" />
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.3-zzz.0" />
+    <PackageReference Include="MinVer" Version="2.3.0">
+      <PrivateAssets>all</PrivateAssets>
+      <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
+    </PackageReference>
   </ItemGroup>
 
   <ItemGroup>
