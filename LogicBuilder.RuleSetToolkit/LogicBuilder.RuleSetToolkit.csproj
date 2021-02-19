@@ -32,22 +32,7 @@
     <WarningLevel>4</WarningLevel>
   </PropertyGroup>
   <ItemGroup>
-    <Reference Include="LogicBuilder.ComponentModel.Design.Serialization, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogicBuilder.ComponentModel.Design.Serialization.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.ComponentModel.Design.Serialization.dll</HintPath>
-    </Reference>
-    <Reference Include="LogicBuilder.Workflow.Activities.Rules, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogicBuilder.Workflow.Activities.Rules.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.Workflow.Activities.Rules.dll</HintPath>
-    </Reference>
-    <Reference Include="LogicBuilder.Workflow.Activities.Rules.Design, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogicBuilder.Workflow.Activities.Rules.Design.1.0.3-preview01\lib\net461\LogicBuilder.Workflow.Activities.Rules.Design.dll</HintPath>
-    </Reference>
-    <Reference Include="LogicBuilder.Workflow.ComponentModel.Serialization, Version=1.0.3.0, Culture=neutral, PublicKeyToken=646893bec0268535, processorArchitecture=MSIL">
-      <HintPath>..\packages\LogicBuilder.Workflow.ComponentModel.Serialization.1.0.3-preview01\lib\netstandard2.0\LogicBuilder.Workflow.ComponentModel.Serialization.dll</HintPath>
-    </Reference>
     <Reference Include="System" />
-    <Reference Include="System.CodeDom, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51, processorArchitecture=MSIL">
-      <HintPath>..\packages\System.CodeDom.4.5.0\lib\net461\System.CodeDom.dll</HintPath>
-    </Reference>
     <Reference Include="System.Core" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
@@ -96,9 +81,6 @@
     <EmbeddedResource Include="TextViewer.resx">
       <DependentUpon>TextViewer.cs</DependentUpon>
     </EmbeddedResource>
-    <None Include="packages.config">
-      <SubType>Designer</SubType>
-    </None>
     <None Include="Properties\Settings.settings">
       <Generator>SettingsSingleFileGenerator</Generator>
       <LastGenOutput>Settings.Designer.cs</LastGenOutput>
@@ -112,6 +94,17 @@
   </ItemGroup>
   <ItemGroup>
     <None Include="App.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <PackageReference Include="System.CodeDom">
+      <Version>4.5.0</Version>
+    </PackageReference>
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\LogicBuilder.Workflow.Activities.Rules.Design\LogicBuilder.Workflow.Activities.Rules.Design.csproj">
+      <Project>{bc3aff22-22f0-42ef-b5dc-63c527ad406d}</Project>
+      <Name>LogicBuilder.Workflow.Activities.Rules.Design</Name>
+    </ProjectReference>
   </ItemGroup>
   <Import Project="$(MSBuildToolsPath)\Microsoft.CSharp.targets" />
 </Project>
