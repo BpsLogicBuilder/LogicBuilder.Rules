@@ -63,4 +63,4 @@ jobs:
       run: dotnet build --configuration Release --no-restore
 
     - name: Test
-      run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetFramework.NetFrameworkRulesTests|UnitTests.NetCore.NetCoreRulesTests"
+      run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetCore.NetCoreRulesTests"
