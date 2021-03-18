@@ -10,6 +10,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Reflection;
 
 namespace LogicBuilder.RuleSetToolkit
 {
@@ -137,17 +138,17 @@ namespace LogicBuilder.RuleSetToolkit
         /// <param name="type"></param>
         /// <param name="ruleSet"></param>
         /// <returns></returns>
-        internal static List<string> ValidateRuleSet(Type type, RuleSet ruleSet)
+        internal static List<string> ValidateRuleSet(Type type, RuleSet ruleSet, List<Assembly> referenceAssemblies)
         {
             List<string> validationErrors = new List<string>();
-            RuleValidation ruleValidation = null;
+            RuleValidation ruleValidation;
             if (type == null)
                 throw new InvalidOperationException(Resources.typeCannotBeNull);
 
             if (ruleSet == null)
                 throw new InvalidOperationException(Resources.ruleSetCannotBeNull);
 
-            ruleValidation = new RuleValidation(type);
+            ruleValidation = new RuleValidation(type, referenceAssemblies);
 
             if (ruleValidation == null)
             {

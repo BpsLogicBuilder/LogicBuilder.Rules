@@ -53,7 +53,7 @@ jobs:
     - name: Build and push LogicBuilder.Workflow.Activities.Rules.Design
       env:
         PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules.Design
-      run: ./CI_Build_Push_Design.ps1
+      run: ./CI_Build_Push.ps1
       shell: pwsh
 
     - name: Restore

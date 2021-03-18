@@ -33,6 +33,7 @@ namespace LogicBuilder.RuleSetToolkit
         private List<string> validationErrors = new List<string>();
         private Type activityClassType;
         private RuleSet ruleSet;
+        private List<Assembly> referenceAssemblies;
         #endregion Variables
 
         #region Properties
@@ -184,15 +185,18 @@ namespace LogicBuilder.RuleSetToolkit
                 return;
             }
 
-            AssemblyLoader assemblyLoader = new AssemblyLoader(this.AssemblyFullName, Settings.Default.assemblyLoadPaths.Split(new char[] { ';' }));
-            Assembly assembly = null;
+            AssemblyLoader assemblyLoader = new AssemblyLoader(this.AssemblyFullName, Settings.Default.assemblyLoadPaths.Split(new char[] { ';' }), System.Runtime.Loader.AssemblyLoadContext.Default);
+            Assembly assembly;
 
             this.Cursor = Cursors.WaitCursor;
             try
             {
                 assembly = assemblyLoader.LoadAssembly();
                 if (assembly != null)
+                {
                     this.activityClassType = AssemblyLoader.GetType(assembly, this.ActivityClass, true);
+                    this.referenceAssemblies = assembly.GetReferencedAssembliesRecursively(assemblyLoader);
+                }
             }
             catch (ToolkitException ex)
             {
@@ -309,7 +313,7 @@ namespace LogicBuilder.RuleSetToolkit
 
         private bool ValidateRules()
         {
-            validationErrors = Rules.ValidateRuleSet(this.activityClassType, ruleSet);
+            validationErrors = Rules.ValidateRuleSet(this.activityClassType, ruleSet, this.referenceAssemblies);
             UpdateErrorLabel(validationErrors.Count != 0
                 ? string.Join(Environment.NewLine, validationErrors)
                 : string.Empty);
@@ -358,7 +362,7 @@ namespace LogicBuilder.RuleSetToolkit
 
         private void DisplayRules()
         {
-            RuleSetDialog ruleSetDialog = new RuleSetDialog(this.activityClassType, ruleSet, Settings.Default.assemblyLoadPaths.Split(new char[] { ';' }))
+            RuleSetDialog ruleSetDialog = new RuleSetDialog(this.activityClassType, ruleSet, this.referenceAssemblies)
             {
                 StartPosition = FormStartPosition.CenterParent
             };

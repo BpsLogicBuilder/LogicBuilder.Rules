@@ -13,11 +13,11 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Console.SampleFlow.NetFrame
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.ComponentModel.Design.Serialization", "LogicBuilder.ComponentModel.Design.Serialization\LogicBuilder.ComponentModel.Design.Serialization.csproj", "{2A65527A-A593-4916-94C4-508B3BF93AD5}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicBuilder.RuleSetToolkit", "LogicBuilder.RuleSetToolkit\LogicBuilder.RuleSetToolkit.csproj", "{2E9B053D-EBDB-406D-9BB5-E935192BD48F}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.RuleSetToolkit", "LogicBuilder.RuleSetToolkit\LogicBuilder.RuleSetToolkit.csproj", "{2E9B053D-EBDB-406D-9BB5-E935192BD48F}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.Workflow.Activities.Rules", "LogicBuilder.Workflow.Activities.Rules\LogicBuilder.Workflow.Activities.Rules.csproj", "{1C38CE58-C4AC-4F93-9268-A815C5D81786}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "LogicBuilder.Workflow.Activities.Rules.Design", "LogicBuilder.Workflow.Activities.Rules.Design\LogicBuilder.Workflow.Activities.Rules.Design.csproj", "{BC3AFF22-22F0-42EF-B5DC-63C527AD406D}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.Workflow.Activities.Rules.Design", "LogicBuilder.Workflow.Activities.Rules.Design\LogicBuilder.Workflow.Activities.Rules.Design.csproj", "{BC3AFF22-22F0-42EF-B5DC-63C527AD406D}"
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "LogicBuilder.Workflow.ComponentModel.Serialization", "LogicBuilder.Workflow.ComponentModel.Serialization\LogicBuilder.Workflow.ComponentModel.Serialization.csproj", "{9BDA0141-6E7D-4F0C-AB9D-615E9E44795E}"
 EndProject

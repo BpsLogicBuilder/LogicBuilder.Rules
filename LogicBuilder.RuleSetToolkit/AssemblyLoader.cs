@@ -4,17 +4,18 @@ using System.Collections.Generic;
 using System.IO;
 using System.Linq;
 using System.Reflection;
+using System.Runtime.Loader;
 using System.Security;
 
 namespace LogicBuilder.RuleSetToolkit
 {
     internal class AssemblyLoader
     {
-        internal AssemblyLoader(string assemblyFullName, string[] paths)
+        internal AssemblyLoader(string assemblyFullName, string[] paths, AssemblyLoadContext assemblyLoadContext)
         {
             this.assemblyFullName = assemblyFullName;
             this.paths = paths;
-            Initialize();
+            this.assemblyLoadContext = assemblyLoadContext;
         }
 
         #region Constants
@@ -25,50 +26,13 @@ namespace LogicBuilder.RuleSetToolkit
         #region Variables
         private string assemblyFullName;
         private string[] paths;
+        private AssemblyLoadContext assemblyLoadContext;
         #endregion Variables
 
         #region Properties
         #endregion Properties
 
         #region Methods
-        private void Initialize()
-        {
-            AppDomain currentDomain = AppDomain.CurrentDomain;
-            currentDomain.AssemblyResolve += new ResolveEventHandler(CurrentDomain_AssemblyResolve);
-        }
-
-        /// <summary>
-        /// Loads unresolved assembly i.e. referenced assembly not found in GAC or otherwise.
-        /// This method searches the local directory of the assemblyFullName assembly.
-        /// </summary>
-        /// <param name="failedAssemblyStrongName"></param>
-        /// <returns></returns>
-        private Assembly ResolveAssembly(string failedAssemblyStrongName)
-        {
-            string assemblyName = failedAssemblyStrongName.Contains(COMMA) ? failedAssemblyStrongName.Substring(0, failedAssemblyStrongName.IndexOf(COMMA, StringComparison.Ordinal)) : failedAssemblyStrongName;
-            LinkedList<string> path = new LinkedList<string>(this.GetPaths());
-            try
-            {
-                return LoadAssembly(path.First, string.Concat(assemblyName, DOTDLL));
-            }
-            catch (FileLoadException ex)
-            {
-                throw new ToolkitException(ex.Message, ex);
-            }
-            catch (ArgumentNullException ex)
-            {
-                throw new ToolkitException(ex.Message, ex);
-            }
-            catch (BadImageFormatException ex)
-            {
-                throw new ToolkitException(ex.Message, ex);
-            }
-            catch (FileNotFoundException ex)
-            {
-                throw new ToolkitException(ex.Message, ex);
-            }
-        }
-
         /// <summary>
         /// Given the fully qualified class name, returns the type form the assemblyFullName assembly
         /// </summary>
@@ -123,7 +87,7 @@ namespace LogicBuilder.RuleSetToolkit
             try
             {
                 if (File.Exists(this.assemblyFullName))
-                    assembly = Assembly.LoadFile(this.assemblyFullName);
+                    assembly = assemblyLoadContext.LoadFromAssemblyPath(this.assemblyFullName);
             }
             catch (FileLoadException ex)
             {
@@ -154,13 +118,12 @@ namespace LogicBuilder.RuleSetToolkit
             if (assemblyName == null)
                 return null;
 
-
-            Assembly assembly = null;
+            Assembly assembly;
             LinkedList<string> path = new LinkedList<string>(this.GetPaths());
             try
             {
                 string name = assemblyName.FullName.Contains(COMMA) ? assemblyName.FullName.Substring(0, assemblyName.FullName.IndexOf(COMMA, StringComparison.Ordinal)) : assemblyName.FullName;
-                assembly = LoadAssembly(path.First, string.Concat(name, DOTDLL)) ?? Assembly.Load(assemblyName.FullName);
+                assembly = LoadAssembly(path.First, string.Concat(name, DOTDLL)) ?? this.assemblyLoadContext.LoadFromAssemblyName(assemblyName);
             }
             catch (IOException ex)
             {
@@ -212,21 +175,12 @@ namespace LogicBuilder.RuleSetToolkit
         {
             string fullName = Path.Combine(path.Value, file);
             if (File.Exists(fullName))
-                return Assembly.LoadFile(fullName);
+                return assemblyLoadContext.LoadFromAssemblyPath(fullName);
             else if (path.Next != null)
                 return LoadAssembly(path.Next, file);
             else
                 return null;
         }
         #endregion Private Methods
-        #region EventHandlers
-        private Assembly CurrentDomain_AssemblyResolve(object sender, ResolveEventArgs args)
-        {
-            if (string.IsNullOrEmpty(this.assemblyFullName))
-                return null;
-            else
-                return ResolveAssembly(args.Name);
-        }
-        #endregion EventHandlers
     }
 }

@@ -626,11 +626,11 @@ namespace LogicBuilder.Workflow.Activities.Rules
 
         [SuppressMessage("Microsoft.Performance", "CA1800:DoNotCastUnnecessarily")]
         [SuppressMessage("Microsoft.Maintainability", "CA1502:AvoidExcessiveComplexity")]
-        internal Parser(RuleValidation validation, string[] assemblyPaths = null)
+        internal Parser(RuleValidation validation)
         {
             this.validation = validation;
 
-            Type[] allTypes = null;
+            Type[] allTypes;
 
             SimpleRunTimeTypeProvider provider = validation.GetTypeProvider();
             if (provider == null)
@@ -649,9 +649,10 @@ namespace LogicBuilder.Workflow.Activities.Rules
             }
             else
             {
-                allTypes = !validation.ThisType.Assembly.IsNetFrameworkAssembly()
-                    ? validation.ThisType.Assembly.GetTypes(assemblyPaths)//additional design time loading logic for non-.NetFramework assemblies
-                    : provider.GetTypes();
+                List<Type> providerTypes = new List<Type>();
+                providerTypes.AddRange(typeof(string).Assembly.GetTypes());
+                providerTypes.AddRange(provider.GetTypes());
+                allTypes = providerTypes.ToArray();
             }
 
 

@@ -10,6 +10,7 @@ using System.ComponentModel;
 using System.ComponentModel.Design;
 using System.Diagnostics.CodeAnalysis;
 using System.Globalization;
+using System.Reflection;
 using System.Text;
 using System.Windows.Forms;
 using System.Windows.Forms.Design;
@@ -28,15 +29,27 @@ namespace LogicBuilder.Workflow.Activities.Rules.Design
         private const int numCols = 4;
         private bool[] sortOrder = new bool[numCols] { false, false, false, false };
 
-        public RuleSetDialog(Type activityType, RuleSet ruleSet, string[] assemblyPaths = null)
+        [Obsolete]
+        public RuleSetDialog(Type activityType, RuleSet ruleSet, string[] assemblyPaths = null, List<Assembly> references = null)
         {
             if (activityType == null)
                 throw (new ArgumentNullException("activityType"));
 
             InitializeDialog(ruleSet);
 
-            RuleValidation validation = new RuleValidation(activityType);
-            this.ruleParser = new Parser(validation, assemblyPaths);
+            RuleValidation validation = new RuleValidation(activityType, references);
+            this.ruleParser = new Parser(validation);
+        }
+
+        public RuleSetDialog(Type activityType, RuleSet ruleSet, List<Assembly> references)
+        {
+            if (activityType == null)
+                throw (new ArgumentNullException("activityType"));
+
+            InitializeDialog(ruleSet);
+
+            RuleValidation validation = new RuleValidation(activityType, references);
+            this.ruleParser = new Parser(validation);
         }
 
         private void InitializeDialog(RuleSet ruleSet)

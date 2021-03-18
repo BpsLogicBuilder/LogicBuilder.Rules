@@ -799,10 +799,10 @@ namespace LogicBuilder.Workflow.Activities.Rules
             root = startingAssembly;
         }
 
-        public SimpleRunTimeTypeProvider(Assembly startingAssembly, List<Assembly> references)
+        public SimpleRunTimeTypeProvider(Assembly startingAssembly, List<Assembly> referenceAssemblies)
         {
             root = startingAssembly;
-            this.references = references;
+            this.references = referenceAssemblies;
         }
 
         public Type GetType(string name)
@@ -819,7 +819,7 @@ namespace LogicBuilder.Workflow.Activities.Rules
 
             // now try mscorlib or this assembly
             // (or if the name is an assembly qualified name)
-            type = Type.GetType(name, throwOnError, false);
+            type = Type.GetType(name, ResolveAssembly, ResolveType, throwOnError, false);
             if (type != null)
                 return type;
 
@@ -839,7 +839,39 @@ namespace LogicBuilder.Workflow.Activities.Rules
                 if (type != null)
                     return type;
             }
+
             return null;
+
+            Assembly ResolveAssembly(AssemblyName assemblyName)
+            {
+                if (this.ReferencedAssembliesLookup.TryGetValue(assemblyName.FullName, out Assembly assembly))
+                    return assembly;
+
+                if (typeof(string).Assembly.GetName().Name == assemblyName.Name)
+                    return typeof(string).Assembly;
+
+                return LoadAssembly(assemblyName);
+            }
+
+            static Type ResolveType(Assembly assembly, string typeName, bool ignoreCase)
+            {
+                if (assembly != null)
+                    return assembly.GetType(typeName);
+
+                return Type.GetType(typeName, false, ignoreCase);
+            }
+
+            static Assembly LoadAssembly(AssemblyName assemblyName)
+            {
+                try
+                {
+                    return Assembly.Load(assemblyName);
+                }
+                catch (Exception)
+                {
+                    return null;
+                }
+            }
         }
 
         public Type[] GetTypes()
@@ -896,6 +928,9 @@ namespace LogicBuilder.Workflow.Activities.Rules
             }
         }
 
+        public IDictionary<string, Assembly> ReferencedAssembliesLookup 
+            => ReferencedAssemblies.ToDictionary(assembly => assembly.FullName);
+
         public IDictionary<object, Exception> TypeLoadErrors
         {
             get
@@ -947,10 +982,10 @@ namespace LogicBuilder.Workflow.Activities.Rules
             this.typeProvider = new SimpleRunTimeTypeProvider(this.thisType.Assembly);
         }
 
-        public RuleValidation(Type thisType, List<Assembly> references)
+        public RuleValidation(Type thisType, List<Assembly> referenceAssemblies)
         {
             this.thisType = thisType ?? throw new ArgumentNullException("thisType");
-            this.typeProvider = new SimpleRunTimeTypeProvider(this.thisType.Assembly, references);
+            this.typeProvider = new SimpleRunTimeTypeProvider(this.thisType.Assembly, referenceAssemblies);
         }
 
         #endregion
