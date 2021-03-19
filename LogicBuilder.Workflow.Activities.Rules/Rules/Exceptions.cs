@@ -231,7 +231,6 @@ namespace LogicBuilder.Workflow.Activities.Rules
         /// </summary>
         /// <param name="info">Reference to the object that holds the data needed to serialize/deserialize the exception</param>
         /// <param name="context">Provides the means for serialiing the exception data</param>
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (info == null)
@@ -319,7 +318,6 @@ namespace LogicBuilder.Workflow.Activities.Rules
         /// </summary>
         /// <param name="info">Reference to the object that holds the data needed to serialize/deserialize the exception</param>
         /// <param name="context">Provides the means for serialiing the exception data</param>
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
         public override void GetObjectData(SerializationInfo info, StreamingContext context)
         {
             if (info == null)

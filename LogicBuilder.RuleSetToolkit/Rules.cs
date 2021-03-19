@@ -53,12 +53,12 @@ namespace LogicBuilder.RuleSetToolkit
         {
             if (ruleSetXml == null) return null;
 
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETNATIVE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_XAMARIN_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETNATIVE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETNATIVE_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETFRAMEWORK_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_XAMARIN_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETNATIVE_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
 
             return ruleSetXml;
         }
@@ -66,11 +66,9 @@ namespace LogicBuilder.RuleSetToolkit
         private static string UpdateStrongNameByPlatForm(this string ruleSetXml, DotNetPlatForm platForm)
         {
             if (ruleSetXml == null) return null;
-            if (platForm == DotNetPlatForm.NetFramework)
-                return ruleSetXml;
 
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, StrongNames[platForm]);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETFRAMEWORK_MATCH, CodeDomStrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, StrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, CodeDomStrongNames[platForm]);
             return ruleSetXml;
         }
 
@@ -127,9 +125,7 @@ namespace LogicBuilder.RuleSetToolkit
             writer.Close();
             stringWriter.Flush();
             stringWriter.Close();
-            return platForm == DotNetPlatForm.NetFramework
-                ? ruleSet.ToString()
-                : ruleSet.ToString().UpdateStrongNameByPlatForm(platForm);
+            return ruleSet.ToString().UpdateStrongNameByPlatForm(platForm);
         }
 
         /// <summary>

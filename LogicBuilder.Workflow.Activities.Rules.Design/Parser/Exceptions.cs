@@ -31,7 +31,6 @@ namespace LogicBuilder.Workflow.Activities.Rules
             this.position = position;
         }
 
-        [SecurityPermissionAttribute(SecurityAction.Demand, SerializationFormatter = true)]
         private RuleSyntaxException(SerializationInfo serializeInfo, StreamingContext context)
             : base(serializeInfo, context)
         {

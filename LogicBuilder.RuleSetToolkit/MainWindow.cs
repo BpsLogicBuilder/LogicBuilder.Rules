@@ -524,7 +524,7 @@ namespace LogicBuilder.RuleSetToolkit
 
         internal const string CODEDOM_NETCORE = "System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
         internal const string CODEDOM_NETFRAMEWORK = "System, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089";
-        internal const string CODEDOM_XAMARIN = "System.CodeDom, Version=4.0.0.0 Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+        internal const string CODEDOM_XAMARIN = "System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
         internal const string CODEDOM_NETNATIVE = "System.CodeDom, Version=4.0.0.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
 
         internal const string NETCORE_MATCH = @"System.Private.CoreLib, Version=\d.\d.\d.\d, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
