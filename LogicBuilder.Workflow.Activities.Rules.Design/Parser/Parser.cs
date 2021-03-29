@@ -680,8 +680,29 @@ namespace LogicBuilder.Workflow.Activities.Rules
                     continue;
 
                 // Skip nested types.
-                if (type.IsNested)
+                try
+                {
+                    if (TypeIsNested(type.Attributes))
+                        continue;
+
+                    if (type.IsNested)//throws exception when root is .NetStandard2.1 library.
+                        continue;
+                }
+                catch (Exception)
+                {
                     continue;
+                }
+
+                bool TypeIsNested(TypeAttributes attr)
+                {
+                    TypeAttributes visibility = attr & TypeAttributes.VisibilityMask;
+                    return visibility == TypeAttributes.NestedAssembly
+                        || visibility == TypeAttributes.NestedFamANDAssem
+                        || visibility == TypeAttributes.NestedFamily
+                        || visibility == TypeAttributes.NestedFamORAssem
+                        || visibility == TypeAttributes.NestedPrivate
+                        || visibility == TypeAttributes.NestedPublic;
+                }
 
                 // Add the namespaces.
                 string typeNamespace = type.Namespace;

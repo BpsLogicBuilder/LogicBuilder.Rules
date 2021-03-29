@@ -11,7 +11,7 @@ namespace LogicBuilder.RuleSetToolkit
 {
     internal class AssemblyLoader
     {
-        internal AssemblyLoader(string assemblyFullName, string[] paths, AssemblyLoadContext assemblyLoadContext)
+        internal AssemblyLoader(string assemblyFullName, string[] paths, ToolkitAssemblyLoadContext assemblyLoadContext)
         {
             this.assemblyFullName = assemblyFullName;
             this.paths = paths;
@@ -26,7 +26,7 @@ namespace LogicBuilder.RuleSetToolkit
         #region Variables
         private string assemblyFullName;
         private string[] paths;
-        private AssemblyLoadContext assemblyLoadContext;
+        private ToolkitAssemblyLoadContext assemblyLoadContext;
         #endregion Variables
 
         #region Properties
@@ -87,7 +87,7 @@ namespace LogicBuilder.RuleSetToolkit
             try
             {
                 if (File.Exists(this.assemblyFullName))
-                    assembly = assemblyLoadContext.LoadFromAssemblyPath(this.assemblyFullName);
+                    assembly = assemblyLoadContext.LoadFromFileStream(this.assemblyFullName);
             }
             catch (FileLoadException ex)
             {
@@ -107,6 +107,42 @@ namespace LogicBuilder.RuleSetToolkit
             }
 
             return assembly;
+        }
+
+        internal static Type[] GetTypes(Assembly assembly)
+        {
+            List<Type> types = new List<Type>();
+            try
+            {
+                types.AddRange(typeof(string).Assembly.GetTypes());
+                types.AddRange(assembly.GetTypes());
+            }
+            catch (ReflectionTypeLoadException e)
+            {
+                types.AddRange(e.Types);
+            }
+            catch (ArgumentException ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
+            }
+            catch (SecurityException ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
+            }
+            catch (FileLoadException ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
+            }
+            catch (FileNotFoundException ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
+            }
+            catch (TypeLoadException ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
+            }
+
+            return types.ToArray();
         }
 
         /// <summary>
@@ -175,7 +211,7 @@ namespace LogicBuilder.RuleSetToolkit
         {
             string fullName = Path.Combine(path.Value, file);
             if (File.Exists(fullName))
-                return assemblyLoadContext.LoadFromAssemblyPath(fullName);
+                return assemblyLoadContext.LoadFromFileStream(fullName);
             else if (path.Next != null)
                 return LoadAssembly(path.Next, file);
             else

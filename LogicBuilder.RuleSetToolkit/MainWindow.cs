@@ -34,6 +34,8 @@ namespace LogicBuilder.RuleSetToolkit
         private Type activityClassType;
         private RuleSet ruleSet;
         private List<Assembly> referenceAssemblies;
+        private string assemblyFullName;
+        private Assembly assembly;
         #endregion Variables
 
         #region Properties
@@ -42,9 +44,17 @@ namespace LogicBuilder.RuleSetToolkit
             get { return this.txtRuleset.Text.Trim(); }
         }
 
-        private string AssemblyFullName
+        public string AssemblyFullName
         {
-            get { return this.txtActivityAssembly.Text.Trim(); }
+            get => assemblyFullName; 
+            set
+            {
+                if (assemblyFullName != value)
+                {
+                    assemblyFullName = value;
+                    LoadAssemblies();
+                }
+            }
         }
 
         private string ActivityClass
@@ -106,7 +116,9 @@ namespace LogicBuilder.RuleSetToolkit
             txtActivityClass.Text = Settings.Default.activityClass;
             txtActivityAssembly.Text = Settings.Default.activityAssembly;
             txtRuleset.Text = Settings.Default.ruleSet;
+            toolStripStatusLabel.Text = string.Empty;
             ValidateButtons();
+            this.Load += MainWindow_Load;
         }
 
         private void ListRules()
@@ -167,6 +179,44 @@ namespace LogicBuilder.RuleSetToolkit
             return rulePreview.ToString();
         }
 
+        private void LoadAssemblies()
+        {
+            ClearErrorLabel();
+            if (!(File.Exists(this.AssemblyFullName)))
+            {
+                this.assembly = null;
+                this.activityClassType = null;
+                return;
+            }
+
+            AssemblyLoader assemblyLoader = new AssemblyLoader(this.AssemblyFullName, Array.Empty<string>(), new ToolkitAssemblyLoadContext(this.AssemblyFullName));
+
+            this.Cursor = Cursors.WaitCursor;
+            try
+            {
+                toolStripStatusLabel.Text = "Loading assemblies.";
+                assembly = assemblyLoader.LoadAssembly();
+
+                if (assembly != null)
+                {
+                    this.activityClassType = AssemblyLoader.GetType(assembly, this.ActivityClass, true);
+                    this.referenceAssemblies = assembly.GetReferencedAssembliesRecursively(assemblyLoader);
+                }
+
+                toolStripStatusLabel.Text = "Ready";
+            }
+            catch (ToolkitException ex)
+            {
+                this.activityClassType = null;
+                UpdateErrorLabel(ex.Message);
+                this.Cursor = Cursors.Default;
+                return;
+            }
+
+            this.Cursor = Cursors.Default;
+            btnLoad.Enabled = true;
+        }
+
         private void ValidateLoad()
         {
             ClearErrorLabel();
@@ -185,28 +235,6 @@ namespace LogicBuilder.RuleSetToolkit
                 return;
             }
 
-            AssemblyLoader assemblyLoader = new AssemblyLoader(this.AssemblyFullName, Settings.Default.assemblyLoadPaths.Split(new char[] { ';' }), System.Runtime.Loader.AssemblyLoadContext.Default);
-            Assembly assembly;
-
-            this.Cursor = Cursors.WaitCursor;
-            try
-            {
-                assembly = assemblyLoader.LoadAssembly();
-                if (assembly != null)
-                {
-                    this.activityClassType = AssemblyLoader.GetType(assembly, this.ActivityClass, true);
-                    this.referenceAssemblies = assembly.GetReferencedAssembliesRecursively(assemblyLoader);
-                }
-            }
-            catch (ToolkitException ex)
-            {
-                this.activityClassType = null;
-                UpdateErrorLabel(ex.Message);
-                btnLoad.Enabled = false;
-                this.Cursor = Cursors.Default;
-                return;
-            }
-
             if (assembly == null || this.activityClassType == null)
             {
                 this.activityClassType = null;
@@ -215,15 +243,11 @@ namespace LogicBuilder.RuleSetToolkit
                 this.Cursor = Cursors.Default;
                 return;
             }
-
-            this.Cursor = Cursors.Default;
-            btnLoad.Enabled = true;
         }
 
         private void ValidateEdit()
         {
             btnEdit.Enabled = (this.activityClassType != null && File.Exists(this.RulesFileFullName));
-
         }
 
         private void ValidateSave()
@@ -350,7 +374,16 @@ namespace LogicBuilder.RuleSetToolkit
                 return false;
             }
 
-            ValidateRules();
+            try
+            {
+                ValidateRules();
+            }
+            catch (ToolkitException ex)
+            {
+                UpdateErrorLabel(ex.Message);
+                return false;
+            }
+
             ListRules();
             return true;
         }
@@ -417,19 +450,24 @@ namespace LogicBuilder.RuleSetToolkit
         #endregion Methods
 
         #region EventHandlers
+        private void MainWindow_Load(object sender, EventArgs e)
+        {
+            this.Refresh();
+            AssemblyFullName = this.txtActivityAssembly.Text.Trim();
+        }
+
         private void TxtActivityClass_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void TxtActivityAssembly_TextChanged(object sender, EventArgs e)
         {
-            
         }
 
         private void TxtRuleset_TextChanged(object sender, EventArgs e)
         {
-            
+
         }
 
         private void TxtActivityClass_Validated(object sender, EventArgs e)
@@ -439,6 +477,7 @@ namespace LogicBuilder.RuleSetToolkit
 
         private void TxtActivityAssembly_Validated(object sender, EventArgs e)
         {
+            AssemblyFullName = this.txtActivityAssembly.Text.Trim();
             ValidateButtons();
         }
 

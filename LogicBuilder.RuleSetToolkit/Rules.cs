@@ -152,10 +152,17 @@ namespace LogicBuilder.RuleSetToolkit
                 return validationErrors;
             }
 
-            if (!ruleSet.Validate(ruleValidation))
+            try
             {
-                foreach (ValidationError validationError in ruleValidation.Errors)
-                    validationErrors.Add(validationError.ErrorText);
+                if (!ruleSet.Validate(ruleValidation))
+                {
+                    foreach (ValidationError validationError in ruleValidation.Errors)
+                        validationErrors.Add(validationError.ErrorText);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
             }
 
             return validationErrors;
