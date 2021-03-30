@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>Updates System.Workflow.Activities.Rules to bring the RuleEngine functionality to .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Added a new constructor with a List&lt;Assembly&gt; argument to RuleValidation. .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</PackageReleaseNotes>
+    <PackageReleaseNotes>Made the designer and type loading .Net 5 compatible.</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="1.0.4" />
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="2.0.0-alpha.1.1" />
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>

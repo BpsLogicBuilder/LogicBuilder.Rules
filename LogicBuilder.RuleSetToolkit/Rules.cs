@@ -10,6 +10,7 @@ using System.IO;
 using System.Text;
 using System.Text.RegularExpressions;
 using System.Xml;
+using System.Reflection;
 
 namespace LogicBuilder.RuleSetToolkit
 {
@@ -52,12 +53,12 @@ namespace LogicBuilder.RuleSetToolkit
         {
             if (ruleSetXml == null) return null;
 
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETNATIVE_MATCH, AssemblyStrongNames.NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_XAMARIN_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETNATIVE_MATCH, AssemblyStrongNames.CODEDOM_NETFRAMEWORK);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.XAMARIN_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETNATIVE_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETFRAMEWORK_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_XAMARIN_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETNATIVE_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
 
             return ruleSetXml;
         }
@@ -65,11 +66,9 @@ namespace LogicBuilder.RuleSetToolkit
         private static string UpdateStrongNameByPlatForm(this string ruleSetXml, DotNetPlatForm platForm)
         {
             if (ruleSetXml == null) return null;
-            if (platForm == DotNetPlatForm.NetFramework)
-                return ruleSetXml;
 
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETFRAMEWORK_MATCH, StrongNames[platForm]);
-            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETFRAMEWORK_MATCH, CodeDomStrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, StrongNames[platForm]);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, CodeDomStrongNames[platForm]);
             return ruleSetXml;
         }
 
@@ -126,9 +125,7 @@ namespace LogicBuilder.RuleSetToolkit
             writer.Close();
             stringWriter.Flush();
             stringWriter.Close();
-            return platForm == DotNetPlatForm.NetFramework
-                ? ruleSet.ToString()
-                : ruleSet.ToString().UpdateStrongNameByPlatForm(platForm);
+            return ruleSet.ToString().UpdateStrongNameByPlatForm(platForm);
         }
 
         /// <summary>
@@ -137,17 +134,17 @@ namespace LogicBuilder.RuleSetToolkit
         /// <param name="type"></param>
         /// <param name="ruleSet"></param>
         /// <returns></returns>
-        internal static List<string> ValidateRuleSet(Type type, RuleSet ruleSet)
+        internal static List<string> ValidateRuleSet(Type type, RuleSet ruleSet, List<Assembly> referenceAssemblies)
         {
             List<string> validationErrors = new List<string>();
-            RuleValidation ruleValidation = null;
+            RuleValidation ruleValidation;
             if (type == null)
                 throw new InvalidOperationException(Resources.typeCannotBeNull);
 
             if (ruleSet == null)
                 throw new InvalidOperationException(Resources.ruleSetCannotBeNull);
 
-            ruleValidation = new RuleValidation(type);
+            ruleValidation = new RuleValidation(type, referenceAssemblies);
 
             if (ruleValidation == null)
             {
@@ -155,10 +152,17 @@ namespace LogicBuilder.RuleSetToolkit
                 return validationErrors;
             }
 
-            if (!ruleSet.Validate(ruleValidation))
+            try
             {
-                foreach (ValidationError validationError in ruleValidation.Errors)
-                    validationErrors.Add(validationError.ErrorText);
+                if (!ruleSet.Validate(ruleValidation))
+                {
+                    foreach (ValidationError validationError in ruleValidation.Errors)
+                        validationErrors.Add(validationError.ErrorText);
+                }
+            }
+            catch (Exception ex)
+            {
+                throw new ToolkitException(ex.Message, ex);
             }
 
             return validationErrors;

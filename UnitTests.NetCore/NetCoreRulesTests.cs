@@ -1,11 +1,11 @@
 ﻿using LogicBuilder.Workflow.Activities.Rules;
-using LogicBuilder.Workflow.ComponentModel.Compiler;
 using LogicBuilder.Workflow.ComponentModel.Serialization;
 using System;
 using System.CodeDom;
 using System.Collections.Generic;
 using System.Globalization;
 using System.Linq;
+using System.Text.RegularExpressions;
 using Xunit;
 
 namespace UnitTests.NetCore
@@ -972,7 +972,17 @@ namespace UnitTests.NetCore
                 stringWriter.Flush();
             }
 
-            return ruleDefinition.ToString();
+            return UpdateStrongNames(ruleDefinition.ToString());
+        }
+
+        private static string UpdateStrongNames(string ruleSetXml)
+        {
+            if (ruleSetXml == null) return null;
+
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.NETCORE_MATCH, AssemblyStrongNames.NETCORE);
+            ruleSetXml = Regex.Replace(ruleSetXml, AssemblyStrongNames.CODEDOM_NETCORE_MATCH, AssemblyStrongNames.CODEDOM_NETCORE);
+
+            return ruleSetXml;
         }
 
         private RuleSet DeserializeRuleSet(string ruleSetXmlDefinition)
@@ -994,5 +1004,14 @@ namespace UnitTests.NetCore
                 return null;
             }
         }
+    }
+
+    internal struct AssemblyStrongNames
+    {
+        internal const string NETCORE = "System.Private.CoreLib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+        internal const string CODEDOM_NETCORE = "System.CodeDom, Version=4.0.1.0, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
+
+        internal const string NETCORE_MATCH = @"System.Private.CoreLib, Version=\d.\d.\d.\d, Culture=neutral, PublicKeyToken=7cec85d7bea7798e";
+        internal const string CODEDOM_NETCORE_MATCH = @"System.CodeDom, Version=\d.\d.\d.\d, Culture=neutral, PublicKeyToken=cc7b13ffcd2ddd51";
     }
 }
