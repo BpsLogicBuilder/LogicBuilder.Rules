@@ -10,7 +10,7 @@
     <Authors>BlaiseD</Authors>
     <Description>This package makes the RuleSetDialog from System.Workflow.Activities.Rules compatible with .Net 5.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>.Net 5 the designer.</PackageReleaseNotes>
+    <PackageReleaseNotes>Made the designer and type loading .Net 5 compatible.</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>

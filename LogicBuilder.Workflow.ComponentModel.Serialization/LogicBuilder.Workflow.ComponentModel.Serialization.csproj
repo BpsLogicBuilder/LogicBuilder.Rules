@@ -7,7 +7,7 @@
     <Authors>BlaiseD</Authors>
     <Description>Manages serialization of rule sets for .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Allow the client to supply reference assemblies because .Net Native does not allow calls to Assembly.GetReferencedAssemblies().</PackageReleaseNotes>
+    <PackageReleaseNotes>Made the designer and type loading .Net 5 compatible.</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
