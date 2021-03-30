@@ -44,6 +44,18 @@ jobs:
       run: ./Release_Build_Push.ps1
       shell: pwsh
 
+    - name: Pack and push LogicBuilder.Workflow.Activities.Rules
+      env:
+        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
+    - name: Build and push LogicBuilder.Workflow.Activities.Rules.Design
+      env:
+        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules.Design
+      run: ./Release_Build_Push.ps1
+      shell: pwsh
+
     - name: Restore
       run: dotnet restore
 
@@ -52,15 +64,3 @@ jobs:
 
     - name: Test
       run: dotnet test --no-restore --verbosity normal --filter "UnitTests.NetFramework.NetFrameworkRulesTests|UnitTests.NetCore.NetCoreRulesTests"
-
-    - name: Pack and push LogicBuilder.Workflow.Activities.Rules
-      env:
-        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules
-      run: ./Release_Pack_Push.ps1
-      shell: pwsh
-
-    - name: Build and push LogicBuilder.Workflow.Activities.Rules.Design
-      env:
-        PROJECT_NAME: LogicBuilder.Workflow.Activities.Rules.Design
-      run: ./Release_Build_Push.ps1
-      shell: pwsh

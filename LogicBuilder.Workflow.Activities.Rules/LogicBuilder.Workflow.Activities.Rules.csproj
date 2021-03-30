@@ -23,7 +23,7 @@
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="2.0.0-preview.0" />
+    <PackageReference Include="LogicBuilder.Workflow.ComponentModel.Serialization" Version="2.0.0-preview.1" />
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
       <IncludeAssets>runtime; build; native; contentfiles; analyzers; buildtransitive</IncludeAssets>
