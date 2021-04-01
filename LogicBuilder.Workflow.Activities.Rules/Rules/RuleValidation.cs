@@ -3384,7 +3384,7 @@ namespace LogicBuilder.Workflow.Activities.Rules
                     seenAssemblies.Add(assembly);
                     if (IsMarkedExtension(assembly))
                     {
-                        Type[] types;
+                        Type[] types;                        
                         try
                         {
                             types = assembly.GetTypes();
@@ -3416,11 +3416,17 @@ namespace LogicBuilder.Workflow.Activities.Rules
                         // skip generic methods
                         if ((mi.IsStatic) && !(mi.IsGenericMethod) && (IsMarkedExtension(mi)))
                         {
-                            ParameterInfo[] parms = mi.GetParameters();
-                            if (parms.Length > 0 && parms[0].ParameterType != null)
+                            try
                             {
-                                extensionMethods.Add(new ExtensionMethodInfo(mi, parms));
+                                ParameterInfo[] parms = mi.GetParameters();
+                                if (parms.Length > 0 && parms[0].ParameterType != null)
+                                {
+                                    extensionMethods.Add(new ExtensionMethodInfo(mi, parms));
+                                }
                             }
+                            catch (TypeLoadException)
+                            {//We excluding the null types from ReflectionTypeLoadException
+                            }//so do the same when they show up as ParameterTypes
                         }
                     }
                 }
