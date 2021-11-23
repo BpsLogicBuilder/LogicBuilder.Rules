@@ -19,7 +19,7 @@ namespace LogicBuilder.Workflow.Activities {
     // class via a tool like ResGen or Visual Studio.
     // To add or remove a member, edit your .ResX file then rerun ResGen
     // with the /str option, or rebuild your VS project.
-    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "15.0.0.0")]
+    [global::System.CodeDom.Compiler.GeneratedCodeAttribute("System.Resources.Tools.StronglyTypedResourceBuilder", "16.0.0.0")]
     [global::System.Diagnostics.DebuggerNonUserCodeAttribute()]
     [global::System.Runtime.CompilerServices.CompilerGeneratedAttribute()]
     internal class Messages {
@@ -1033,6 +1033,15 @@ namespace LogicBuilder.Workflow.Activities {
         }
         
         /// <summary>
+        ///   Looks up a localized string similar to The object creation expression for constructor &quot;{0}&quot; is the missing required parameter &quot;{1}&quot;..
+        /// </summary>
+        internal static string MissingConstructorParameterExpression {
+            get {
+                return ResourceManager.GetString("MissingConstructorParameterExpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
         ///   Looks up a localized string similar to No index expressions were specified..
         /// </summary>
         internal static string MissingIndexExpressions {
@@ -1047,6 +1056,24 @@ namespace LogicBuilder.Workflow.Activities {
         internal static string MissingInitializer {
             get {
                 return ResourceManager.GetString("MissingInitializer", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to The method call expression for &quot;{0}.{1}&quot; is missing the required parameter &quot;{2}&quot;..
+        /// </summary>
+        internal static string MissingMethodParameterExpression {
+            get {
+                return ResourceManager.GetString("MissingMethodParameterExpression", resourceCulture);
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized string similar to Missing required parameter &quot;{0}&quot;..
+        /// </summary>
+        internal static string MissingParameterExpression {
+            get {
+                return ResourceManager.GetString("MissingParameterExpression", resourceCulture);
             }
         }
         

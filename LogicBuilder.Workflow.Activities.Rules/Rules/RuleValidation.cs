@@ -2751,8 +2751,8 @@ namespace LogicBuilder.Workflow.Activities.Rules
                     }
                 }
 
-                System.Diagnostics.Debug.Assert(arguments.Count == this.signature.Count);
-                System.Diagnostics.Debug.Assert(arguments.Count == other.signature.Count);
+                System.Diagnostics.Debug.Assert(arguments.Count <= this.signature.Count);
+                System.Diagnostics.Debug.Assert(arguments.Count <= other.signature.Count);
 
                 bool hasAtLeastOneBetterConversion = false;
                 bool hasAtLeastOneWorseConversion = false;
@@ -2997,14 +2997,14 @@ namespace LogicBuilder.Workflow.Activities.Rules
                         fixedParameterCount -= 1;
                 }
 
-                if (numArguments < fixedParameterCount)
+                if (numArguments < fixedParameterCount && !parameters[numArguments].IsOptional)
                 {
                     // Not enough arguments were passed for this to be a candidate.
                     error = buildArgCountMismatchError(candidateName, numArguments);
 
                     return;
                 }
-                else if (fixedParameterCount == parameterCount && numArguments != parameterCount)
+                else if (fixedParameterCount == parameterCount && numArguments > parameterCount)//invalid "numArguments < parameterCount" fail on line 3000.
                 {
                     // Too many arguments were passed for this to be a candidate.
                     error = buildArgCountMismatchError(candidateName, numArguments);
@@ -3018,8 +3018,16 @@ namespace LogicBuilder.Workflow.Activities.Rules
                 for (; p < fixedParameterCount; ++p)
                 {
                     CandidateParameter candidateParam = new CandidateParameter(parameters[p]);
-                    if (!candidateParam.Match(arguments[p], candidateName, p + 1, out error))
-                        break; // argument #p didn't match
+                    if (p < numArguments)
+                    {
+                        if (!candidateParam.Match(arguments[p], candidateName, p + 1, out error))
+                            break; // argument #p didn't match
+                    }
+                    else
+                    {
+                        if (!parameters[p].IsOptional)//we shouldn't get here.  Bail out on 3005
+                            throw new ArgumentException("arguments");
+                    }
 
                     // If we get here, then so far so good.
                     signature.Add(candidateParam);
@@ -3039,6 +3047,12 @@ namespace LogicBuilder.Workflow.Activities.Rules
                     CandidateMember candidateMethod = null;
 
                     if (numArguments == fixedParameterCount)
+                    {
+                        // Zero arguments were passed as the params array.  The method is a candidate
+                        // in its expanded form.
+                        candidateMethod = new CandidateMember(candidateMember, parameters, signature, CandidateMember.Form.Expanded);
+                    }
+                    else if (numArguments < fixedParameterCount && parameters[numArguments].IsOptional)
                     {
                         // Zero arguments were passed as the params array.  The method is a candidate
                         // in its expanded form.

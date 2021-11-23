@@ -21,6 +21,10 @@ namespace SampleFlow
         public decimal Discount { get; set; }
         public DateTime Date { get; set; }
         public string FirstValue { get; set; }
+        public string SecondValue { get; set; }
+        public string ThirdValue { get; set; }
+        public int FourthValue { get; set; }
+        public int[] TheParams;
 
         public Type TheType { get; set; }
         public Collection<object> MyCollection { get; set; }
@@ -67,6 +71,52 @@ namespace SampleFlow
         private void SetGenericObject(GenericClass<IList<decimal>> obj)
         {
             GenericListOfDecimal = obj;
+        }
+
+        private void SetValues(string firstValue, string secondValue, string thirdValue = "", int fourthValue = 0, params int[] theParams)
+        {
+            this.FirstValue = firstValue;
+            this.SecondValue = secondValue;
+            this.ThirdValue = thirdValue;
+            this.FourthValue = fourthValue;
+            this.TheParams = theParams;
+        }
+
+        private void SetValuesWithoutParams(string firstValue, string secondValue, string thirdValue = "", int fourthValue = 0)
+        {
+            this.FirstValue = firstValue;
+            this.SecondValue = secondValue;
+            this.ThirdValue = thirdValue;
+            this.FourthValue = fourthValue;
+        }
+
+        private void SetMoreValues(string firstValue, string secondValue)
+        {
+            this.FirstValue = firstValue;
+            this.SecondValue = secondValue;
+        }
+
+        private void SetValues(OtherEntity otherEntity)
+        {
+            this.FirstValue = otherEntity.FirstValue;
+            this.SecondValue = otherEntity.SecondValue;
+            this.ThirdValue = otherEntity.ThirdValue;
+            this.FourthValue = otherEntity.FourthValue;
+            this.TheParams = otherEntity.TheParams;
+        }
+
+        private void SetValues(YetAnotherEntity otherEntity)
+        {
+            this.FirstValue = otherEntity.FirstValue;
+            this.SecondValue = otherEntity.SecondValue;
+        }
+
+        private void SetValues(EntityWithoutParams otherEntity)
+        {
+            this.FirstValue = otherEntity.FirstValue;
+            this.SecondValue = otherEntity.SecondValue;
+            this.ThirdValue = otherEntity.ThirdValue;
+            this.FourthValue = otherEntity.FourthValue;
         }
     }
 }
