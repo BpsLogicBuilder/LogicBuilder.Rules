@@ -1551,6 +1551,28 @@ namespace LogicBuilder.Workflow.Activities.Rules
                 // Evaluate the fixed portion of the parameter list.
                 for (i = 0; i < numFixedParameters; ++i)
                 {
+                    if (i >= invokeExpr.Parameters.Count)
+                    {
+                        if (parmInfos[i].IsOptional)
+                        {
+                            arguments[i] = parmInfos[i].DefaultValue;
+                            continue;
+                        }
+
+                        throw new ArgumentException
+                        (
+                            string.Format
+                            (
+                                CultureInfo.CurrentCulture,
+                                Messages.MissingMethodParameterExpression,
+                                mi.DeclaringType.FullName,
+                                mi.Name,
+                                parmInfos[i].Name
+                            ),
+                            "invokeExpr.Parameters"
+                        );
+                    }
+
                     Type argType = execution.Validation.ExpressionInfo(invokeExpr.Parameters[i]).ExpressionType;
                     RuleExpressionResult argResult = RuleExpressionWalker.Evaluate(execution, invokeExpr.Parameters[i]);
 
@@ -3070,6 +3092,27 @@ namespace LogicBuilder.Workflow.Activities.Rules
                 // Evaluate the fixed portion of the parameter list.
                 for (i = 0; i < numFixedParameters; ++i)
                 {
+                    if (i >= createExpression.Parameters.Count)
+                    {
+                        if (parmInfos[i].IsOptional)
+                        {
+                            arguments[i] = parmInfos[i].DefaultValue;
+                            continue;
+                        }
+
+                        throw new ArgumentException
+                        (
+                            string.Format
+                            (
+                                CultureInfo.CurrentCulture,
+                                Messages.MissingConstructorParameterExpression,
+                                constructor.DeclaringType.FullName,
+                                parmInfos[i].Name
+                            ),
+                            "createExpression.Parameters"
+                        );
+                    }
+
                     Type argType = execution.Validation.ExpressionInfo(createExpression.Parameters[i]).ExpressionType;
                     RuleExpressionResult argResult = RuleExpressionWalker.Evaluate(execution, createExpression.Parameters[i]);
 

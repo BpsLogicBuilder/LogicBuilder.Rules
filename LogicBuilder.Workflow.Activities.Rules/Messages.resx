@@ -776,4 +776,16 @@
   <data name="NewRuleName" xml:space="preserve">
     <value>Rule</value>
   </data>
+  <data name="MissingMethodParameterExpression" xml:space="preserve">
+    <value>The method call expression for "{0}.{1}" is missing the required parameter "{2}".</value>
+    <comment>0=DeclaringTypeFullName;1=methodName;2=parameterName</comment>
+  </data>
+  <data name="MissingConstructorParameterExpression" xml:space="preserve">
+    <value>The object creation expression for constructor "{0}" is the missing required parameter "{1}".</value>
+    <comment>0=cDeclaringTypeFullName;1=parameterName</comment>
+  </data>
+  <data name="MissingParameterExpression" xml:space="preserve">
+    <value>Missing required parameter "{0}".</value>
+    <comment>0=parameterName</comment>
+  </data>
 </root>
