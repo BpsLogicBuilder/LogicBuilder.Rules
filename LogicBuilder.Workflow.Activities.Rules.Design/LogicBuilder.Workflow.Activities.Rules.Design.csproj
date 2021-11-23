@@ -29,7 +29,7 @@
   </PropertyGroup>
   <ItemGroup>
     <PackageReference Include="LogicBuilder.Workflow.Activities.Rules">
-      <Version>2.0.1-alpha.0.1</Version>
+      <Version>2.0.2</Version>
     </PackageReference>
     <PackageReference Include="MinVer" Version="2.3.0">
       <PrivateAssets>all</PrivateAssets>
