@@ -7,7 +7,7 @@
     <RootNamespace>LogicBuilder.ComponentModel.Design.Serialization</RootNamespace>
     <Description>Implements DesignerSerializationManager for .NetStandard.</Description>
     <PackageRequireLicenseAcceptance>false</PackageRequireLicenseAcceptance>
-    <PackageReleaseNotes>Made the designer and type loading .Net 5 compatible.</PackageReleaseNotes>
+    <PackageReleaseNotes>Handling validation for optional parameters.</PackageReleaseNotes>
     <PackageTags>serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
     <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
