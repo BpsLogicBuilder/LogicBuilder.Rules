@@ -3026,7 +3026,16 @@ namespace LogicBuilder.Workflow.Activities.Rules
                     else
                     {
                         if (!parameters[p].IsOptional)//we shouldn't get here.  Bail out on 3005
-                            throw new ArgumentException("arguments");
+                            throw new ArgumentException
+                            (
+                                string.Format
+                                (
+                                    CultureInfo.CurrentCulture,
+                                    Messages.MissingParameterExpression,
+                                    parameters[p].Name
+                                ),
+                                "arguments"
+                            );
                     }
 
                     // If we get here, then so far so good.
