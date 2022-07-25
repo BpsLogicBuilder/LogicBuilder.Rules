@@ -58,7 +58,7 @@ namespace UnitTests.NetCore
                         new CodeExpression[] { new CodePrimitiveExpression("12:3:5"), invariantCultureReference }
                     )
             );
-            //System.Guid.Parse()
+
             CodeAssignStatement guidAction = new
             (
                 dClassRef,
@@ -69,7 +69,7 @@ namespace UnitTests.NetCore
                         new CodeExpression[] { new CodePrimitiveExpression("{7E75868B-CDBE-408C-BEA2-88F887ACD725}") }
                     )
             );
-            //decimal d = decimal.Parse("100.0012M", System.Globalization.CultureInfo.InvariantCulture);
+
             CodeAssignStatement decimalAction = new(dClassRef, new CodePrimitiveExpression(100.0012m));
             CodeAssignStatement decimalAction1 = new(dClassRef, new CodePrimitiveExpression(decimal.Parse("100.0012", System.Globalization.CultureInfo.InvariantCulture)));
             CodeAssignStatement charAction = new(dClassRef, new CodePrimitiveExpression(char.Parse("P")));
