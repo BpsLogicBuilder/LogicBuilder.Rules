@@ -170,6 +170,16 @@ namespace LogicBuilder.Workflow.Activities.Rules
                         newError.UserData[de.Key] = de.Value;
 
                     errors[i] = newError;
+
+                    UpdateErrorsByRuleName();
+
+                    void UpdateErrorsByRuleName()
+                    {
+                        if (validation.ErrorsByRuleName.TryGetValue(name, out IList<ValidationError> ruleErrorList))
+                            ruleErrorList.Add(newError);
+                        else
+                            validation.ErrorsByRuleName.Add(name, new List<ValidationError> { newError });
+                    }
                 }
             }
         }
