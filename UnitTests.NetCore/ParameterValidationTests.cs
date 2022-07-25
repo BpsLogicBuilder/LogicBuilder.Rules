@@ -475,32 +475,7 @@ namespace UnitTests.NetCore
 
         private RuleEngine CreateRuleEngine(RuleSet ruleSet)
         {
-            return new RuleEngine(ruleSet, GetValidation(ruleSet, typeof(SampleFlow.FlowEntity)));
-        }
-
-        private RuleValidation GetValidation(RuleSet ruleSet, Type type)
-        {
-            RuleValidation ruleValidation = null;
-
-            if (ruleSet == null)
-                throw new InvalidOperationException(Resources.ruleSetCannotBeNull);
-
-            ruleValidation = new RuleValidation(type);
-            if (ruleValidation == null)
-                throw new InvalidOperationException(Resources.ruleValidationCannotBeNull);
-
-            if (!ruleSet.Validate(ruleValidation))
-            {
-                List<string> errors = ruleValidation.Errors.Aggregate(new List<string> { string.Format(CultureInfo.CurrentCulture, Resources.invalidRuleSetFormat, ruleSet.Name) }, (list, next) =>
-                {
-                    list.Add(next.ErrorText);
-                    return list;
-                });
-
-                throw new InvalidOperationException(string.Join(Environment.NewLine, errors));
-            }
-
-            return ruleValidation;
+            return new RuleEngine(ruleSet, Helper.GetValidation(ruleSet, typeof(SampleFlow.FlowEntity)));
         }
     }
 }

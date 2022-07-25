@@ -1067,6 +1067,8 @@ namespace LogicBuilder.Workflow.Activities.Rules
             return typeProvider;
         }
 
+        public IDictionary<string, IList<ValidationError>> ErrorsByRuleName { get; } = new Dictionary<string, IList<ValidationError>>();
+
         public ValidationErrorCollection Errors
         {
             get { return errors; }
