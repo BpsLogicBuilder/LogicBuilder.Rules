@@ -10,8 +10,8 @@
     <PackageReleaseNotes>Handling validation for optional parameters.</PackageReleaseNotes>
     <PackageTags>rules serialization</PackageTags>
     <Copyright>Copyright © Microsoft 2017</Copyright>
-    <RepositoryUrl>https://github.com/BlaiseD/LogicBuilder.Rules</RepositoryUrl>
-    <PackageLicense>https://github.com/BlaiseD/LogicBuilder.Rules/blob/master/LICENCE.MD</PackageLicense>
+    <RepositoryUrl>https://github.com/BpsLogicBuilder/LogicBuilder.Rules</RepositoryUrl>
+		<PackageLicenseExpression>MIT</PackageLicenseExpression>
     <PackageProjectUrl>https://github.com/BlaiseD/LogicBuilder</PackageProjectUrl>
     <AssemblyOriginatorKeyFile>..\LogicBuilder.Rules.snk</AssemblyOriginatorKeyFile>
     <SignAssembly>true</SignAssembly>
