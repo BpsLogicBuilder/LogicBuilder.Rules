@@ -1,4 +1,12 @@
 # LogicBuilder.Rules
+
+LogicBuilder.Rules is archived and is no longer being maintained. Please find the composite libraries at their respective location below:
+- [LogicBuilder.ComponentModel.Design.Serialization](https://github.com/BpsLogicBuilder/LogicBuilder.ComponentModel.Design.Serialization)
+- [LogicBuilder.Workflow.ComponentModel.Serialization](https://github.com/BpsLogicBuilder/LogicBuilder.Workflow.ComponentModel.Serialization)
+- [LogicBuilder.Workflow.Activities.Rules](https://github.com/BpsLogicBuilder/LogicBuilder.Workflow.Activities.Rules)
+
+LogicBuilder.Workflow.Activities.Rules.Design is no longer being maintained. Consider using the [Logic Builder Client](https://github.com/BlaiseD/LogicBuilder) for rule set editing and serialization.
+
 This project removes the deprecated sections from System.Workflow.Activities.Rules, makes the assembly compatible with .NetStandard 2.0. and updates the namespace to LogicBuilder.Workflow.Activities.Rules.
 
 ## To get started:
